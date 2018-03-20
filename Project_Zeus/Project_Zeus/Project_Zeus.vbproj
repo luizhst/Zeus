@@ -152,12 +152,50 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="About.aspx" />
-    <Content Include="Contact.aspx" />
+    <Content Include="Content\css\main.css" />
+    <Content Include="Content\css\util.css" />
+    <Content Include="Content\fonts\font-awesome-4.7.0\css\font-awesome.css" />
+    <Content Include="Content\fonts\font-awesome-4.7.0\css\font-awesome.min.css" />
+    <Content Include="Content\fonts\font-awesome-4.7.0\HELP-US-OUT.txt" />
+    <Content Include="Content\fonts\iconic\css\material-design-iconic-font.css" />
+    <Content Include="Content\fonts\iconic\css\material-design-iconic-font.min.css" />
+    <Content Include="Content\images\icons\favicon.ico" />
+    <Content Include="Content\js\main.js" />
+    <Content Include="Content\vendor\animate\animate.css" />
+    <Content Include="Content\vendor\animsition\css\animsition.css" />
+    <Content Include="Content\vendor\animsition\css\animsition.min.css" />
+    <Content Include="Content\vendor\animsition\js\animsition.js" />
+    <Content Include="Content\vendor\animsition\js\animsition.min.js" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Content\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="Content\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Content\vendor\bootstrap\js\popper.js" />
+    <Content Include="Content\vendor\bootstrap\js\popper.min.js" />
+    <Content Include="Content\vendor\bootstrap\js\tooltip.js" />
+    <Content Include="Content\vendor\countdowntime\countdowntime.js" />
+    <Content Include="Content\vendor\css-hamburgers\hamburgers.css" />
+    <Content Include="Content\vendor\css-hamburgers\hamburgers.min.css" />
+    <Content Include="Content\vendor\daterangepicker\daterangepicker.css" />
+    <Content Include="Content\vendor\daterangepicker\daterangepicker.js" />
+    <Content Include="Content\vendor\daterangepicker\moment.js" />
+    <Content Include="Content\vendor\daterangepicker\moment.min.js" />
+    <Content Include="Content\vendor\jquery\jquery-3.2.1.min.js" />
+    <Content Include="Content\vendor\perfect-scrollbar\perfect-scrollbar.css" />
+    <Content Include="Content\vendor\perfect-scrollbar\perfect-scrollbar.min.js" />
+    <Content Include="Content\vendor\select2\select2.css" />
+    <Content Include="Content\vendor\select2\select2.js" />
+    <Content Include="Content\vendor\select2\select2.min.css" />
+    <Content Include="Content\vendor\select2\select2.min.js" />
+    <Content Include="Pages\Acesso.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
-    <Content Include="Default.aspx" />
+    <Content Include="Pages\Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -167,7 +205,72 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\fonts\font-awesome-4.7.0\fonts\FontAwesome.otf" />
+    <Content Include="Content\fonts\font-awesome-4.7.0\less\animated.less" />
+    <Content Include="Content\fonts\font-awesome-4.7.0\less\bordered-pulled.less" />
+    <Content Include="Content\fonts\font-awesome-4.7.0\less\core.less" />
+    <Content Include="Content\fonts\font-awesome-4.7.0\less\fixed-width.less" />
+    <Content Include="Content\fonts\font-awesome-4.7.0\less\font-awesome.less" />
+    <Content Include="Content\fonts\font-awesome-4.7.0\less\icons.less" />
+    <Content Include="Content\fonts\font-awesome-4.7.0\less\larger.less" />
+    <Content Include="Content\fonts\font-awesome-4.7.0\less\list.less" />
+    <Content Include="Content\fonts\font-awesome-4.7.0\less\mixins.less" />
+    <Content Include="Content\fonts\font-awesome-4.7.0\less\path.less" />
+    <Content Include="Content\fonts\font-awesome-4.7.0\less\rotated-flipped.less" />
+    <Content Include="Content\fonts\font-awesome-4.7.0\less\screen-reader.less" />
+    <Content Include="Content\fonts\font-awesome-4.7.0\less\stacked.less" />
+    <Content Include="Content\fonts\font-awesome-4.7.0\less\variables.less" />
+    <Content Include="Content\fonts\font-awesome-4.7.0\scss\font-awesome.scss" />
+    <Content Include="Content\fonts\font-awesome-4.7.0\scss\_animated.scss" />
+    <Content Include="Content\fonts\font-awesome-4.7.0\scss\_bordered-pulled.scss" />
+    <Content Include="Content\fonts\font-awesome-4.7.0\scss\_core.scss" />
+    <Content Include="Content\fonts\font-awesome-4.7.0\scss\_fixed-width.scss" />
+    <Content Include="Content\fonts\font-awesome-4.7.0\scss\_icons.scss" />
+    <Content Include="Content\fonts\font-awesome-4.7.0\scss\_larger.scss" />
+    <Content Include="Content\fonts\font-awesome-4.7.0\scss\_list.scss" />
+    <Content Include="Content\fonts\font-awesome-4.7.0\scss\_mixins.scss" />
+    <Content Include="Content\fonts\font-awesome-4.7.0\scss\_path.scss" />
+    <Content Include="Content\fonts\font-awesome-4.7.0\scss\_rotated-flipped.scss" />
+    <Content Include="Content\fonts\font-awesome-4.7.0\scss\_screen-reader.scss" />
+    <Content Include="Content\fonts\font-awesome-4.7.0\scss\_stacked.scss" />
+    <Content Include="Content\fonts\font-awesome-4.7.0\scss\_variables.scss" />
+    <Content Include="Content\fonts\iconic\fonts\Material-Design-Iconic-Font.eot" />
+    <Content Include="Content\fonts\iconic\fonts\Material-Design-Iconic-Font.svg" />
+    <Content Include="Content\fonts\iconic\fonts\Material-Design-Iconic-Font.ttf" />
+    <Content Include="Content\fonts\iconic\fonts\Material-Design-Iconic-Font.woff" />
+    <Content Include="Content\fonts\iconic\fonts\Material-Design-Iconic-Font.woff2" />
+    <Content Include="Content\fonts\poppins\Poppins-Black.ttf" />
+    <Content Include="Content\fonts\poppins\Poppins-BlackItalic.ttf" />
+    <Content Include="Content\fonts\poppins\Poppins-Bold.ttf" />
+    <Content Include="Content\fonts\poppins\Poppins-BoldItalic.ttf" />
+    <Content Include="Content\fonts\poppins\Poppins-ExtraBold.ttf" />
+    <Content Include="Content\fonts\poppins\Poppins-ExtraBoldItalic.ttf" />
+    <Content Include="Content\fonts\poppins\Poppins-ExtraLight.ttf" />
+    <Content Include="Content\fonts\poppins\Poppins-ExtraLightItalic.ttf" />
+    <Content Include="Content\fonts\poppins\Poppins-Italic.ttf" />
+    <Content Include="Content\fonts\poppins\Poppins-Light.ttf" />
+    <Content Include="Content\fonts\poppins\Poppins-LightItalic.ttf" />
+    <Content Include="Content\fonts\poppins\Poppins-Medium.ttf" />
+    <Content Include="Content\fonts\poppins\Poppins-MediumItalic.ttf" />
+    <Content Include="Content\fonts\poppins\Poppins-Regular.ttf" />
+    <Content Include="Content\fonts\poppins\Poppins-SemiBold.ttf" />
+    <Content Include="Content\fonts\poppins\Poppins-SemiBoldItalic.ttf" />
+    <Content Include="Content\fonts\poppins\Poppins-Thin.ttf" />
+    <Content Include="Content\fonts\poppins\Poppins-ThinItalic.ttf" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap.min.css.map" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Pages\Sair.aspx" />
+    <Content Include="Pages\Usuarios\Usuarios.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -202,25 +305,22 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.vb" />
     <Compile Include="App_Start\RouteConfig.vb" />
-    <Compile Include="About.aspx.designer.vb">
-      <DependentUpon>About.aspx</DependentUpon>
+    <Compile Include="BIZ\Tbl_UsuarioBIZ.vb" />
+    <Compile Include="Conection\Connection.vb" />
+    <Compile Include="DAO\Tbl_UsuarioDAO.vb" />
+    <Compile Include="Modal\Tbl_Usuario.vb" />
+    <Compile Include="Pages\Acesso.aspx.designer.vb">
+      <DependentUpon>Acesso.aspx</DependentUpon>
     </Compile>
-    <Compile Include="About.aspx.vb">
-      <DependentUpon>About.aspx</DependentUpon>
+    <Compile Include="Pages\Acesso.aspx.vb">
+      <DependentUpon>Acesso.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="Contact.aspx.designer.vb">
-      <DependentUpon>Contact.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Contact.aspx.vb">
-      <DependentUpon>Contact.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
-    <Compile Include="Default.aspx.vb">
+    <Compile Include="Pages\Default.aspx.vb">
       <SubType>ASPXCodeBehind</SubType>
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Default.aspx.designer.vb">
+    <Compile Include="Pages\Default.aspx.designer.vb">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.vb">
@@ -244,6 +344,20 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Pages\Sair.aspx.designer.vb">
+      <DependentUpon>Sair.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Sair.aspx.vb">
+      <DependentUpon>Sair.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Usuarios\Usuarios.aspx.designer.vb">
+      <DependentUpon>Usuarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Usuarios\Usuarios.aspx.vb">
+      <DependentUpon>Usuarios.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Site.Master.designer.vb">
       <DependentUpon>Site.Master</DependentUpon>

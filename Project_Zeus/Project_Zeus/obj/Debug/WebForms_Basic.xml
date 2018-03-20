@@ -37,13 +37,111 @@ Project_Zeus
  Retorna o objeto de log Asp.
  </summary>
 </member>
+<member name="M:Project_Zeus.Tbl_UsuarioBIZ.LogarSistema(System.String,System.String)">
+ <summary>
+ Valida Conta do Usuario no Sistema
+ </summary>
+ <param name="Usuario"></param>
+ <param name="Senha"></param>
+ <returns></returns>
+</member>
+<member name="F:Project_Zeus.Acesso._frmAcesso">
+<summary>
+Controle frmAcesso.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:Project_Zeus.Acesso._txt_conta">
+<summary>
+Controle txt_conta.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:Project_Zeus.Acesso._txt_senha">
+<summary>
+Controle txt_senha.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:Project_Zeus.Acesso._btn_logar">
+<summary>
+Controle btn_logar.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:Project_Zeus.Acesso._lblMensagem">
+<summary>
+Controle lblMensagem.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:Project_Zeus.Sair._form1">
+<summary>
+Controle form1.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:Project_Zeus.Usuarios._grid_usuarios">
+<summary>
+Controle grid_usuarios.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:Project_Zeus.SiteMaster._divMenu">
+<summary>
+Controle divMenu.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:Project_Zeus.SiteMaster._lblBemVindo">
+<summary>
+Controle lblBemVindo.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:Project_Zeus.SiteMaster._A1">
+<summary>
+Controle A1.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
 <member name="F:Project_Zeus.SiteMaster._MainContent">
 <summary>
 Controle MainContent.
 </summary>
 <remarks>
 Campo gerado automaticamente.
-Para modificar, mova a declaração de campo do arquivo do designer para o arquivo code-behind.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
 </remarks>
 </member>
 <member name="F:Project_Zeus.Site_Mobile._Head1">
