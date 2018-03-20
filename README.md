@@ -9,7 +9,7 @@ Posteriormente, poderá ser feito uma consulta de viabilidade de migração para
 
 # Banco de Dados
 
-O banco de dados ainda será definido.
+Banco de dados SQL Server.
 
 # Referências
 
