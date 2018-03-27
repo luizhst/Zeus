@@ -24,7 +24,7 @@
 
         Dim Lista As New List(Of Tbl_Usuario)
 
-        Lista = Biz.ListarUsuarios().toList()
+        Lista = Biz.ListarUsuarios().ToList()
 
         grid_usuarios.DataSource = Nothing
         grid_usuarios.DataSource = Lista
@@ -32,4 +32,5 @@
         grid_usuarios.DataBind()
 
     End Sub
+
 End Class
