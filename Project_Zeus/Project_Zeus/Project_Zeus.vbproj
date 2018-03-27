@@ -338,11 +338,14 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.vb" />
     <Compile Include="App_Start\RouteConfig.vb" />
+    <Compile Include="BIZ\Tbl_Ctrl_UsadoBIZ.vb" />
     <Compile Include="BIZ\Tbl_Hist_CargaBIZ.vb" />
     <Compile Include="BIZ\Tbl_UsuarioBIZ.vb" />
     <Compile Include="Conection\Connection.vb" />
+    <Compile Include="DAO\Tbl_Ctrl_UsadoDAO.vb" />
     <Compile Include="DAO\Tbl_Hist_CargaDAO.vb" />
     <Compile Include="DAO\Tbl_UsuarioDAO.vb" />
+    <Compile Include="Modal\Tbl_Ctrl_Usado.vb" />
     <Compile Include="Modal\Tbl_Hist_Carga.vb" />
     <Compile Include="Modal\Tbl_Usuario.vb" />
     <Compile Include="Pages\Acesso.aspx.designer.vb">

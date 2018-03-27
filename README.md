@@ -9,7 +9,23 @@ Posteriormente, poderá ser feito uma consulta de viabilidade de migração para
 
 # Banco de Dados
 
-O banco de dados ainda será definido.
+Banco de dados SQL Server.
+
+# Funcionalidades em desenvolvimento
+
+Gestão de integrantes da banca.
+
+# Funcionalidades a serem desenvolvidas
+
+Gestão de entrada e saída de carregamentos de revistas;
+Gestão de entrada e saída de revistas;
+Controle do acervo de revistas por categoria e editora;
+Relatórios de análise de bens;
+Dashboard de indicadores gerenciais.
+
+# Funcionalidades já desenvolvidas
+
+Acesso ao ambiente.
 
 # Referências
 
