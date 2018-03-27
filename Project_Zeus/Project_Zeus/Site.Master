@@ -55,7 +55,15 @@
                         <ul class="nav navbar-nav">
                             <li><a runat="server" href="~/Pages/">Página inicial</a></li>
                             <li class="dropdown">
-                                <a runat="server" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Cadastro<span class="caret"></span></a>
+                                <a runat="server" href="~/Pages/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Lançamento<span class="caret"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a runat="server" href="~/Pages/CargaDescarga/IncluirHistCarga.aspx">Carga e Descarga</a></li>
+                                    <%--<li class="divider"></li>--%>
+                                </ul>
+                            </li>
+                            <li><a runat="server" href="~/Pages/">Relatórios</a></li>
+                            <li class="dropdown">
+                                <a runat="server" href="~/Pages/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Cadastro<span class="caret"></span></a>
                                 <ul class="dropdown-menu" role="menu">
                                     <li><a runat="server" href="~/Pages/Usuarios/Usuarios.aspx">Usuários</a></li>
                                     <li><a runat="server" href="~/Pages/">Transportadoras</a></li>
@@ -64,7 +72,6 @@
                                     <%--<li class="divider"></li>--%>
                                 </ul>
                             </li>
-                            <li><a runat="server" href="~/Pages/">Relatórios</a></li>
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
                             <li><a runat="server" id="lblBemVindo" href="~/Pages/"></a></li>

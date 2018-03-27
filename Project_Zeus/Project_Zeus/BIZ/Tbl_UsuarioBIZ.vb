@@ -48,4 +48,31 @@ Public Class Tbl_UsuarioBIZ
         Return DAO.List("SELECT * FROM dbo.TBL_USUARIO ORDER BY Nome").ToList()
 
     End Function
+
+    Friend Function GetUsuarioById(ByVal Cod As Integer) As Tbl_Usuario
+
+        Return DAO.List("SELECT * FROM dbo.TBL_USUARIO WHERE CodUsuario = " & Cod).FirstOrDefault()
+
+    End Function
+
+
+    Friend Sub InsertUsuario(ByVal Obj As Tbl_Usuario)
+
+        Try
+
+            If Obj.CodUsuario <> 0 Then
+                DAO.Update(Obj)
+            Else
+                DAO.Insert(Obj)
+            End If
+
+        Catch ex As Exception
+
+            Throw ex
+
+        End Try
+
+    End Sub
+
+
 End Class

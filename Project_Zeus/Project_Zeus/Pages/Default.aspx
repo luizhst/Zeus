@@ -2,7 +2,126 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-    <div class="jumbotron">
+    <br />
+    <h3>Dashboard Principal</h3>
+    <br />
+
+    <div class="row">
+        <div class="col-md-3 col-sm-6" style="text-align: center">
+            <div class="panel panel-info">
+
+                <div class="panel-body">
+                    <h3>10.567</h3>
+                </div>
+                <div class="panel-heading" style="font-style: inherit">PBR NOVOS</div>
+            </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6" style="text-align: center">
+            <div class="panel panel-info">
+
+                <div class="panel-body">
+                    <h3>10.567</h3>
+                </div>
+                <div class="panel-heading" style="font-style: inherit">ONE-WAY NOVOS</div>
+            </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6" style="text-align: center">
+            <div class="panel panel-info">
+
+                <div class="panel-body">
+                    <h3>10.567</h3>
+                </div>
+                <div class="panel-heading" style="font-style: inherit">PBR USADOS</div>
+            </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6" style="text-align: center">
+            <div class="panel panel-info">
+
+                <div class="panel-body">
+                    <h3>10.567</h3>
+                </div>
+                <div class="panel-heading" style="font-style: inherit">ONE-WAY USADOS</div>
+            </div>
+        </div>
+    </div>
+
+    <h4>Registro de Carga e Descarga</h4>
+
+    <div class="row">
+        <div class="col-md-12 col-sm-12">
+            <div class="panel panel-info" style="border: unset">
+                <div class="panel-heading">FILA DE CARGA DESCARGA</div>
+                <br />
+                <div class="table">
+                    <%--Tabela com os produtos cadastrados--%>
+                    <asp:GridView ID="grid_carregamentos" ClientIDMode="Static" AllowPaging="True" AllowSorting="True" CssClass="tablesaw table-striped table-hover table-bordered table" AutoGenerateColumns="False" runat="server">
+
+                        <Columns>
+
+                            <asp:TemplateField HeaderText="Cod." ItemStyle-Width="5%">
+                                <ItemTemplate><%#Eval("CodHist") %> </ItemTemplate>
+                                <ItemStyle Width="5%"></ItemStyle>
+                            </asp:TemplateField>
+
+                            <asp:TemplateField HeaderText="Registro" ItemStyle-Width="15%">
+                                <ItemTemplate><%#Eval("DtaRegistro") %> </ItemTemplate>
+                                <ItemStyle Width="15%"></ItemStyle>
+                            </asp:TemplateField>
+
+                            <asp:TemplateField HeaderText="Origem / Destino" ItemStyle-Width="30%">
+                                <ItemTemplate><%#Eval("DesOrigemDestino") %> </ItemTemplate>
+
+                                <ItemStyle Width="30%"></ItemStyle>
+                            </asp:TemplateField>
+
+                            <asp:TemplateField HeaderText="Transportadora" ItemStyle-Width="15%">
+                                <ItemTemplate><%#Eval("DesTransportadora") %> </ItemTemplate>
+
+                                <ItemStyle Width="15%"></ItemStyle>
+                            </asp:TemplateField>
+
+                            <asp:TemplateField HeaderText="Placa" ItemStyle-Width="15%">
+                                <ItemTemplate><%#Eval("DesPlaca1") %> </ItemTemplate>
+
+                                <ItemStyle Width="15%"></ItemStyle>
+                            </asp:TemplateField>
+
+                            <asp:TemplateField HeaderText="Tipo" ItemStyle-Width="10%">
+                                <ItemTemplate><%#Eval("DesTipo") %> </ItemTemplate>
+
+                                <ItemStyle Width="10%"></ItemStyle>
+                            </asp:TemplateField>
+
+                            <asp:HyperLinkField ItemStyle-Width="20%" DataNavigateUrlFields="CodHist" DataNavigateUrlFormatString="~/Pages/CargaDescarga/IncluirHistCarga.aspx?Cod={0}" HeaderText="Editar" Text="Atualizar" />
+
+                        </Columns>
+
+                    </asp:GridView>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <h4>Histórico de Entrada e Saída de Pallets</h4>
+
+    <div class="row">
+
+        <div class="col-md-12 col-sm-12" style="text-align: center">
+            <div class="panel panel-info">
+                <div class="panel-heading">ÚLTIMOS LANÇAMENTOS</div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <%--<div class="jumbotron">
         <h1>ASP.NET</h1>
         <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
         <p><a href="http://www.asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
@@ -37,6 +156,5 @@
                 <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301950">Learn more &raquo;</a>
             </p>
         </div>
-    </div>
-
+    </div>--%>
 </asp:Content>

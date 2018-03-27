@@ -3,9 +3,6 @@
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
-        txt_conta.Value = "luizhst"
-        txt_senha.Value = "123"
-
     End Sub
 
     Protected Sub btn_logar_Click(sender As Object, e As EventArgs)

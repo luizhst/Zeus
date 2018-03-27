@@ -6,20 +6,23 @@
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As EventArgs) Handles Me.Load
 
-        If Not IsNothing(Session("Usuario")) Then
+        If Not IsPostBack Then
 
-            Usuario = Session("Usuario").ToString
-            CodUsuario = Session("CodUsuario").ToString
 
-            lblBemVindo.InnerText = "Bem vindo(a), " & Usuario
+            If Not IsNothing(Session("Usuario")) Then
 
-        Else
+                Usuario = Session("Usuario").ToString
+                CodUsuario = Session("CodUsuario").ToString
 
-            Response.Redirect("~/Pages/Sair.aspx")
+                lblBemVindo.InnerText = "Bem vindo(a), " & Usuario
+
+            Else
+
+                Response.Redirect("~/Pages/Sair.aspx")
+
+            End If
 
         End If
-
-
 
     End Sub
 End Class
