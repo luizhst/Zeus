@@ -110,4 +110,24 @@
         End Set
     End Property
 
+    Private _DesNotaFiscal As String
+    Public Property DesNotaFiscal() As String
+        Get
+            Return _DesNotaFiscal
+        End Get
+        Set(ByVal value As String)
+            _DesNotaFiscal = value
+        End Set
+    End Property
+
+    Private _DesPedidoCompra As String
+    Public Property DesPedidoCompra() As String
+        Get
+            Return _DesPedidoCompra
+        End Get
+        Set(ByVal value As String)
+            _DesPedidoCompra = value
+        End Set
+    End Property
+
 End Class

@@ -3,8 +3,15 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <br />
-    <h3>Dashboard Principal</h3>
-    <br />
+    <div class="row">
+        <div class="col-md-12 col-sm-12">
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    <h3>DASHBOARD SERVALE PALLETS</h3>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="row">
         <div class="col-md-3 col-sm-6" style="text-align: center">
@@ -47,14 +54,13 @@
             </div>
         </div>
     </div>
-
-    <h4>Registro de Carga e Descarga</h4>
+    <hr />
 
     <div class="row">
         <div class="col-md-12 col-sm-12">
             <div class="panel panel-info" style="border: unset">
-                <div class="panel-heading">FILA DE CARGA DESCARGA</div>
-                <br />
+                <div class="panel-heading">FILA DE ESPERA CARGA DESCARGA</div>
+
                 <div class="table">
                     <%--Tabela com os produtos cadastrados--%>
                     <asp:GridView ID="grid_carregamentos" ClientIDMode="Static" AllowPaging="True" AllowSorting="True" CssClass="tablesaw table-striped table-hover table-bordered table" AutoGenerateColumns="False" runat="server">
@@ -71,27 +77,33 @@
                                 <ItemStyle Width="15%"></ItemStyle>
                             </asp:TemplateField>
 
+                            <asp:TemplateField HeaderText="Nota Fiscal" ItemStyle-Width="10%">
+                                <ItemTemplate><%#Eval("DesNotaFiscal") %> </ItemTemplate>
+                                <ItemStyle Width="10%"></ItemStyle>
+                            </asp:TemplateField>
+                            
+                            <asp:TemplateField HeaderText="Pedido Compra" ItemStyle-Width="15%">
+                                <ItemTemplate><%#Eval("DesPedidoCompra") %> </ItemTemplate>
+                                <ItemStyle Width="15%"></ItemStyle>
+                            </asp:TemplateField>
+
                             <asp:TemplateField HeaderText="Origem / Destino" ItemStyle-Width="30%">
                                 <ItemTemplate><%#Eval("DesOrigemDestino") %> </ItemTemplate>
-
                                 <ItemStyle Width="30%"></ItemStyle>
                             </asp:TemplateField>
 
                             <asp:TemplateField HeaderText="Transportadora" ItemStyle-Width="15%">
                                 <ItemTemplate><%#Eval("DesTransportadora") %> </ItemTemplate>
-
                                 <ItemStyle Width="15%"></ItemStyle>
                             </asp:TemplateField>
 
                             <asp:TemplateField HeaderText="Placa" ItemStyle-Width="15%">
                                 <ItemTemplate><%#Eval("DesPlaca1") %> </ItemTemplate>
-
                                 <ItemStyle Width="15%"></ItemStyle>
                             </asp:TemplateField>
 
                             <asp:TemplateField HeaderText="Tipo" ItemStyle-Width="10%">
                                 <ItemTemplate><%#Eval("DesTipo") %> </ItemTemplate>
-
                                 <ItemStyle Width="10%"></ItemStyle>
                             </asp:TemplateField>
 
@@ -103,9 +115,13 @@
                 </div>
             </div>
 
+            <a class="btn btn-success" href="../Pages/CargaDescarga/IncluirHistCarga.aspx">Registrar Novo Carregamento</a>
+
         </div>
 
     </div>
+
+    <hr />
 
     <h4>Histórico de Entrada e Saída de Pallets</h4>
 

@@ -1,6 +1,9 @@
 ﻿Public Class Acesso
     Inherits System.Web.UI.Page
 
+    Private ReadOnly Log As log4net.ILog = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
+
+
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
     End Sub
@@ -12,11 +15,14 @@
 
         Try
 
+            Log.Debug("Tentativa de login. Usuário: " & txt_conta.Value)
             Usuario = Biz.LogarSistema(txt_conta.Value.ToString.Trim(), txt_senha.Value.ToString.Trim())
 
             If Not IsNothing(Usuario) Then
 
                 If Usuario.FlgAtivo Then
+
+                    Log.Debug("Login realizado com sucesso.")
 
                     Session("Usuario") = Usuario.Nome
                     Session("CodUsuario") = Usuario.CodUsuario
@@ -25,23 +31,22 @@
                 Else
 
                     lblMensagem.Text = "Usuário inativo, procure um administrador!"
+                    Log.Debug(lblMensagem.Text)
 
                 End If
 
             Else
 
                 lblMensagem.Text = "Usuário e/ou Senha não encontrados no banco de dados!"
+                Log.Debug(lblMensagem.Text)
 
             End If
         Catch ex As Exception
 
             lblMensagem.Text = ex.Message.ToString()
+            Log.Debug(lblMensagem.Text)
 
         End Try
-
-
-
-
 
     End Sub
 End Class

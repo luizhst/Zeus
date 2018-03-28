@@ -10,16 +10,17 @@ Imports System.Web.SessionState
 Public Class Tbl_Hist_CargaBIZ
 
     Private DAO As New Tbl_Hist_CargaDAO
+    Private ReadOnly Log As log4net.ILog = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
 
     Friend Function ListarCarregamentos() As List(Of Tbl_Hist_Carga)
 
-        Return DAO.List("SELECT * FROM dbo.TBL_HIST_CARGA ORDER BY DtaRegistro DESC").ToList()
+        Return DAO.List("SELECT * FROM dbo.TBL_HIST_CARGA ORDER BY DtaRegistro").ToList()
 
     End Function
 
     Friend Function ListarCarregamentosPendentes() As List(Of Tbl_Hist_Carga)
 
-        Return DAO.List("SELECT * FROM dbo.TBL_HIST_CARGA WHERE FlgLiberado = 'False' ORDER BY DtaRegistro DESC").ToList()
+        Return DAO.List("SELECT * FROM dbo.TBL_HIST_CARGA WHERE FlgLiberado = 'False' ORDER BY DtaRegistro").ToList()
 
     End Function
 
@@ -40,7 +41,7 @@ Public Class Tbl_Hist_CargaBIZ
 
         Catch ex As Exception
 
-            Throw ex
+            Log.Fatal(ex.Message)
 
         End Try
 

@@ -4,6 +4,7 @@ Imports System.Text
 Public Class Tbl_UsuarioDAO
 
     Private DB As New Connection
+    Private ReadOnly Log As log4net.ILog = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
 
     Public Sub Insert(ByVal Item As Tbl_Usuario)
 
@@ -33,7 +34,7 @@ Public Class Tbl_UsuarioDAO
 
         Catch ex As Exception
 
-            Throw ex
+            Log.Fatal(ex.Message)
 
         Finally
 
@@ -74,7 +75,7 @@ Public Class Tbl_UsuarioDAO
 
         Catch ex As Exception
 
-            Throw ex
+            Log.Fatal(ex.Message)
 
         Finally
 
@@ -125,7 +126,7 @@ Public Class Tbl_UsuarioDAO
 
         Catch ex As Exception
 
-            Throw ex
+            Log.Fatal(ex.Message)
 
         Finally
 

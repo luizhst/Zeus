@@ -19,77 +19,78 @@
 </head>
 <body>
     <form runat="server">
-        <asp:ScriptManager runat="server">
-            <Scripts>
-                <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
-                <%--Framework Scripts--%>
-                <asp:ScriptReference Name="MsAjaxBundle" />
-                <asp:ScriptReference Name="jquery" />
-                <asp:ScriptReference Name="bootstrap" />
-                <asp:ScriptReference Name="respond" />
-                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
-                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
-                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
-                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
-                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
-                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
-                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
-                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
-                <asp:ScriptReference Name="WebFormsBundle" />
-                <%--Site Scripts--%>
-            </Scripts>
-        </asp:ScriptManager>
+        <div class="container-login100">
+            <asp:ScriptManager runat="server">
+                <Scripts>
+                    <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                    <%--Framework Scripts--%>
+                    <asp:ScriptReference Name="MsAjaxBundle" />
+                    <asp:ScriptReference Name="jquery" />
+                    <asp:ScriptReference Name="bootstrap" />
+                    <asp:ScriptReference Name="respond" />
+                    <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                    <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                    <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                    <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                    <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                    <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                    <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                    <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                    <asp:ScriptReference Name="WebFormsBundle" />
+                    <%--Site Scripts--%>
+                </Scripts>
+            </asp:ScriptManager>
 
-        <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" runat="server" href="~/Pages/">Controle Zeus</a>
-                </div>
-                <div class="navbar-collapse collapse">
-                    <div runat="server" id="divMenu">
-                        <ul class="nav navbar-nav">
-                            <li><a runat="server" href="~/Pages/">Página inicial</a></li>
-                            <li class="dropdown">
-                                <a runat="server" href="~/Pages/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Lançamento<span class="caret"></span></a>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li><a runat="server" href="~/Pages/CargaDescarga/IncluirHistCarga.aspx">Carga e Descarga</a></li>
-                                    <%--<li class="divider"></li>--%>
-                                </ul>
-                            </li>
-                            <li><a runat="server" href="~/Pages/">Relatórios</a></li>
-                            <li class="dropdown">
-                                <a runat="server" href="~/Pages/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Cadastro<span class="caret"></span></a>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li><a runat="server" href="~/Pages/Usuarios/Usuarios.aspx">Usuários</a></li>
-                                    <li><a runat="server" href="~/Pages/">Transportadoras</a></li>
-                                    <li><a runat="server" href="~/Pages/">Veículos</a></li>
+            <div class="navbar navbar-inverse navbar-fixed-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" runat="server" href="~/Pages/">Controle Zeus</a>
+                    </div>
+                    <div class="navbar-collapse collapse">
+                        <div runat="server" id="divMenu">
+                            <ul class="nav navbar-nav">
+                                <li><a runat="server" href="~/Pages/">Página inicial</a></li>
+                                <li class="dropdown">
+                                    <a runat="server" href="~/Pages/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Lançamento<span class="caret"></span></a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a runat="server" href="~/Pages/CargaDescarga/IncluirHistCarga.aspx">Carga e Descarga</a></li>
+                                        <%--<li class="divider"></li>--%>
+                                    </ul>
+                                </li>
+                                <li><a runat="server" href="~/Pages/">Relatórios</a></li>
+                                <li class="dropdown">
+                                    <a runat="server" href="~/Pages/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Cadastro<span class="caret"></span></a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a runat="server" href="~/Pages/Usuarios/Usuarios.aspx">Usuários</a></li>
+                                        <li><a runat="server" href="~/Pages/">Transportadoras</a></li>
+                                        <li><a runat="server" href="~/Pages/">Veículos</a></li>
 
-                                    <%--<li class="divider"></li>--%>
-                                </ul>
-                            </li>
-                        </ul>
-                        <ul class="nav navbar-nav navbar-right">
-                            <li><a runat="server" id="lblBemVindo" href="~/Pages/"></a></li>
-                            <li><a runat="server" id="A1" href="~/Pages/Sair">Sair</a></li>
-                        </ul>
+                                        <%--<li class="divider"></li>--%>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a runat="server" id="lblBemVindo" href="~/Pages/"></a></li>
+                                <li><a runat="server" id="A1" href="~/Pages/Sair">Sair</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
+            <div class="container body-content">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                </asp:ContentPlaceHolder>
+                <hr />
+                <footer>
+                    <p>&copy; <%: DateTime.Now.Year %> - Controle Zeus</p>
+                </footer>
+            </div>
         </div>
-        <div class="container body-content">
-            <asp:ContentPlaceHolder ID="MainContent" runat="server">
-            </asp:ContentPlaceHolder>
-            <hr />
-            <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - Controle Zeus</p>
-            </footer>
-        </div>
-
     </form>
 </body>
 </html>

@@ -23,6 +23,24 @@ Partial Public Class IncluirHistCarga
     Protected WithEvents txt_cod_hist As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
+    '''Controle txt_notafiscal.
+    '''</summary>
+    '''<remarks>
+    '''Campo gerado automaticamente.
+    '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+    '''</remarks>
+    Protected WithEvents txt_notafiscal As Global.System.Web.UI.WebControls.TextBox
+    
+    '''<summary>
+    '''Controle txt_pedidocompra.
+    '''</summary>
+    '''<remarks>
+    '''Campo gerado automaticamente.
+    '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+    '''</remarks>
+    Protected WithEvents txt_pedidocompra As Global.System.Web.UI.WebControls.TextBox
+    
+    '''<summary>
     '''Controle txt_origem_destino.
     '''</summary>
     '''<remarks>

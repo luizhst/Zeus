@@ -5,7 +5,6 @@
     <div class="row">
         <br />
         <br />
-        <br />
         <div class="col-md-12">
             <div class="panel" style="box-shadow: unset">
 
@@ -65,7 +64,7 @@
 
                                 </asp:GridView>
 
-                                <a href="IncluirUsuario.aspx">Cadastrar Usuário</a>
+                                <a class="btn btn-success" href="IncluirUsuario.aspx">Cadastrar Usuário</a>
 
                             </div>
 

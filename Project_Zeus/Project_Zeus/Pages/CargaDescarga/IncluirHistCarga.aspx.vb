@@ -43,12 +43,9 @@
             Obj.DesPlaca1 = txt_placa1.Text
             Obj.DesPlaca2 = txt_placa2.Text
             Obj.DesPlaca3 = txt_placa3.Text
-
-            If drp_tipo.SelectedValue = "C" Then
-                Obj.DesTipo = "C"
-            Else
-                Obj.DesTipo = "D"
-            End If
+            Obj.DesNotaFiscal = txt_notafiscal.Text
+            Obj.DesPedidoCompra = txt_pedidocompra.Text
+            Obj.DesTipo = Convert.ToString(drp_tipo.SelectedValue)
 
             If drp_status.SelectedIndex = 0 Then
                 Obj.FlgLiberado = False
@@ -86,11 +83,13 @@
             txt_placa1.Text = Obj.DesPlaca1
             txt_placa2.Text = Obj.DesPlaca2
             txt_placa3.Text = Obj.DesPlaca3
+            txt_pedidocompra.Text = Obj.DesPedidoCompra
+            txt_notafiscal.Text = Obj.DesNotaFiscal
 
-            If Obj.DesTipo = "C" Then
-                drp_tipo.SelectedValue = "C"
+            If Obj.DesTipo = "Carregar" Then
+                drp_tipo.SelectedValue = "Carregar"
             Else
-                drp_tipo.SelectedValue = "D"
+                drp_tipo.SelectedValue = "Descarregar"
             End If
 
             If Obj.FlgLiberado = True Then
@@ -119,6 +118,8 @@
         txt_registro.Text = ""
         txt_transportadora.Text = ""
         txt_update.Text = ""
+        txt_notafiscal.Text = ""
+        txt_pedidocompra.Text = ""
         drp_status.SelectedIndex = -1
         drp_tipo.SelectedIndex = -1
 

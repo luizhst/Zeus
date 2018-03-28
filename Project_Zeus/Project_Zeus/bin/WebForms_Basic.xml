@@ -99,6 +99,24 @@ Campo gerado automaticamente.
 Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
 </remarks>
 </member>
+<member name="F:Project_Zeus.IncluirHistCarga._txt_notafiscal">
+<summary>
+Controle txt_notafiscal.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:Project_Zeus.IncluirHistCarga._txt_pedidocompra">
+<summary>
+Controle txt_pedidocompra.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
 <member name="F:Project_Zeus.IncluirHistCarga._txt_origem_destino">
 <summary>
 Controle txt_origem_destino.

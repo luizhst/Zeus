@@ -3,6 +3,8 @@ Imports System.Text
 
 Public Class Tbl_Hist_CargaDAO
 
+
+    Private ReadOnly Log As log4net.ILog = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
     Private DB As New Connection
 
     Public Sub Insert(ByVal Item As Tbl_Hist_Carga)
@@ -13,8 +15,8 @@ Public Class Tbl_Hist_CargaDAO
         Dim Sql As New StringBuilder
 
 
-        Sql.Append("INSERT INTO dbo.TBL_HIST_CARGA (DtaRegistro, DtaAtualizacao, DesOrigemDestino, DesMotorista, DesTransportadora, DesPlaca1, DesPlaca2, DesPlaca3, DesTipo, FlgLiberado) VALUES " &
-                                               "(@DtaRegistro, @DtaAtualizacao, @DesOrigemDestino, @DesMotorista, @DesTransportadora, @DesPlaca1, @DesPlaca2, @DesPlaca3, @DesTipo, @FlgLiberado)")
+        Sql.Append("INSERT INTO dbo.TBL_HIST_CARGA (DtaRegistro, DtaAtualizacao, DesOrigemDestino, DesMotorista, DesTransportadora, DesPlaca1, DesPlaca2, DesPlaca3, DesTipo, FlgLiberado, DesNotaFiscal, DesPedidoCompra) VALUES " &
+                                               "(@DtaRegistro, @DtaAtualizacao, @DesOrigemDestino, @DesMotorista, @DesTransportadora, @DesPlaca1, @DesPlaca2, @DesPlaca3, @DesTipo, @FlgLiberado, @DesNotaFiscal, @DesPedidoCompra)")
 
         Try
 
@@ -32,12 +34,14 @@ Public Class Tbl_Hist_CargaDAO
             Comando.Parameters.AddWithValue("@DesPlaca3", Item.DesPlaca3)
             Comando.Parameters.AddWithValue("@DesTipo", Item.DesTipo)
             Comando.Parameters.AddWithValue("@FlgLiberado", Item.FlgLiberado)
+            Comando.Parameters.AddWithValue("@DesNotaFiscal", Item.DesNotaFiscal)
+            Comando.Parameters.AddWithValue("@DesPedidoCompra", Item.DesPedidoCompra)
 
             Comando.ExecuteNonQuery()
 
         Catch ex As Exception
 
-            Throw ex
+            Log.Fatal(ex.Message)
 
         Finally
 
@@ -58,7 +62,7 @@ Public Class Tbl_Hist_CargaDAO
 
         Sql.Append("UPDATE dbo.TBL_HIST_CARGA SET DtaRegistro = @DtaRegistro, DtaAtualizacao = @DtaAtualizacao, DesOrigemDestino = @DesOrigemDestino, DesMotorista = @DesMotorista, " &
                    "DesTransportadora = @DesTransportadora, DesPlaca1 = @DesPlaca1, DesPlaca2 = @DesPlaca2, DesPlaca3 = @DesPlaca3, " &
-                   "DesTipo = @DesTipo, FlgLiberado = @FlgLiberado WHERE CodHist = @CodHist")
+                   "DesTipo = @DesTipo, FlgLiberado = @FlgLiberado, DesPedidoCompra = @DesPedidoCompra, DesNotaFiscal = @DesNotaFiscal  WHERE CodHist = @CodHist")
 
         Try
 
@@ -77,12 +81,14 @@ Public Class Tbl_Hist_CargaDAO
             Comando.Parameters.AddWithValue("@DesPlaca3", Item.DesPlaca3)
             Comando.Parameters.AddWithValue("@DesTipo", Item.DesTipo)
             Comando.Parameters.AddWithValue("@FlgLiberado", Item.FlgLiberado)
+            Comando.Parameters.AddWithValue("@DesPedidoCompra", Item.DesPedidoCompra)
+            Comando.Parameters.AddWithValue("@DesNotaFiscal", Item.DesNotaFiscal)
 
             Comando.ExecuteNonQuery()
 
         Catch ex As Exception
 
-            Throw ex
+            Log.Fatal(ex.Message)
 
         Finally
 
@@ -129,6 +135,8 @@ Public Class Tbl_Hist_CargaDAO
                     Item.DesPlaca3 = Reader("DesPlaca3").ToString
                     Item.DesTipo = Reader("DesTipo").ToString
                     Item.FlgLiberado = Reader("FlgLiberado")
+                    Item.DesPedidoCompra = Reader("DesPedidoCompra").ToString
+                    Item.DesNotaFiscal = Reader("DesNotaFiscal").ToString
 
                     Lista.Add(Item)
 
@@ -138,7 +146,7 @@ Public Class Tbl_Hist_CargaDAO
 
         Catch ex As Exception
 
-            Throw ex
+            Log.Fatal(ex.Message)
 
         Finally
 
