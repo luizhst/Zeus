@@ -207,6 +207,7 @@
     <Content Include="Pages\Acesso.aspx" />
     <Content Include="Content\Site.css" />
     <Content Include="Pages\CargaDescarga\IncluirHistCarga.aspx" />
+    <Content Include="Pages\Controle\InserirControleUsados.aspx" />
     <Content Include="Pages\Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
@@ -363,6 +364,13 @@
     </Compile>
     <Compile Include="Pages\CargaDescarga\IncluirHistCarga.aspx.vb">
       <DependentUpon>IncluirHistCarga.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Controle\InserirControleUsados.aspx.designer.vb">
+      <DependentUpon>InserirControleUsados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Controle\InserirControleUsados.aspx.vb">
+      <DependentUpon>InserirControleUsados.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Pages\Default.aspx.vb">

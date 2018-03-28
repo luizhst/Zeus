@@ -15,7 +15,9 @@
                         <div class="form-body">
                             <h3 class="box-title">Registrar entrada de carregamento</h3>
 
-                            <hr>
+                            <br />
+                            <h4>Dados do carregamento</h4>
+                            <hr />
 
                             <div class="row">
                                 <div class="col-md-3">
@@ -30,7 +32,7 @@
                                 <div class="col-md-3">
                                     <div class="form-group">
                                         <label class="control-label ">Nota Fiscal</label>
-                                        <asp:TextBox runat="server"  MaxLength="50" ClientIDMode="Static" ID="txt_notafiscal" CssClass="form-control"></asp:TextBox>
+                                        <asp:TextBox runat="server" MaxLength="50" ClientIDMode="Static" ID="txt_notafiscal" CssClass="form-control"></asp:TextBox>
                                         <span class="help-block"></span>
                                     </div>
                                 </div>
@@ -116,6 +118,10 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <br />
+                            <h4>Dados complementares</h4>
+                            <hr />
 
                             <div class="row">
                                 <div class="col-md-3">

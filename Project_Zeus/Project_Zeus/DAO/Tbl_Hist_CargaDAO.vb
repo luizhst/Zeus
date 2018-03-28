@@ -15,8 +15,10 @@ Public Class Tbl_Hist_CargaDAO
         Dim Sql As New StringBuilder
 
 
-        Sql.Append("INSERT INTO dbo.TBL_HIST_CARGA (DtaRegistro, DtaAtualizacao, DesOrigemDestino, DesMotorista, DesTransportadora, DesPlaca1, DesPlaca2, DesPlaca3, DesTipo, FlgLiberado, DesNotaFiscal, DesPedidoCompra) VALUES " &
-                                               "(@DtaRegistro, @DtaAtualizacao, @DesOrigemDestino, @DesMotorista, @DesTransportadora, @DesPlaca1, @DesPlaca2, @DesPlaca3, @DesTipo, @FlgLiberado, @DesNotaFiscal, @DesPedidoCompra)")
+        Sql.Append("INSERT INTO dbo.TBL_HIST_CARGA (DtaRegistro, DtaAtualizacao, DesOrigemDestino, DesMotorista, DesTransportadora, " &
+                                                   "DesPlaca1, DesPlaca2, DesPlaca3, DesTipo, FlgLiberado, DesNotaFiscal, DesPedidoCompra) VALUES " &
+                                                   "(@DtaRegistro, @DtaAtualizacao, @DesOrigemDestino, @DesMotorista, @DesTransportadora, " &
+                                                   "@DesPlaca1, @DesPlaca2, @DesPlaca3, @DesTipo, @FlgLiberado, @DesNotaFiscal, @DesPedidoCompra)")
 
         Try
 
