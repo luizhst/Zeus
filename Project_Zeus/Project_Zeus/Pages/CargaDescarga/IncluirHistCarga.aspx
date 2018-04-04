@@ -13,10 +13,10 @@
                     <div class="panel-body">
 
                         <div class="form-body">
-                            <h3 class="box-title">Registrar entrada de carregamento</h3>
+                            <h3 class="box-title">Registrar entrada de carregamento/descarregamento</h3>
 
                             <br />
-                            <h4>Dados do carregamento</h4>
+                            <%--<h4>Dados</h4>--%>
                             <hr />
 
                             <div class="row">
@@ -29,6 +29,15 @@
                             </div>
 
                             <div class="row">
+
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label class="control-label ">Data da Nota</label>
+                                        <asp:TextBox runat="server" ID="txt_data_nota" CssClass="form-control" TextMode="Date"></asp:TextBox>
+                                        <span class="help-block"></span>
+                                    </div>
+                                </div>
+
                                 <div class="col-md-3">
                                     <div class="form-group">
                                         <label class="control-label ">Nota Fiscal</label>
@@ -76,7 +85,7 @@
                                 <div class="col-md-3">
                                     <div class="form-group">
                                         <label class="control-label ">Placa 1</label>
-                                        <asp:TextBox runat="server" required="true" MaxLength="50" ClientIDMode="Static" ID="txt_placa1" CssClass="form-control"></asp:TextBox>
+                                        <asp:TextBox runat="server" required="true" MaxLength="8" ClientIDMode="Static" ID="txt_placa1" CssClass="form-control"></asp:TextBox>
                                         <span class="help-block"></span>
                                     </div>
                                 </div>
@@ -84,7 +93,7 @@
                                 <div class="col-md-3">
                                     <div class="form-group">
                                         <label class="control-label ">Placa 2</label>
-                                        <asp:TextBox runat="server" MaxLength="50" ClientIDMode="Static" ID="txt_placa2" CssClass="form-control"></asp:TextBox>
+                                        <asp:TextBox runat="server" MaxLength="8" ClientIDMode="Static" ID="txt_placa2" CssClass="form-control"></asp:TextBox>
                                         <span class="help-block"></span>
                                     </div>
                                 </div>
@@ -92,7 +101,7 @@
                                 <div class="col-md-3">
                                     <div class="form-group">
                                         <label class="control-label">Placa 3</label>
-                                        <asp:TextBox runat="server" MaxLength="50" ClientIDMode="Static" ID="txt_placa3" CssClass="form-control"></asp:TextBox>
+                                        <asp:TextBox runat="server" MaxLength="8" ClientIDMode="Static" ID="txt_placa3" CssClass="form-control"></asp:TextBox>
                                         <span class="help-block"></span>
                                     </div>
                                 </div>

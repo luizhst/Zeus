@@ -1,12 +1,12 @@
 ﻿Imports System.Data.SqlClient
 Imports System.Text
 
-Public Class Tbl_Ctrl_UsadoDAO
+Public Class Tbl_Entrada_UsadoDAO
 
     Private DB As New Connection
     Private ReadOnly Log As log4net.ILog = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
 
-    Public Sub Insert(ByVal Item As Tbl_Ctrl_Usado)
+    Public Sub Insert(ByVal Item As Tbl_Entrada_Usado)
 
         Dim Conexao As New SqlConnection
         Dim Comando As New SqlCommand
@@ -14,11 +14,11 @@ Public Class Tbl_Ctrl_UsadoDAO
         Dim Sql As New StringBuilder
 
 
-        Sql.Append("INSERT INTO dbo.TBL_CTRL_USADOS (CodHist, DtaRegistro, DtaNotaFiscal, DesNotaFiscal, DesCnpj, DesOrigemDestino, " &
+        Sql.Append("INSERT INTO dbo.TBL_ENTRADA_USADOS (DtaRegistro, DtaNotaFiscal, DesNotaFiscal, DesCnpj, DesOrigemDestino, " &
                                                     "DesProduto, QtdeTotal, QtdeFpq, DesPercentualSucata, QtdeSucata, QtdeTotalLiquido, " &
                                                     "QtdeDisponivel, FlgFaturadoSucata, FlgFaturadoFPQ, DesTipoRegistro, DesUsuarioRegistro) " &
                                                     "VALUES " &
-                                                    "(@CodHist, @DtaRegistro, @DtaNotaFiscal, @DesNotaFiscal, @DesCnpj, @DesOrigemDestino, " &
+                                                    "(@DtaRegistro, @DtaNotaFiscal, @DesNotaFiscal, @DesCnpj, @DesOrigemDestino, " &
                                                     "@DesProduto, @QtdeTotal, @QtdeFpq, @DesPercentualSucata, @QtdeSucata, @QtdeTotalLiquido, " &
                                                     "@QtdeDisponivel, @FlgFaturadoSucata, @FlgFaturadoFPQ, @DesTipoRegistro, @DesUsuarioRegistro)")
 
@@ -28,7 +28,6 @@ Public Class Tbl_Ctrl_UsadoDAO
             Comando.Connection = Conexao
             Comando.CommandText = Sql.ToString()
 
-            Comando.Parameters.AddWithValue("@CodHist", Item.HistCarga.CodHist)
             Comando.Parameters.AddWithValue("@DtaRegistro", Item.DtaRegistro)
             Comando.Parameters.AddWithValue("@DtaNotaFiscal", Item.DtaNotaFiscal)
             Comando.Parameters.AddWithValue("@DesNotaFiscal", Item.DesNotaFiscal)
@@ -64,14 +63,14 @@ Public Class Tbl_Ctrl_UsadoDAO
     End Sub
 
 
-    Public Sub Update(ByVal Item As Tbl_Ctrl_Usado)
+    Public Sub Update(ByVal Item As Tbl_Entrada_Usado)
 
         Dim Conexao As New SqlConnection
         Dim Comando As New SqlCommand
         Comando.CommandTimeout = 60
         Dim Sql As New StringBuilder
 
-        Sql.Append("UPDATE dbo.TBL_CTRL_USADOS SET CodHist = @CodHist, DtaRegistro = @DtaRegistro, DtaNotaFiscal = @DtaNotaFiscal, DesNotaFiscal = @DesNotaFiscal, " &
+        Sql.Append("UPDATE dbo.TBL_ENTRADA_USADOS SET DtaRegistro = @DtaRegistro, DtaNotaFiscal = @DtaNotaFiscal, DesNotaFiscal = @DesNotaFiscal, " &
                                                   "DesCnpj = @DesCnpj, DesOrigemDestino = @DesOrigemDestino, DesProduto = @DesProduto, QtdeTotal = @QtdeTotal, " &
                                                   "QtdeFpq = @QtdeFpq, DesPercentualSucata = @DesPercentualSucata, QtdeSucata = @QtdeSucata, QtdeTotalLiquido = @QtdeTotalLiquido, " &
                                                   "QtdeDisponivel = @QtdeDisponivel, FlgFaturadoSucata = @FlgFaturadoSucata, FlgFaturadoFPQ = @FlgFaturadoFPQ, " &
@@ -84,7 +83,6 @@ Public Class Tbl_Ctrl_UsadoDAO
             Comando.Connection = Conexao
             Comando.CommandText = Sql.ToString()
 
-            Comando.Parameters.AddWithValue("@CodHist", Item.HistCarga.CodHist)
             Comando.Parameters.AddWithValue("@DtaRegistro", Item.DtaRegistro)
             Comando.Parameters.AddWithValue("@DtaNotaFiscal", Item.DtaNotaFiscal)
             Comando.Parameters.AddWithValue("@DesNotaFiscal", Item.DesNotaFiscal)
@@ -120,10 +118,10 @@ Public Class Tbl_Ctrl_UsadoDAO
 
     End Sub
 
-    Public Function List(ByVal Sql As String) As List(Of Tbl_Ctrl_Usado)
+    Public Function List(ByVal Sql As String) As List(Of Tbl_Entrada_Usado)
 
-        Dim Lista As New List(Of Tbl_Ctrl_Usado)
-        Dim Item As New Tbl_Ctrl_Usado
+        Dim Lista As New List(Of Tbl_Entrada_Usado)
+        Dim Item As New Tbl_Entrada_Usado
         Dim Conexao As New SqlConnection
         Dim Comando As New SqlCommand
         Comando.CommandTimeout = 60
@@ -142,11 +140,9 @@ Public Class Tbl_Ctrl_UsadoDAO
 
                 While (Reader.Read())
 
-                    Item = New Tbl_Ctrl_Usado
-                    Item.HistCarga = New Tbl_Hist_Carga
+                    Item = New Tbl_Entrada_Usado
 
                     Item.CodCtrl = Reader("CodCtrl")
-                    Item.HistCarga.CodHist = Reader("CodHist")
                     Item.DtaRegistro = Reader("DtaRegistro")
                     Item.DtaNotaFiscal = Reader("DtaNotaFiscal").ToString
                     Item.DesNotaFiscal = Reader("DesNotaFiscal").ToString

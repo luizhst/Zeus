@@ -99,6 +99,15 @@ Campo gerado automaticamente.
 Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
 </remarks>
 </member>
+<member name="F:Project_Zeus.IncluirHistCarga._txt_data_nota">
+<summary>
+Controle txt_data_nota.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
 <member name="F:Project_Zeus.IncluirHistCarga._txt_notafiscal">
 <summary>
 Controle txt_notafiscal.
@@ -216,6 +225,15 @@ Campo gerado automaticamente.
 Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
 </remarks>
 </member>
+<member name="F:Project_Zeus.InserirControleUsados._UpdatePanel1">
+<summary>
+Controle UpdatePanel1.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
 <member name="F:Project_Zeus.InserirControleUsados._txt_cod">
 <summary>
 Controle txt_cod.
@@ -234,15 +252,6 @@ Campo gerado automaticamente.
 Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
 </remarks>
 </member>
-<member name="F:Project_Zeus.InserirControleUsados._txt_cnpj_nota">
-<summary>
-Controle txt_cnpj_nota.
-</summary>
-<remarks>
-Campo gerado automaticamente.
-Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-</remarks>
-</member>
 <member name="F:Project_Zeus.InserirControleUsados._txt_dta_notafiscal">
 <summary>
 Controle txt_dta_notafiscal.
@@ -252,9 +261,18 @@ Campo gerado automaticamente.
 Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
 </remarks>
 </member>
-<member name="F:Project_Zeus.InserirControleUsados._DropDownList2">
+<member name="F:Project_Zeus.InserirControleUsados._drp_tipo">
 <summary>
-Controle DropDownList2.
+Controle drp_tipo.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:Project_Zeus.InserirControleUsados._txt_cnpj_nota">
+<summary>
+Controle txt_cnpj_nota.
 </summary>
 <remarks>
 Campo gerado automaticamente.
@@ -270,9 +288,9 @@ Campo gerado automaticamente.
 Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
 </remarks>
 </member>
-<member name="F:Project_Zeus.InserirControleUsados._DropDownList1">
+<member name="F:Project_Zeus.InserirControleUsados._drp_produto">
 <summary>
-Controle DropDownList1.
+Controle drp_produto.
 </summary>
 <remarks>
 Campo gerado automaticamente.
@@ -372,6 +390,24 @@ Modificar a declaração do campo de movimento do arquivo de designer para o arq
 <member name="F:Project_Zeus.InserirControleUsados._btn_registrar">
 <summary>
 Controle btn_registrar.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:Project_Zeus.NotasPendentesUsados._grid_notas_usadas">
+<summary>
+Controle grid_notas_usadas.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:Project_Zeus.NotasPendentesUsados._lb_mensagem">
+<summary>
+Controle lb_mensagem.
 </summary>
 <remarks>
 Campo gerado automaticamente.

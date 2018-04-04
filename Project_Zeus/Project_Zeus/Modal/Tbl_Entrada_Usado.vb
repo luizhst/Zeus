@@ -1,4 +1,4 @@
-﻿Public Class Tbl_Ctrl_Usado
+﻿Public Class Tbl_Entrada_Usado
 
 
     Private _CodCtrl As Integer
@@ -8,16 +8,6 @@
         End Get
         Set(ByVal value As Integer)
             _CodCtrl = value
-        End Set
-    End Property
-
-    Private _HistCarga As Tbl_Hist_Carga
-    Public Property HistCarga() As Tbl_Hist_Carga
-        Get
-            Return _HistCarga
-        End Get
-        Set(ByVal value As Tbl_Hist_Carga)
-            _HistCarga = value
         End Set
     End Property
 

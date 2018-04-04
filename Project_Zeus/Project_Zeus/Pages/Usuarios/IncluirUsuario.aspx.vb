@@ -6,39 +6,30 @@
     Private _EditarUsuario As String
 
 
+    Private ReadOnly Log As log4net.ILog = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
     Private Biz As New Tbl_UsuarioBIZ
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
         Try
 
-            Try
+            _Usuario = Session("Usuario").ToString
 
-                _Usuario = Session("Usuario").ToString
+            If IsNothing(_Usuario) Then
+                Response.Redirect("~/Pages/Sair.aspx")
+            End If
 
-                If IsNothing(_Usuario) Then
-                    Response.Redirect("~/Pages/Sair.aspx")
+            If Not IsPostBack() Then
+                If Not IsNothing(Request.QueryString("Cod")) Then
+                    _EditarUsuario = Request.QueryString("Cod")
+                    GetUsuario(_EditarUsuario)
+                    btn_registrar.Text = "Atualizar"
                 End If
-
-                If Not IsPostBack() Then
-                    If Not IsNothing(Request.QueryString("Cod")) Then
-                        _EditarUsuario = Request.QueryString("Cod")
-                        GetUsuario(_EditarUsuario)
-                        btn_registrar.Text = "Atualizar"
-                    End If
-                End If
-
-
-
-
-            Catch ex As Exception
-
-                Throw ex
-
-            End Try
-
+            End If
 
         Catch ex As Exception
+
+            Log.Fatal(ex.Message)
 
         End Try
 
@@ -68,7 +59,7 @@
 
         Catch ex As Exception
 
-            Throw ex
+            Log.Fatal(ex.Message)
 
         End Try
 
@@ -101,7 +92,7 @@
         Catch ex As Exception
 
             'Erro
-            Throw ex
+            Log.Fatal(ex.Message)
 
         End Try
 

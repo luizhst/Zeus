@@ -208,6 +208,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Pages\CargaDescarga\IncluirHistCarga.aspx" />
     <Content Include="Pages\Controle\InserirControleUsados.aspx" />
+    <Content Include="Pages\Controle\NotasPendentesUsados.aspx" />
     <Content Include="Pages\Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
@@ -342,14 +343,14 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.vb" />
     <Compile Include="App_Start\RouteConfig.vb" />
-    <Compile Include="BIZ\Tbl_Ctrl_UsadoBIZ.vb" />
+    <Compile Include="BIZ\Tbl_Entrada_UsadosBIZ.vb" />
     <Compile Include="BIZ\Tbl_Hist_CargaBIZ.vb" />
     <Compile Include="BIZ\Tbl_UsuarioBIZ.vb" />
     <Compile Include="Conection\Connection.vb" />
-    <Compile Include="DAO\Tbl_Ctrl_UsadoDAO.vb" />
+    <Compile Include="DAO\Tbl_Entrada_UsadoDAO.vb" />
     <Compile Include="DAO\Tbl_Hist_CargaDAO.vb" />
     <Compile Include="DAO\Tbl_UsuarioDAO.vb" />
-    <Compile Include="Modal\Tbl_Ctrl_Usado.vb" />
+    <Compile Include="Modal\Tbl_Entrada_Usado.vb" />
     <Compile Include="Modal\Tbl_Hist_Carga.vb" />
     <Compile Include="Modal\Tbl_Usuario.vb" />
     <Compile Include="Pages\Acesso.aspx.designer.vb">
@@ -371,6 +372,13 @@
     </Compile>
     <Compile Include="Pages\Controle\InserirControleUsados.aspx.vb">
       <DependentUpon>InserirControleUsados.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Controle\NotasPendentesUsados.aspx.designer.vb">
+      <DependentUpon>NotasPendentesUsados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Controle\NotasPendentesUsados.aspx.vb">
+      <DependentUpon>NotasPendentesUsados.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Pages\Default.aspx.vb">

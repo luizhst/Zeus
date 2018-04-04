@@ -1,11 +1,17 @@
-﻿Public Class IncluirHistCarga
+﻿Imports Project_Zeus
+
+Public Class IncluirHistCarga
     Inherits System.Web.UI.Page
 
     Private _EditarCarga As String
 
-    Private Biz As New Tbl_Hist_CargaBIZ
+    Private ReadOnly Log As log4net.ILog = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
+    Private BizCarga As New Tbl_Hist_CargaBIZ
+    Private BizEntradaUsados As New Tbl_Entrada_UsadosBIZ
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+
+        txt_data_nota.Text = Format(Now, "yyyy-MM-dd")
 
         If Not IsPostBack Then
 
@@ -25,6 +31,67 @@
 
 
     Protected Sub btn_registrar_Click(sender As Object, e As EventArgs)
+
+        Dim ObjHstCarga As New Tbl_Hist_Carga
+        
+        Try
+
+            'Gera a parte de controle de entrada e saída de veículos (Fila de espera)
+            ObjHstCarga = GeraObjHistCarga()
+            BizCarga.InsertCarregamento(ObjHstCarga)
+
+            'Gera a partir do tipo do Objeto (Descarregamento) uma entrada pendente de nota fiscal de pallets usados.
+            If ObjHstCarga.DesTipo = "Descarregar" And ObjHstCarga.FlgLiberado = True Then
+                Dim ObjEntradaUsados As New Tbl_Entrada_Usado
+                ObjEntradaUsados = GerarEntradaUsados()
+                BizEntradaUsados.InsertEntradaUsados(ObjEntradaUsados)
+            End If
+
+            Response.Redirect("../Default.aspx")
+
+        Catch ex As Exception
+
+            Log.Fatal(ex.Message)
+
+        End Try
+
+    End Sub
+
+    Private Function GerarEntradaUsados() As Tbl_Entrada_Usado
+
+        Dim Obj As New Tbl_Entrada_Usado
+
+        Try
+
+            Obj.CodCtrl = "0"
+            Obj.DtaRegistro = Format(Now, "dd/MM/yyyy HH:mm:ss")
+            Obj.DtaNotaFiscal = CDate(txt_data_nota.Text)
+            Obj.DesNotaFiscal = txt_notafiscal.Text
+            Obj.DesOrigemDestino = txt_origem_destino.Text
+            Obj.DesTipoRegistro = "E"
+            Obj.DesUsuarioRegistro = Session("Usuario").ToString
+            Obj.DesCnpj = ""
+            Obj.DesPercentualSucata = ""
+            Obj.DesProduto = ""
+            Obj.FlgFaturadoFPQ = False
+            Obj.FlgFaturadoSucata = False
+            Obj.QtdeDisponivel = 0
+            Obj.QtdeFpq = 0
+            Obj.QtdeSucata = 0
+            Obj.QtdeTotal = 0
+            Obj.QtdeTotalLiquido = 0
+
+        Catch ex As Exception
+
+            Log.Fatal(ex.Message)
+
+        End Try
+
+        Return Obj
+
+    End Function
+
+    Public Function GeraObjHistCarga() As Tbl_Hist_Carga
 
         Dim Obj As New Tbl_Hist_Carga
 
@@ -53,17 +120,15 @@
                 Obj.FlgLiberado = True
             End If
 
-            Biz.InsertCarregamento(Obj)
-
-            Response.Redirect("../Default.aspx")
-
         Catch ex As Exception
 
-            Throw ex
+            Log.Fatal(ex.Message)
 
         End Try
 
-    End Sub
+        Return Obj
+
+    End Function
 
     Public Sub GetCarregamento(ByVal Cod As Integer)
 
@@ -72,7 +137,7 @@
 
         Try
 
-            Obj = Biz.GetCarregamentoById(Cod)
+            Obj = BizCarga.GetCarregamentoById(Cod)
 
             txt_cod_hist.Text = Obj.CodHist
             txt_registro.Text = Obj.DtaRegistro

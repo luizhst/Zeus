@@ -14,6 +14,15 @@ Option Explicit On
 Partial Public Class InserirControleUsados
     
     '''<summary>
+    '''Controle UpdatePanel1.
+    '''</summary>
+    '''<remarks>
+    '''Campo gerado automaticamente.
+    '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+    '''</remarks>
+    Protected WithEvents UpdatePanel1 As Global.System.Web.UI.UpdatePanel
+    
+    '''<summary>
     '''Controle txt_cod.
     '''</summary>
     '''<remarks>
@@ -41,13 +50,13 @@ Partial Public Class InserirControleUsados
     Protected WithEvents txt_dta_notafiscal As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
-    '''Controle DropDownList2.
+    '''Controle drp_tipo.
     '''</summary>
     '''<remarks>
     '''Campo gerado automaticamente.
     '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
     '''</remarks>
-    Protected WithEvents DropDownList2 As Global.System.Web.UI.WebControls.DropDownList
+    Protected WithEvents drp_tipo As Global.System.Web.UI.WebControls.DropDownList
     
     '''<summary>
     '''Controle txt_cnpj_nota.
@@ -68,13 +77,13 @@ Partial Public Class InserirControleUsados
     Protected WithEvents txt_origem_destino As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
-    '''Controle DropDownList1.
+    '''Controle drp_produto.
     '''</summary>
     '''<remarks>
     '''Campo gerado automaticamente.
     '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
     '''</remarks>
-    Protected WithEvents DropDownList1 As Global.System.Web.UI.WebControls.DropDownList
+    Protected WithEvents drp_produto As Global.System.Web.UI.WebControls.DropDownList
     
     '''<summary>
     '''Controle txt_qtde_total.

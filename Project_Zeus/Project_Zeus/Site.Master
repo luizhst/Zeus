@@ -59,7 +59,8 @@
                                     <a runat="server" href="~/Pages/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Lançamento<span class="caret"></span></a>
                                     <ul class="dropdown-menu" role="menu">
                                         <li><a runat="server" href="~/Pages/CargaDescarga/IncluirHistCarga.aspx">Carga e Descarga</a></li>
-                                        <li><a runat="server" href="~/Pages/Controle/InserirControleUsados.aspx">Nota Fiscal</a></li>
+                                        <li><a runat="server" href="~/Pages/Controle/NotasPendentesUsados.aspx">Entrada de Usados Pendentes</a></li>
+                                        <%--<li><a runat="server" href="~/Pages/Controle/InserirControleUsados.aspx">Entrada de Usados Pendentes</a></li>--%>
                                         <%--<li class="divider"></li>--%>
                                     </ul>
                                 </li>
