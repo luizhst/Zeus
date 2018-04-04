@@ -30,6 +30,7 @@ O banco de dados ainda não está disponível para utilização, mas as entidade
 
 # Funcionalidades a serem desenvolvidas
 
+- Método de controle de estoque entrada e saída;
 - Relatórios de análise de bens;
 
 # Funcionalidades já desenvolvidas
