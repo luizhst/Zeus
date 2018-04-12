@@ -12,16 +12,16 @@
     <title>Acesso ao sistema Zeus</title>
 
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-    <link rel="stylesheet" type="text/css" href="../Content/vendor/bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="../Content/fonts/font-awesome-4.7.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" type="text/css" href="../Content/fonts/iconic/css/material-design-iconic-font.min.css" />
-    <link rel="stylesheet" type="text/css" href="../Content/vendor/animate/animate.css" />
-    <link rel="stylesheet" type="text/css" href="../Content/vendor/css-hamburgers/hamburgers.min.css" />
-    <link rel="stylesheet" type="text/css" href="../Content/vendor/animsition/css/animsition.min.css" />
-    <link rel="stylesheet" type="text/css" href="../Content/vendor/select2/select2.min.css" />
-    <link rel="stylesheet" type="text/css" href="../Content/vendor/daterangepicker/daterangepicker.css" />
-    <link rel="stylesheet" type="text/css" href="../Content/Css/util.css" />
-    <link rel="stylesheet" type="text/css" href="../Content/Css/main.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/vendor/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/fonts/font-awesome-4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/fonts/iconic/css/material-design-iconic-font.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/vendor/animate/animate.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/vendor/css-hamburgers/hamburgers.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/vendor/animsition/css/animsition.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/vendor/select2/select2.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/vendor/daterangepicker/daterangepicker.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/Css/util.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/Css/main.css" />
 
 
 </head>

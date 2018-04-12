@@ -37,6 +37,22 @@ Project_Zeus
  Retorna o objeto de log Asp.
  </summary>
 </member>
+<member name="T:Project_Zeus.My.Resources.Resources">
+<summary>
+  Uma classe de recurso de tipo de alta segurança, para pesquisar cadeias de caracteres localizadas etc.
+</summary>
+</member>
+<member name="P:Project_Zeus.My.Resources.Resources.ResourceManager">
+<summary>
+  Retorna a instância de ResourceManager armazenada em cache usada por essa classe.
+</summary>
+</member>
+<member name="P:Project_Zeus.My.Resources.Resources.Culture">
+<summary>
+  Substitui a propriedade CurrentUICulture do thread atual para todas as
+  pesquisas de recursos que usam essa classe de recurso de tipo de alta segurança.
+</summary>
+</member>
 <member name="M:Project_Zeus.Tbl_UsuarioBIZ.LogarSistema(System.String,System.String)">
  <summary>
  Valida Conta do Usuario no Sistema
@@ -84,6 +100,348 @@ Modificar a declaração do campo de movimento do arquivo de designer para o arq
 <member name="F:Project_Zeus.Acesso._lblMensagem">
 <summary>
 Controle lblMensagem.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:Project_Zeus.IncluirHistCarga._txt_cod_hist">
+<summary>
+Controle txt_cod_hist.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:Project_Zeus.IncluirHistCarga._txt_data_nota">
+<summary>
+Controle txt_data_nota.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:Project_Zeus.IncluirHistCarga._txt_notafiscal">
+<summary>
+Controle txt_notafiscal.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:Project_Zeus.IncluirHistCarga._txt_pedidocompra">
+<summary>
+Controle txt_pedidocompra.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:Project_Zeus.IncluirHistCarga._txt_origem_destino">
+<summary>
+Controle txt_origem_destino.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:Project_Zeus.IncluirHistCarga._txt_motorista">
+<summary>
+Controle txt_motorista.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:Project_Zeus.IncluirHistCarga._txt_transportadora">
+<summary>
+Controle txt_transportadora.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:Project_Zeus.IncluirHistCarga._txt_placa1">
+<summary>
+Controle txt_placa1.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:Project_Zeus.IncluirHistCarga._txt_placa2">
+<summary>
+Controle txt_placa2.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:Project_Zeus.IncluirHistCarga._txt_placa3">
+<summary>
+Controle txt_placa3.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:Project_Zeus.IncluirHistCarga._drp_tipo">
+<summary>
+Controle drp_tipo.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:Project_Zeus.IncluirHistCarga._drp_status">
+<summary>
+Controle drp_status.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:Project_Zeus.IncluirHistCarga._txt_registro">
+<summary>
+Controle txt_registro.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:Project_Zeus.IncluirHistCarga._txt_update">
+<summary>
+Controle txt_update.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:Project_Zeus.IncluirHistCarga._btn_registrar">
+<summary>
+Controle btn_registrar.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:Project_Zeus.ListaCargas._lbl_Mensagem_Grid">
+<summary>
+Controle lbl_Mensagem_Grid.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:Project_Zeus.ListaCargas._grid_carregamentos">
+<summary>
+Controle grid_carregamentos.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:Project_Zeus.InserirControleUsados._UpdatePanel1">
+<summary>
+Controle UpdatePanel1.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:Project_Zeus.InserirControleUsados._txt_cod">
+<summary>
+Controle txt_cod.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:Project_Zeus.InserirControleUsados._txt_notafiscal">
+<summary>
+Controle txt_notafiscal.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:Project_Zeus.InserirControleUsados._txt_dta_notafiscal">
+<summary>
+Controle txt_dta_notafiscal.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:Project_Zeus.InserirControleUsados._drp_tipo">
+<summary>
+Controle drp_tipo.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:Project_Zeus.InserirControleUsados._txt_cnpj_nota">
+<summary>
+Controle txt_cnpj_nota.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:Project_Zeus.InserirControleUsados._txt_origem_destino">
+<summary>
+Controle txt_origem_destino.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:Project_Zeus.InserirControleUsados._drp_produto">
+<summary>
+Controle drp_produto.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:Project_Zeus.InserirControleUsados._txt_qtde_total">
+<summary>
+Controle txt_qtde_total.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:Project_Zeus.InserirControleUsados._txt_qtde_fpq">
+<summary>
+Controle txt_qtde_fpq.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:Project_Zeus.InserirControleUsados._txt_perc_sucata">
+<summary>
+Controle txt_perc_sucata.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:Project_Zeus.InserirControleUsados._txt_qtde_sucata">
+<summary>
+Controle txt_qtde_sucata.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:Project_Zeus.InserirControleUsados._txt_total_liquido">
+<summary>
+Controle txt_total_liquido.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:Project_Zeus.InserirControleUsados._txt_total_disponivel">
+<summary>
+Controle txt_total_disponivel.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:Project_Zeus.InserirControleUsados._drp_faturado_sucata">
+<summary>
+Controle drp_faturado_sucata.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:Project_Zeus.InserirControleUsados._drp_faturado_fpq">
+<summary>
+Controle drp_faturado_fpq.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:Project_Zeus.InserirControleUsados._txt_registro">
+<summary>
+Controle txt_registro.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:Project_Zeus.InserirControleUsados._txt_usuario">
+<summary>
+Controle txt_usuario.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:Project_Zeus.InserirControleUsados._btn_registrar">
+<summary>
+Controle btn_registrar.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:Project_Zeus.NotasPendentesUsados._grid_notas_usadas">
+<summary>
+Controle grid_notas_usadas.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:Project_Zeus.NotasPendentesUsados._lb_mensagem">
+<summary>
+Controle lb_mensagem.
 </summary>
 <remarks>
 Campo gerado automaticamente.
@@ -180,9 +538,18 @@ Campo gerado automaticamente.
 Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
 </remarks>
 </member>
-<member name="F:Project_Zeus.SiteMaster._divMenu">
+<member name="F:Project_Zeus.SiteMaster._theme">
 <summary>
-Controle divMenu.
+Controle theme.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:Project_Zeus.SiteMaster._AliasSistema">
+<summary>
+Controle AliasSistema.
 </summary>
 <remarks>
 Campo gerado automaticamente.
@@ -201,6 +568,51 @@ Modificar a declaração do campo de movimento do arquivo de designer para o arq
 <member name="F:Project_Zeus.SiteMaster._A1">
 <summary>
 Controle A1.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:Project_Zeus.SiteMaster._lbl_menu_1">
+<summary>
+Controle lbl_menu_1.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:Project_Zeus.SiteMaster._lbl_menu_2">
+<summary>
+Controle lbl_menu_2.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:Project_Zeus.SiteMaster._lbl_menu_3">
+<summary>
+Controle lbl_menu_3.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:Project_Zeus.SiteMaster._lbl_menu_4">
+<summary>
+Controle lbl_menu_4.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:Project_Zeus.SiteMaster._lbl_menu_5">
+<summary>
+Controle lbl_menu_5.
 </summary>
 <remarks>
 Campo gerado automaticamente.

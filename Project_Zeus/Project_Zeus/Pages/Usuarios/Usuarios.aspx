@@ -2,9 +2,8 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
-    <div class="row">
-        <br />
-        <br />
+    <div class="row" style="margin-top:4%">
+
         <div class="col-md-12">
             <div class="panel" style="box-shadow: unset">
 
@@ -64,7 +63,9 @@
 
                                 </asp:GridView>
 
-                                <a class="btn btn-success" href="IncluirUsuario.aspx">Cadastrar Usuário</a>
+                                <br />
+
+                                <a class="btn btn-success" href="../Usuarios/IncluirUsuario.aspx">Cadastrar Usuário</a>
 
                             </div>
 

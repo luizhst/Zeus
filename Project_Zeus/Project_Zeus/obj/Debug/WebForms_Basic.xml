@@ -37,6 +37,22 @@ Project_Zeus
  Retorna o objeto de log Asp.
  </summary>
 </member>
+<member name="T:Project_Zeus.My.Resources.Resources">
+<summary>
+  Uma classe de recurso de tipo de alta segurança, para pesquisar cadeias de caracteres localizadas etc.
+</summary>
+</member>
+<member name="P:Project_Zeus.My.Resources.Resources.ResourceManager">
+<summary>
+  Retorna a instância de ResourceManager armazenada em cache usada por essa classe.
+</summary>
+</member>
+<member name="P:Project_Zeus.My.Resources.Resources.Culture">
+<summary>
+  Substitui a propriedade CurrentUICulture do thread atual para todas as
+  pesquisas de recursos que usam essa classe de recurso de tipo de alta segurança.
+</summary>
+</member>
 <member name="M:Project_Zeus.Tbl_UsuarioBIZ.LogarSistema(System.String,System.String)">
  <summary>
  Valida Conta do Usuario no Sistema
@@ -219,6 +235,24 @@ Modificar a declaração do campo de movimento do arquivo de designer para o arq
 <member name="F:Project_Zeus.IncluirHistCarga._btn_registrar">
 <summary>
 Controle btn_registrar.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:Project_Zeus.ListaCargas._lbl_Mensagem_Grid">
+<summary>
+Controle lbl_Mensagem_Grid.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:Project_Zeus.ListaCargas._grid_carregamentos">
+<summary>
+Controle grid_carregamentos.
 </summary>
 <remarks>
 Campo gerado automaticamente.
@@ -414,15 +448,6 @@ Campo gerado automaticamente.
 Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
 </remarks>
 </member>
-<member name="F:Project_Zeus._Default._grid_carregamentos">
-<summary>
-Controle grid_carregamentos.
-</summary>
-<remarks>
-Campo gerado automaticamente.
-Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-</remarks>
-</member>
 <member name="F:Project_Zeus.Sair._form1">
 <summary>
 Controle form1.
@@ -513,9 +538,18 @@ Campo gerado automaticamente.
 Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
 </remarks>
 </member>
-<member name="F:Project_Zeus.SiteMaster._divMenu">
+<member name="F:Project_Zeus.SiteMaster._theme">
 <summary>
-Controle divMenu.
+Controle theme.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:Project_Zeus.SiteMaster._AliasSistema">
+<summary>
+Controle AliasSistema.
 </summary>
 <remarks>
 Campo gerado automaticamente.
@@ -534,6 +568,51 @@ Modificar a declaração do campo de movimento do arquivo de designer para o arq
 <member name="F:Project_Zeus.SiteMaster._A1">
 <summary>
 Controle A1.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:Project_Zeus.SiteMaster._lbl_menu_1">
+<summary>
+Controle lbl_menu_1.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:Project_Zeus.SiteMaster._lbl_menu_2">
+<summary>
+Controle lbl_menu_2.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:Project_Zeus.SiteMaster._lbl_menu_3">
+<summary>
+Controle lbl_menu_3.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:Project_Zeus.SiteMaster._lbl_menu_4">
+<summary>
+Controle lbl_menu_4.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:Project_Zeus.SiteMaster._lbl_menu_5">
+<summary>
+Controle lbl_menu_5.
 </summary>
 <remarks>
 Campo gerado automaticamente.

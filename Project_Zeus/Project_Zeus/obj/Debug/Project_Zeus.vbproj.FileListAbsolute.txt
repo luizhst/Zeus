@@ -75,9 +75,7 @@ D:\SERVALE\Projetos\Zeus\Project_Zeus\Project_Zeus\bin\System.Web.Optimization.x
 D:\SERVALE\Projetos\Zeus\Project_Zeus\Project_Zeus\bin\Antlr3.Runtime.pdb
 D:\SERVALE\Projetos\Zeus\Project_Zeus\Project_Zeus\bin\Microsoft.AspNet.FriendlyUrls.xml
 D:\SERVALE\Projetos\Zeus\Project_Zeus\Project_Zeus\bin\Newtonsoft.Json.xml
-D:\SERVALE\Projetos\Zeus\Project_Zeus\Project_Zeus\bin\Microsoft.ApplicationInsights.xml
 D:\SERVALE\Projetos\Zeus\Project_Zeus\Project_Zeus\bin\Microsoft.AI.DependencyCollector.xml
-D:\SERVALE\Projetos\Zeus\Project_Zeus\Project_Zeus\bin\Microsoft.AI.ServerTelemetryChannel.xml
 D:\SERVALE\Projetos\Zeus\Project_Zeus\Project_Zeus\bin\Microsoft.AI.WindowsServer.xml
 D:\SERVALE\Projetos\Zeus\Project_Zeus\Project_Zeus\bin\Microsoft.AI.Web.xml
 D:\SERVALE\Projetos\Zeus\Project_Zeus\Project_Zeus\bin\pt-br\System.Web.Optimization.resources.dll
@@ -92,3 +90,7 @@ D:\SERVALE\Projetos\Zeus\Project_Zeus\Project_Zeus\obj\Debug\WebForms_Basic.xml
 D:\SERVALE\Projetos\Zeus\Project_Zeus\Project_Zeus\obj\Debug\Project_Zeus.pdb
 D:\SERVALE\Projetos\Zeus\Project_Zeus\Project_Zeus\bin\log4net.dll
 D:\SERVALE\Projetos\Zeus\Project_Zeus\Project_Zeus\bin\log4net.xml
+D:\SERVALE\Projetos\Zeus\Project_Zeus\Project_Zeus\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+D:\SERVALE\Projetos\Zeus\Project_Zeus\Project_Zeus\bin\System.Diagnostics.DiagnosticSource.dll
+D:\SERVALE\Projetos\Zeus\Project_Zeus\Project_Zeus\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+D:\SERVALE\Projetos\Zeus\Project_Zeus\Project_Zeus\bin\System.Diagnostics.DiagnosticSource.xml

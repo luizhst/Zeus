@@ -12,13 +12,4 @@ Option Explicit On
 
 
 Partial Public Class _Default
-    
-    '''<summary>
-    '''Controle grid_carregamentos.
-    '''</summary>
-    '''<remarks>
-    '''Campo gerado automaticamente.
-    '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-    '''</remarks>
-    Protected WithEvents grid_carregamentos As Global.System.Web.UI.WebControls.GridView
 End Class

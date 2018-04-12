@@ -40,14 +40,7 @@ Public Class IncluirHistCarga
             ObjHstCarga = GeraObjHistCarga()
             BizCarga.InsertCarregamento(ObjHstCarga)
 
-            'Gera a partir do tipo do Objeto (Descarregamento) uma entrada pendente de nota fiscal de pallets usados.
-            If ObjHstCarga.DesTipo = "Descarregar" And ObjHstCarga.FlgLiberado = True Then
-                Dim ObjEntradaUsados As New Tbl_Entrada_Usado
-                ObjEntradaUsados = GerarEntradaUsados()
-                BizEntradaUsados.InsertEntradaUsados(ObjEntradaUsados)
-            End If
-
-            Response.Redirect("../Default.aspx")
+            Response.Redirect("~/Pages/CargaDescarga/ListaCargas.aspx")
 
         Catch ex As Exception
 

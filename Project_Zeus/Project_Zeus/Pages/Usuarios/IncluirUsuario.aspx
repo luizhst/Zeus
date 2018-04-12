@@ -2,9 +2,8 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
-    <div class="row">
-        <br />
-        <br />
+        <div class="row" style="margin-top:4%">
+
         <div class="col-md-12">
             <div class="panel" style="box-shadow: unset">
 
@@ -82,7 +81,7 @@
 
                             <div>
                                 <asp:Button runat="server" CssClass="btn btn-success" ID="btn_registrar" Text="Cadastrar" OnClick="btn_registrar_Click" />
-                                <a class="btn btn-default" href="Usuarios.aspx">Voltar</a>
+                                <a class="btn btn-default" href="../Usuarios/Usuarios.aspx">Voltar</a>
                             </div>
                         </div>
 

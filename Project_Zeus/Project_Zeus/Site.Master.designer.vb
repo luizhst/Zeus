@@ -14,13 +14,22 @@ Option Explicit On
 Partial Public Class SiteMaster
     
     '''<summary>
-    '''Controle divMenu.
+    '''Controle theme.
     '''</summary>
     '''<remarks>
     '''Campo gerado automaticamente.
     '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
     '''</remarks>
-    Protected WithEvents divMenu As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+    Protected WithEvents theme As Global.System.Web.UI.HtmlControls.HtmlLink
+    
+    '''<summary>
+    '''Controle AliasSistema.
+    '''</summary>
+    '''<remarks>
+    '''Campo gerado automaticamente.
+    '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+    '''</remarks>
+    Protected WithEvents AliasSistema As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
     '''Controle lblBemVindo.
@@ -39,6 +48,51 @@ Partial Public Class SiteMaster
     '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
     '''</remarks>
     Protected WithEvents A1 As Global.System.Web.UI.HtmlControls.HtmlAnchor
+    
+    '''<summary>
+    '''Controle lbl_menu_1.
+    '''</summary>
+    '''<remarks>
+    '''Campo gerado automaticamente.
+    '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+    '''</remarks>
+    Protected WithEvents lbl_menu_1 As Global.System.Web.UI.WebControls.HyperLink
+    
+    '''<summary>
+    '''Controle lbl_menu_2.
+    '''</summary>
+    '''<remarks>
+    '''Campo gerado automaticamente.
+    '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+    '''</remarks>
+    Protected WithEvents lbl_menu_2 As Global.System.Web.UI.WebControls.HyperLink
+    
+    '''<summary>
+    '''Controle lbl_menu_3.
+    '''</summary>
+    '''<remarks>
+    '''Campo gerado automaticamente.
+    '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+    '''</remarks>
+    Protected WithEvents lbl_menu_3 As Global.System.Web.UI.WebControls.HyperLink
+    
+    '''<summary>
+    '''Controle lbl_menu_4.
+    '''</summary>
+    '''<remarks>
+    '''Campo gerado automaticamente.
+    '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+    '''</remarks>
+    Protected WithEvents lbl_menu_4 As Global.System.Web.UI.WebControls.HyperLink
+    
+    '''<summary>
+    '''Controle lbl_menu_5.
+    '''</summary>
+    '''<remarks>
+    '''Campo gerado automaticamente.
+    '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+    '''</remarks>
+    Protected WithEvents lbl_menu_5 As Global.System.Web.UI.WebControls.HyperLink
     
     '''<summary>
     '''Controle MainContent.
