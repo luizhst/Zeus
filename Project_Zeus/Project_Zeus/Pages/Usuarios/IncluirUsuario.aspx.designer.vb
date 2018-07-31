@@ -77,6 +77,15 @@ Partial Public Class IncluirUsuario
     Protected WithEvents drp_status As Global.System.Web.UI.WebControls.DropDownList
     
     '''<summary>
+    '''Controle drp_perfil.
+    '''</summary>
+    '''<remarks>
+    '''Campo gerado automaticamente.
+    '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+    '''</remarks>
+    Protected WithEvents drp_perfil As Global.System.Web.UI.WebControls.DropDownList
+    
+    '''<summary>
     '''Controle btn_registrar.
     '''</summary>
     '''<remarks>

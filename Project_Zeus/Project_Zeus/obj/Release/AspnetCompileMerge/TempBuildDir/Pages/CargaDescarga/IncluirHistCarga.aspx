@@ -2,8 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
-    <div class="row" style="margin-top:4%">
-
+    <div class="row" style="margin-top: 4%">
         <div class="col-md-12">
 
             <div class="panel" style="box-shadow: unset">
@@ -22,7 +21,25 @@
                                         <asp:TextBox runat="server" ID="txt_cod_hist" MaxLength="150" CssClass="form-control" ReadOnly="true"></asp:TextBox>
                                     </div>
                                 </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label class="control-label ">CPF Motorista</label>
+                                        <asp:TextBox runat="server" ID="txt_cpf" MaxLength="11" CssClass="form-control" ReadOnly="false" Required="true" TextMode="Number" ></asp:TextBox>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <div style="margin-top: 26px">
+                                            <asp:LinkButton ID="btn_link_pesquisa" runat="server" CssClass="btn btn-success" OnClick="btn_pesquisa_Click">Buscar Cadastro</asp:LinkButton>
+                                            <asp:Label ID="lbl_resultado_pesquisa" runat="server" CssClass="control-label" Visible="false" Style="font-style:initial"></asp:Label>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
+
+                            <br />
+                            <h4>Dados Principais</h4>
+                            <hr />
 
                             <div class="row">
 
@@ -55,7 +72,7 @@
                                 <div class="col-md-3">
                                     <div class="form-group">
                                         <label class="control-label ">Origem / Destino</label>
-                                        <asp:TextBox runat="server" Style="text-transform: uppercase" required="true" MaxLength="50" ClientIDMode="Static" ID="txt_origem_destino" CssClass="form-control" TextMode="SingleLine" ></asp:TextBox>
+                                        <asp:TextBox runat="server" Style="text-transform: uppercase" required="true" MaxLength="50" ClientIDMode="Static" ID="txt_origem_destino" CssClass="form-control" TextMode="SingleLine"></asp:TextBox>
                                         <span class="help-block"></span>
                                     </div>
                                 </div>
@@ -81,7 +98,7 @@
                                 <div class="col-md-3">
                                     <div class="form-group">
                                         <label class="control-label ">Placa 1</label>
-                                        <asp:TextBox runat="server" Style="text-transform: uppercase" required="true" MaxLength="8" ClientIDMode="Static" ID="txt_placa1" CssClass="form-control" ></asp:TextBox>
+                                        <asp:TextBox runat="server" Style="text-transform: uppercase" required="true" MaxLength="8" ClientIDMode="Static" ID="txt_placa1" CssClass="form-control"></asp:TextBox>
                                         <span class="help-block"></span>
                                     </div>
                                 </div>

@@ -11,7 +11,7 @@ Imports System.Web.SessionState
 Public Class Tbl_UsuarioBIZ
 
     Private DAO As New Tbl_UsuarioDAO
-
+    Private ReadOnly Log As log4net.ILog = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
 
     ''' <summary>
     ''' Valida Conta do Usuario no Sistema
@@ -36,10 +36,9 @@ Public Class Tbl_UsuarioBIZ
 
         Catch ex As Exception
 
-            Throw ex
+            Log.Fatal(ex.Message)
 
         End Try
-
 
     End Function
 
@@ -68,7 +67,7 @@ Public Class Tbl_UsuarioBIZ
 
         Catch ex As Exception
 
-            Throw ex
+            Log.Fatal(ex.Message)
 
         End Try
 

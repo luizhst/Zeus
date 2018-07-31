@@ -16,9 +16,11 @@ Public Class Tbl_Hist_CargaDAO
 
 
         Sql.Append("INSERT INTO dbo.TBL_HIST_CARGA (DtaRegistro, DtaAtualizacao, DesOrigemDestino, DesMotorista, DesTransportadora, " &
-                                                   "DesPlaca1, DesPlaca2, DesPlaca3, DesTipo, FlgLiberado, DesNotaFiscal, DesPedidoCompra) VALUES " &
+                                                   "DesPlaca1, DesPlaca2, DesPlaca3, DesTipo, FlgLiberado, DesNotaFiscal, DesPedidoCompra, NumCpfMotorista, " &
+                                                   "DtaNotaFiscal, DesTelefone, NumQtdePallet) VALUES " &
                                                    "(@DtaRegistro, @DtaAtualizacao, @DesOrigemDestino, @DesMotorista, @DesTransportadora, " &
-                                                   "@DesPlaca1, @DesPlaca2, @DesPlaca3, @DesTipo, @FlgLiberado, @DesNotaFiscal, @DesPedidoCompra)")
+                                                   "@DesPlaca1, @DesPlaca2, @DesPlaca3, @DesTipo, @FlgLiberado, @DesNotaFiscal, @DesPedidoCompra, @NumCpfMotorista, " &
+                                                   "@DtaNotaFiscal, @DesTelefone, @NumQtdePallet)")
 
         Try
 
@@ -38,6 +40,10 @@ Public Class Tbl_Hist_CargaDAO
             Comando.Parameters.AddWithValue("@FlgLiberado", Item.FlgLiberado)
             Comando.Parameters.AddWithValue("@DesNotaFiscal", Item.DesNotaFiscal)
             Comando.Parameters.AddWithValue("@DesPedidoCompra", Item.DesPedidoCompra)
+            Comando.Parameters.AddWithValue("@NumCpfMotorista", Item.NumCpfMotorista)
+            Comando.Parameters.AddWithValue("@DtaNotaFiscal", Item.DtaNotaFiscal)
+            Comando.Parameters.AddWithValue("@DesTelefone", Item.DesTelefone)
+            Comando.Parameters.AddWithValue("@NumQtdePallet", Item.NumQtdePallet)
 
             Comando.ExecuteNonQuery()
 
@@ -64,7 +70,8 @@ Public Class Tbl_Hist_CargaDAO
 
         Sql.Append("UPDATE dbo.TBL_HIST_CARGA SET DtaRegistro = @DtaRegistro, DtaAtualizacao = @DtaAtualizacao, DesOrigemDestino = @DesOrigemDestino, DesMotorista = @DesMotorista, " &
                    "DesTransportadora = @DesTransportadora, DesPlaca1 = @DesPlaca1, DesPlaca2 = @DesPlaca2, DesPlaca3 = @DesPlaca3, " &
-                   "DesTipo = @DesTipo, FlgLiberado = @FlgLiberado, DesPedidoCompra = @DesPedidoCompra, DesNotaFiscal = @DesNotaFiscal  WHERE CodHist = @CodHist")
+                   "DesTipo = @DesTipo, FlgLiberado = @FlgLiberado, DesPedidoCompra = @DesPedidoCompra, DesNotaFiscal = @DesNotaFiscal, NumCpfMotorista = @NumCpfMotorista, " &
+                   "DtaNotaFiscal = @DtaNotaFiscal, DesTelefone = @DesTelefone, NumQtdePallet = @NumQtdePallet WHERE CodHist = @CodHist")
 
         Try
 
@@ -85,6 +92,10 @@ Public Class Tbl_Hist_CargaDAO
             Comando.Parameters.AddWithValue("@FlgLiberado", Item.FlgLiberado)
             Comando.Parameters.AddWithValue("@DesPedidoCompra", Item.DesPedidoCompra)
             Comando.Parameters.AddWithValue("@DesNotaFiscal", Item.DesNotaFiscal)
+            Comando.Parameters.AddWithValue("@NumCpfMotorista", Item.NumCpfMotorista)
+            Comando.Parameters.AddWithValue("@DtaNotaFiscal", Item.DtaNotaFiscal)
+            Comando.Parameters.AddWithValue("@DesTelefone", Item.DesTelefone)
+            Comando.Parameters.AddWithValue("@NumQtdePallet", Item.NumQtdePallet)
 
             Comando.ExecuteNonQuery()
 
@@ -139,6 +150,10 @@ Public Class Tbl_Hist_CargaDAO
                     Item.FlgLiberado = Reader("FlgLiberado")
                     Item.DesPedidoCompra = Reader("DesPedidoCompra").ToString
                     Item.DesNotaFiscal = Reader("DesNotaFiscal").ToString
+                    Item.NumCpfMotorista = Reader("NumCpfMotorista").ToString
+                    Item.DtaNotaFiscal = Reader("DtaNotaFiscal").ToString
+                    Item.DesTelefone = Reader("DesTelefone").ToString
+                    Item.NumQtdePallet = CInt(Reader("NumQtdePallet").ToString.PadLeft(4, "0"))
 
                     Lista.Add(Item)
 

@@ -7,13 +7,15 @@ Public Class Connection
 
     'Private Shared StringConexao As String = ConfigurationManager.ConnectionStrings("").ConnectionString
 
-    Private Shared StringConexao As String = "Data Source=NB-LUIZHST;Initial Catalog=Db_Zeus;Persist Security Info=True;User ID='sa';Password='BGT5bgt%'"
+    Private Shared StringConexao As String = "Data Source=NB-LUIZHST;Initial Catalog=Db_Zeus;Persist Security Info=True;User ID=sa;Password='bgt5BGT%'"
+
+    Private ReadOnly Log As log4net.ILog = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
 
     Public Function GetConexao() As SqlConnection
 
         Dim Conexao As New SqlConnection
 
-        StringConexao = "Data Source=NB-LUIZHST;Initial Catalog=Db_Zeus;Persist Security Info=True;User ID=sa;Password='bgt5BGT%'"
+        StringConexao = "Data Source=mssql03.redehost.com.br,5003;Initial Catalog=Db_Zeus;Persist Security Info=True;User ID=user_prd;Password='bgt5BGT%'"
 
         Try
 
@@ -23,7 +25,7 @@ Public Class Connection
 
         Catch ex As Exception
 
-            MsgBox(ex.Message.ToUpper)
+            Log.Fatal(ex.Message)
 
         End Try
 
@@ -42,7 +44,7 @@ Public Class Connection
 
         Catch ex As Exception
 
-            MsgBox(ex.Message.ToUpper)
+            Log.Fatal(ex.Message)
 
         End Try
 

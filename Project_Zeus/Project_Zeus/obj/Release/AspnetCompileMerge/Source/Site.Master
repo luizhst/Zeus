@@ -101,6 +101,7 @@
                         <li>
                             <asp:HyperLink runat="server" ID="lbl_menu_1" NavigateUrl="~/Pages/Default.aspx" class="waves-effect"><i class="ti-world p-r-10"></i><span class="hide-menu">Página Inicial</span></asp:HyperLink>
                             <asp:HyperLink runat="server" ID="lbl_menu_2" NavigateUrl="~/Pages/CargaDescarga/ListaCargas.aspx" class="waves-effect"><i class="ti-truck p-r-10"></i><span class="hide-menu">Carregamentos</span></asp:HyperLink>
+                            <asp:HyperLink runat="server" ID="HyperLink1" NavigateUrl="~/Pages/Oleo/ControleOleo.aspx" class="waves-effect"><i class="ti-stack-overflow p-r-10"></i><span class="hide-menu">Oleo Diesel</span></asp:HyperLink>
                             <asp:HyperLink runat="server" ID="lbl_menu_3" NavigateUrl="~/Pages/Usuarios/Usuarios.aspx" class="waves-effect"><i class="ti-user p-r-10"></i><span class="hide-menu">Acessos</span></asp:HyperLink>
                             <asp:HyperLink runat="server" ID="lbl_menu_4" class="waves-effect"><i class="ti-settings p-r-10"></i><span class="hide-menu">Configurações </span></asp:HyperLink>
                             <asp:HyperLink runat="server" ID="lbl_menu_5" class="waves-effect"><i class="ti-server p-r-10"></i><span class="hide-menu">Relatórios</span></asp:HyperLink>

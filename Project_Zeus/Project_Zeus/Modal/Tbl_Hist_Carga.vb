@@ -130,4 +130,44 @@
         End Set
     End Property
 
+    Private _NumCpfMotorista As String
+    Public Property NumCpfMotorista() As String
+        Get
+            Return _NumCpfMotorista
+        End Get
+        Set(ByVal value As String)
+            _NumCpfMotorista = value
+        End Set
+    End Property
+
+    Private _DtaNotaFiscal As DateTime
+    Public Property DtaNotaFiscal() As DateTime
+        Get
+            Return _DtaNotaFiscal
+        End Get
+        Set(ByVal value As DateTime)
+            _DtaNotaFiscal = value
+        End Set
+    End Property
+
+    Private _DesTelefone As String
+    Public Property DesTelefone() As String
+        Get
+            Return _DesTelefone
+        End Get
+        Set(ByVal value As String)
+            _DesTelefone = value
+        End Set
+    End Property
+
+    Private _NumQtdePallet As Integer
+    Public Property NumQtdePallet() As String
+        Get
+            Return _NumQtdePallet
+        End Get
+        Set(ByVal value As String)
+            _NumQtdePallet = value
+        End Set
+    End Property
+
 End Class

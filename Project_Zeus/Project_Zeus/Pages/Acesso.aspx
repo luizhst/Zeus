@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Acesso ao sistema Zeus</title>
+    <title>Acesso</title>
 
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <link rel="stylesheet" type="text/css" href="~/Content/vendor/bootstrap/css/bootstrap.min.css" />
@@ -64,7 +64,7 @@
                             <%--<span class="txt1">Ainda não possui uma conta?
                             </span>
                             <a class="txt2" href="#">Sign Up</a>--%>
-                            <p>&copy; <%: DateTime.Now.Year %> - Controle Zeus</p>
+                            <p>&copy; <%: DateTime.Now.Year %> - AdaptGestão | Controle</p>
                         </div>
                     </form>
                 </div>

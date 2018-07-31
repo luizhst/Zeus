@@ -31,16 +31,16 @@
     <link href="Content/css/animate.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="Content/css/style.css" rel="stylesheet">
+
     <!-- color CSS -->
     <link href="Content/css/colors/megna.css" id="theme" rel="stylesheet">
     <link href="Content/themify-icons/themify-icons.css" rel="stylesheet">
 
     <script type="text/javascript">
-         jQuery(function ($) {
-             $("#txt_placa1").mask("aaa-9999");
-             $("#txt_placa2").mask("aaa-9999");
-             $("#txt_placa3").mask("aaa-9999");
-         });
+        jQuery(function ($) {
+            $("#txt_placa1").mask("aaa-9999");
+            $("#txt_placa2").mask("aaa-9999");
+        });
     </script>
 
 </head>
@@ -48,7 +48,7 @@
     <!-- Page Content -->
     <form runat="server">
 
-        <asp:ScriptManager runat="server">
+        <asp:ScriptManager ID="scrpman1" runat="server">
             <Scripts>
                 <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
                 <%--Framework Scripts--%>
@@ -71,59 +71,75 @@
             </Scripts>
         </asp:ScriptManager>
 
-        <div class="navbar navbar-inverse navbar-fixed-top" style="background-color: darkslategrey">
-
-            <div>
-                <ul class="nav navbar-nav">
-                    <li>
-                        <asp:Label ID="AliasSistema" ForeColor="White" class="navbar-brand" runat="server" href="~/Pages/"><strong>Controle</strong><span>Zeus</span></asp:Label>
-                    </li>
-                </ul>
-
-                <ul class="nav navbar-right" style="margin-top: 7px">
-                    <li><a runat="server" class="navbar-brand" id="lblBemVindo" href="~/Pages/"></a></li>
-                    <li><a runat="server" class="navbar-brand" id="A1" href="~/Pages/Sair"><span>Sair</span></a></li>
-                </ul>
-            </div>
-        </div>
-
-
         <div id="wrapper">
 
-            <!-- Left navbar-header -->
-            <div class="navbar-default sidebar" role="navigation">
-                <div class="sidebar-nav navbar-collapse slimscrollsidebar">
-                    <br />
-                    <ul class="nav" id="side-menu">
+            <div class="navbar-header">
 
-                        <li class="nav-small-cap m-t-10">--- Menu Principal</li>
+                <div class="navbar navbar-inverse navbar-fixed-top" style="background-color: darkslategrey">
 
-                        <li>
-                            <asp:HyperLink runat="server" ID="lbl_menu_1" NavigateUrl="~/Pages/Default.aspx" class="waves-effect"><i class="ti-world p-r-10"></i><span class="hide-menu">Página Inicial</span></asp:HyperLink>
-                            <asp:HyperLink runat="server" ID="lbl_menu_2" NavigateUrl="~/Pages/CargaDescarga/ListaCargas.aspx" class="waves-effect"><i class="ti-truck p-r-10"></i><span class="hide-menu">Carregamentos</span></asp:HyperLink>
-                            <asp:HyperLink runat="server" ID="lbl_menu_3" class="waves-effect"><i class="ti-settings p-r-10"></i><span class="hide-menu">Configurações </span></asp:HyperLink>
-                            <asp:HyperLink runat="server" ID="lbl_menu_4" class="waves-effect"><i class="ti-server p-r-10"></i><span class="hide-menu">Relatórios</span></asp:HyperLink>
+                    <div>
+                        <ul class="nav navbar-top-links navbar-left hidden-xs">
+                            <li>
+                                <asp:Label ID="AliasSistema" ForeColor="White" class="navbar-brand" runat="server" href="~/Pages/"><strong>AGControle</strong><span> 1.0</span></asp:Label>
+                            </li>
 
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div id="page-wrapper" style="background-color: white">
-                <div class="container-fluid" style="border-left: 0px; border-right: 0px">
-                    <br />
-                    <div class="panel" style="margin-right: 1px; margin-left: 1px;">
-                        <asp:ContentPlaceHolder ID="MainContent" runat="server">
-                        </asp:ContentPlaceHolder>
+                        </ul>
+
+                        <ul class="nav navbar-right" style="margin-top: 7px">
+                            <li><a runat="server" class="navbar-brand" id="lblBemVindo" href="~/Pages/"></a></li>
+                            <li><a runat="server" class="navbar-brand" id="A1" href="~/Pages/Sair"><span>Sair</span></a></li>
+                            <li><a class="navbar-toggle navbar-left hidden-sm hidden-md hidden-lg" href="#menu" data-toggle="collapse" data-target=".navbar-collapse"><i class="ti-menu"></i></a></li>
+                        </ul>
                     </div>
-
                 </div>
-            </div>
-        </div>
 
-        <footer class="footer text-center">
-            <hr />
-            <p>&copy; <%: DateTime.Now.Year %> - Controle Zeus</p>
-        </footer>
+
+
+                <!-- Left navbar-header -->
+                <div class="navbar-default sidebar" id="menu" role="navigation">
+                    <div class="sidebar-nav navbar-collapse slimscrollsidebar">
+                        <br />
+                        <ul class="nav" id="side-menu">
+
+                            <li class="nav-small-cap m-t-10">--- Menu Principal</li>
+
+                            <li>
+                                <asp:HyperLink runat="server" ID="_lbl_menu_default" NavigateUrl="~/Pages/Default.aspx" class="waves-effect"><i class="ti-world p-r-10"></i><span class="hide-menu">Página Inicial</span></asp:HyperLink>
+                                <asp:HyperLink runat="server" ID="_lbl_menu_cargas" NavigateUrl="~/Pages/CargaDescarga/ListaCargas.aspx" class="waves-effect"><i class="ti-truck p-r-10"></i><span class="hide-menu">Carga e Descarga</span></asp:HyperLink>
+                                <asp:HyperLink runat="server" ID="_lbl_menu_oleo" NavigateUrl="~/Pages/Oleo/ControleOleo.aspx" class="waves-effect"><i class="ti-stack-overflow p-r-10"></i><span class="hide-menu">Oleo Diesel</span></asp:HyperLink>
+                                <asp:HyperLink runat="server" ID="_lbl_menu_usuarios" NavigateUrl="~/Pages/Usuarios/Usuarios.aspx" class="waves-effect"><i class="ti-user p-r-10"></i><span class="hide-menu">Acessos</span></asp:HyperLink>
+                                <asp:HyperLink runat="server" ID="_lbl_menu_solicitacao" NavigateUrl="~/Pages/Solicitacao/Solicitacoes.aspx" class="waves-effect"><i class="ti-comments p-r-10"></i><span class="hide-menu">Solicitações</span></asp:HyperLink>
+                                <%--<asp:HyperLink runat="server" ID="_lbl_menu_config" class="waves-effect"><i class="ti-settings p-r-10"></i><span class="hide-menu">Configurações </span></asp:HyperLink>--%>
+                                <asp:HyperLink runat="server" ID="_lbl_menu_relatorios" NavigateUrl="~/Pages/Relatorio/Relatorio.aspx" class="waves-effect"><i class="ti-server p-r-10"></i><span class="hide-menu">Relatórios</span></asp:HyperLink>
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+                <div id="page-wrapper" style="background-color: white">
+                    <div class="container-fluid" style="border-left: 0px; border-right: 0px">
+                        <br />
+                        <div class="panel" style="margin-right: 1px; margin-left: 1px;">
+
+                            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                            </asp:ContentPlaceHolder>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+            <footer class="footer text-center">
+                <hr />
+                <p>&copy; <%: DateTime.Now.Year %> - Controle Zeus</p>
+            </footer>
+        </div>
     </form>
 
 </body>

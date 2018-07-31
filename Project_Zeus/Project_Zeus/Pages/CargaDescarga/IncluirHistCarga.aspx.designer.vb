@@ -23,6 +23,33 @@ Partial Public Class IncluirHistCarga
     Protected WithEvents txt_cod_hist As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
+    '''Controle txt_cpf.
+    '''</summary>
+    '''<remarks>
+    '''Campo gerado automaticamente.
+    '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+    '''</remarks>
+    Protected WithEvents txt_cpf As Global.System.Web.UI.WebControls.TextBox
+    
+    '''<summary>
+    '''Controle btn_link_pesquisa.
+    '''</summary>
+    '''<remarks>
+    '''Campo gerado automaticamente.
+    '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+    '''</remarks>
+    Protected WithEvents btn_link_pesquisa As Global.System.Web.UI.WebControls.LinkButton
+    
+    '''<summary>
+    '''Controle lbl_resultado_pesquisa.
+    '''</summary>
+    '''<remarks>
+    '''Campo gerado automaticamente.
+    '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+    '''</remarks>
+    Protected WithEvents lbl_resultado_pesquisa As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
     '''Controle txt_data_nota.
     '''</summary>
     '''<remarks>
@@ -50,6 +77,15 @@ Partial Public Class IncluirHistCarga
     Protected WithEvents txt_pedidocompra As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
+    '''Controle txt_qtdepallet.
+    '''</summary>
+    '''<remarks>
+    '''Campo gerado automaticamente.
+    '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+    '''</remarks>
+    Protected WithEvents txt_qtdepallet As Global.System.Web.UI.WebControls.TextBox
+    
+    '''<summary>
     '''Controle txt_origem_destino.
     '''</summary>
     '''<remarks>
@@ -66,6 +102,15 @@ Partial Public Class IncluirHistCarga
     '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
     '''</remarks>
     Protected WithEvents txt_motorista As Global.System.Web.UI.WebControls.TextBox
+    
+    '''<summary>
+    '''Controle txt_telefone.
+    '''</summary>
+    '''<remarks>
+    '''Campo gerado automaticamente.
+    '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+    '''</remarks>
+    Protected WithEvents txt_telefone As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
     '''Controle txt_transportadora.

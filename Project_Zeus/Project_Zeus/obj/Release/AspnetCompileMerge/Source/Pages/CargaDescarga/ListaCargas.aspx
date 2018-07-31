@@ -15,7 +15,7 @@
 
                             <hr>
 
-                            <div class="table">
+                            <div class="table-responsive">
 
                                 <h5>
                                     <asp:Label runat="server" ID="lbl_Mensagem_Grid" Visible="false"></asp:Label>

@@ -72,6 +72,16 @@
         End Set
     End Property
 
+    Private _DesPerfil As String
+    Public Property DesPerfil() As String
+        Get
+            Return _DesPerfil
+        End Get
+        Set(ByVal value As String)
+            _DesPerfil = value
+        End Set
+    End Property
+
 #End Region
 
 End Class

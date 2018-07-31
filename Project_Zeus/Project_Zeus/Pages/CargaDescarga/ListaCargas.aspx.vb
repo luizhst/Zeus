@@ -12,6 +12,7 @@
             If IsNothing(Session("Usuario")) Then
                 Response.Redirect("~/Pages/Sair.aspx")
             Else
+                AtualizaIndicadores()
                 CarregarCarregamentosPendentes()
             End If
         End If
@@ -25,6 +26,7 @@
 
         If Lista.Count > 0 Then
 
+            lbl_Mensagem_Grid.Visible = False
             grid_carregamentos.DataSource = Nothing
             grid_carregamentos.DataSource = Lista
 
@@ -51,4 +53,21 @@
         grid_carregamentos.DataBind()
 
     End Sub
+
+    Private Sub AtualizaIndicadores()
+
+        Dim Lista As New List(Of Tbl_Hist_Carga)
+        Lista = Biz.ListarCarregamentos()
+
+        Dim PrimeiroDia As String = "01/" & DateTime.Now.Month & "/" & DateTime.Now.Year & " 00:00:00"
+
+
+        lbl_cargahoje.Text = Lista.Where(Function(x) Format(x.DtaRegistro, "dd/MM/yyyy") = Format(Now, "dd/MM/yyyy") And x.DesTipo = "CARREGAR").Count
+        lbl_descargahoje.Text = Lista.Where(Function(x) Format(x.DtaRegistro, "dd/MM/yyyy") = Format(Now, "dd/MM/yyyy") And x.DesTipo = "DESCARREGAR").Count
+
+        lbl_cargames.Text = Lista.Where(Function(x) Format(x.DtaRegistro, "dd/MM/yyyy") >= Format(Now, "01/MM/yyyy") And Format(x.DtaRegistro, "dd/MM/yyyy") <= Format(Now, "dd/MM/yyyy") And x.DesTipo = "CARREGAR").Count
+        lbl_descargames.Text = Lista.Where(Function(x) Format(x.DtaRegistro, "dd/MM/yyyy") >= Format(Now, "01/MM/yyyy") And Format(x.DtaRegistro, "dd/MM/yyyy") <= Format(Now, "dd/MM/yyyy") And x.DesTipo = "DESCARREGAR").Count
+
+    End Sub
+
 End Class

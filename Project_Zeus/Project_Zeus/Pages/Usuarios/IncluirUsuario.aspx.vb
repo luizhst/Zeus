@@ -2,7 +2,7 @@
     Inherits System.Web.UI.Page
 
 
-    Private _Usuario As String
+    Private _Usuario As Tbl_Usuario
     Private _EditarUsuario As String
 
 
@@ -13,11 +13,22 @@
 
         Try
 
-            _Usuario = Session("Usuario").ToString
+            _Usuario = Session("Usuario")
 
-            If IsNothing(_Usuario) Then
+            If IsNothing(Session("Usuario")) Then
                 Response.Redirect("~/Pages/Sair.aspx")
             End If
+
+            If _Usuario.DesPerfil = "AD" Then
+
+                Dim item As New ListItem()
+                item.Value = "AD"
+                item.Text = "Administrador"
+
+                drp_perfil.Items.Add(item)
+
+            End If
+
 
             If Not IsPostBack() Then
                 If Not IsNothing(Request.QueryString("Cod")) Then
@@ -47,6 +58,8 @@
             Obj.ContaLogin = txt_login.Text
             Obj.SenhaLogin = txt_senha.Text
             Obj.DtaNascimento = txt_nascimento.Text
+            Obj.DesPerfil = drp_perfil.SelectedValue
+
             If drp_status.SelectedIndex = 0 Then
                 Obj.FlgAtivo = True
             Else
@@ -82,6 +95,7 @@
             txt_senha.Attributes("value") = Obj.SenhaLogin
             txt_login.Text = Obj.ContaLogin
             txt_nascimento.Text = Obj.DtaNascimento
+            drp_perfil.SelectedValue = Obj.DesPerfil
 
             If Obj.FlgAtivo = True Then
                 drp_status.SelectedIndex = 0
@@ -106,6 +120,7 @@
         txt_login.Text = ""
         txt_nascimento.Text = ""
         drp_status.SelectedIndex = -1
+        drp_perfil.SelectedIndex = -1
     End Sub
 
 

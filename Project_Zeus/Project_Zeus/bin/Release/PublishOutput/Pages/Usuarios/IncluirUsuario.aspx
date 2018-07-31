@@ -2,9 +2,8 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
-    <div class="row">
-        <br />
-        <br />
+    <div class="row" style="margin-top: 4%">
+
         <div class="col-md-12">
             <div class="panel" style="box-shadow: unset">
 
@@ -53,7 +52,7 @@
                                 <div class="col-md-3">
                                     <div class="form-group">
                                         <label class="control-label ">Senha</label>
-                                        <asp:TextBox runat="server" required="true" MaxLength="50" ClientIDMode="Static" ID="txt_senha" CssClass="form-control"  TextMode="Password"></asp:TextBox>
+                                        <asp:TextBox runat="server" required="true" MaxLength="50" ClientIDMode="Static" ID="txt_senha" CssClass="form-control" TextMode="Password"></asp:TextBox>
                                         <span class="help-block"></span>
                                     </div>
                                 </div>
@@ -74,7 +73,20 @@
                                             <asp:ListItem Value="false" Text="Inativo" />
                                         </asp:DropDownList>
                                     </div>
+
                                 </div>
+
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label class="control-label">Perfil</label>
+                                        <asp:DropDownList AutoPostBack="false   " runat="server" AppendDataBoundItems="true" CssClass="dropdown form-control" SelectionMode="sigle" MaxLength="50" ID="drp_perfil">
+                                            <%--<asp:ListItem Value="AD" Text="Administrador" />--%>
+                                            <asp:ListItem Value="UA" Text="Interativo" />
+                                            <asp:ListItem Value="UC" Text="Consultas" />
+                                        </asp:DropDownList>
+                                    </div>
+                                </div>
+
                                 <br />
                             </div>
 
@@ -82,7 +94,7 @@
 
                             <div>
                                 <asp:Button runat="server" CssClass="btn btn-success" ID="btn_registrar" Text="Cadastrar" OnClick="btn_registrar_Click" />
-                                <a class="btn btn-default" href="Usuarios.aspx">Voltar</a>
+                                <a class="btn btn-default" href="../Usuarios/Usuarios.aspx">Voltar</a>
                             </div>
                         </div>
 

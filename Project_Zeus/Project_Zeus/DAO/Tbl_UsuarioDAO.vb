@@ -14,8 +14,8 @@ Public Class Tbl_UsuarioDAO
         Dim Sql As New StringBuilder
 
 
-        Sql.Append("INSERT INTO dbo.TBL_USUARIO (Nome, SobreNome, ContaLogin, SenhaLogin, DtaNascimento, FlgAtivo) VALUES " &
-                                               "(@Nome, @SobreNome, @ContaLogin, @SenhaLogin, @DtaNascimento, @FlgAtivo)")
+        Sql.Append("INSERT INTO dbo.TBL_USUARIO (Nome, SobreNome, ContaLogin, SenhaLogin, DtaNascimento, FlgAtivo, DesPerfil) VALUES " &
+                                               "(@Nome, @SobreNome, @ContaLogin, @SenhaLogin, @DtaNascimento, @FlgAtivo, @DesPerfil)")
 
         Try
 
@@ -29,6 +29,7 @@ Public Class Tbl_UsuarioDAO
             Comando.Parameters.AddWithValue("@SenhaLogin", Item.SenhaLogin)
             Comando.Parameters.AddWithValue("@DtaNascimento", Item.DtaNascimento)
             Comando.Parameters.AddWithValue("@FlgAtivo", Item.FlgAtivo)
+            Comando.Parameters.AddWithValue("@DesPerfil", Item.DesPerfil)
 
             Comando.ExecuteNonQuery()
 
@@ -54,7 +55,7 @@ Public Class Tbl_UsuarioDAO
         Dim Sql As New StringBuilder
 
         Sql.Append("UPDATE dbo.TBL_USUARIO SET Nome = @Nome, SobreNome = @SobreNome, ContaLogin = @ContaLogin, " &
-                   "SenhaLogin = @SenhaLogin, DtaNascimento = @DtaNascimento, FlgAtivo = @FlgAtivo " &
+                   "SenhaLogin = @SenhaLogin, DtaNascimento = @DtaNascimento, FlgAtivo = @FlgAtivo, DesPerfil = @DesPerfil " &
                    "WHERE CodUsuario = @CodUsuario")
 
         Try
@@ -70,6 +71,7 @@ Public Class Tbl_UsuarioDAO
             Comando.Parameters.AddWithValue("@SenhaLogin", Item.SenhaLogin)
             Comando.Parameters.AddWithValue("@DtaNascimento", Item.DtaNascimento)
             Comando.Parameters.AddWithValue("@FlgAtivo", Item.FlgAtivo)
+            Comando.Parameters.AddWithValue("@DesPerfil", Item.DesPerfil)
 
             Comando.ExecuteNonQuery()
 
@@ -117,6 +119,7 @@ Public Class Tbl_UsuarioDAO
                     Item.SenhaLogin = Reader("SenhaLogin").ToString
                     Item.DtaNascimento = Reader("DtaNascimento")
                     Item.FlgAtivo = Reader("FlgAtivo")
+                    Item.DesPerfil = Reader("DesPerfil").ToString
 
                     Lista.Add(Item)
 

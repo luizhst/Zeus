@@ -24,8 +24,7 @@
 
                     Log.Debug("Login realizado com sucesso.")
 
-                    Session("Usuario") = Usuario.Nome
-                    Session("CodUsuario") = Usuario.CodUsuario
+                    Session("Usuario") = Usuario
                     Response.Redirect("~/Pages/Default.aspx")
 
                 Else
