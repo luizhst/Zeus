@@ -19,16 +19,6 @@
                 Response.Redirect("~/Pages/Sair.aspx")
             End If
 
-            If _Usuario.DesPerfil = "AD" Then
-
-                Dim item As New ListItem()
-                item.Value = "AD"
-                item.Text = "Administrador"
-
-                drp_perfil.Items.Add(item)
-
-            End If
-
 
             If Not IsPostBack() Then
                 If Not IsNothing(Request.QueryString("Cod")) Then
@@ -38,11 +28,35 @@
                 End If
             End If
 
+            GetPerfis()
+
         Catch ex As Exception
 
             Log.Fatal(ex.Message)
 
         End Try
+
+    End Sub
+
+    Private Sub GetPerfis()
+
+        Dim Lista As New List(Of Tbl_Perfil)
+
+        If IsNothing(Session("Perfis")) Then
+
+            Lista = Biz.GetPerfis().ToList()
+            Session("Perfis") = Lista
+
+        Else
+
+            Lista = Session("Perfis")
+
+        End If
+
+        drp_perfil.DataSource = Lista
+        drp_perfil.DataValueField = "CodPerfil"
+        drp_perfil.DataTextField = "DesPerfil"
+        drp_perfil.DataBind()
 
     End Sub
 
@@ -58,7 +72,7 @@
             Obj.ContaLogin = txt_login.Text
             Obj.SenhaLogin = txt_senha.Text
             Obj.DtaNascimento = txt_nascimento.Text
-            Obj.DesPerfil = drp_perfil.SelectedValue
+            Obj.CodPerfil = drp_perfil.SelectedValue
 
             If drp_status.SelectedIndex = 0 Then
                 Obj.FlgAtivo = True
@@ -95,7 +109,7 @@
             txt_senha.Attributes("value") = Obj.SenhaLogin
             txt_login.Text = Obj.ContaLogin
             txt_nascimento.Text = Obj.DtaNascimento
-            drp_perfil.SelectedValue = Obj.DesPerfil
+            drp_perfil.SelectedValue = Obj.CodPerfil
 
             If Obj.FlgAtivo = True Then
                 drp_status.SelectedIndex = 0

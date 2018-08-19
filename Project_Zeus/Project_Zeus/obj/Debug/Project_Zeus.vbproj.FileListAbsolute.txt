@@ -97,3 +97,4 @@ D:\SERVALE\Projetos\Zeus\Project_Zeus\Project_Zeus\obj\Debug\Project_Zeus.vbproj
 D:\SERVALE\Projetos\Zeus\Project_Zeus\Project_Zeus\obj\Debug\Project_Zeus.dll
 D:\SERVALE\Projetos\Zeus\Project_Zeus\Project_Zeus\obj\Debug\WebForms_Basic.xml
 D:\SERVALE\Projetos\Zeus\Project_Zeus\Project_Zeus\obj\Debug\Project_Zeus.pdb
+D:\SERVALE\Projetos\Zeus\Project_Zeus\Project_Zeus\obj\Debug\Project_Zeus.vbprojResolveAssemblyReference.cache

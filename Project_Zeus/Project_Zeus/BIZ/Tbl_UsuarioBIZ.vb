@@ -54,6 +54,13 @@ Public Class Tbl_UsuarioBIZ
 
     End Function
 
+    Friend Function GetPerfis() As List(Of Tbl_Perfil)
+
+        Dim DAO As New Tbl_Perfil_DAO
+        Return DAO.List("SELECT * FROM dbo.TBL_PERFIL ORDER BY DesPerfil").ToList()
+
+    End Function
+
 
     Friend Sub InsertUsuario(ByVal Obj As Tbl_Usuario)
 

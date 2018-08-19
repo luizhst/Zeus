@@ -23,6 +23,14 @@
 
                                             <div class="col-md-3">
                                                 <div class="form-group">
+                                                    <label class="control-label ">Código</label>
+                                                    <asp:TextBox runat="server" MaxLength="50" ClientIDMode="Static" ID="txt_codVeiculo" CssClass="form-control" TextMode="Number" ReadOnly="true"></asp:TextBox>
+                                                    <span class="help-block"></span>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-3">
+                                                <div class="form-group">
                                                     <label class="control-label ">Descrição</label>
                                                     <asp:TextBox runat="server" MaxLength="50" ClientIDMode="Static" ID="txt_des_veiculo" CssClass="form-control"></asp:TextBox>
                                                     <span class="help-block"></span>
@@ -31,16 +39,8 @@
 
                                             <div class="col-md-3">
                                                 <div class="form-group">
-                                                    <label class="control-label ">Placa Veículo 1</label>
-                                                    <asp:TextBox runat="server" Required="True" ID="txt_placa1" MaxLength="7" CssClass="form-control"></asp:TextBox>
-                                                    <span class="help-block"></span>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-md-3">
-                                                <div class="form-group">
-                                                    <label class="control-label ">Placa Veículo 2</label>
-                                                    <asp:TextBox runat="server" Required="True" ID="txt_placa2" MaxLength="7" CssClass="form-control"></asp:TextBox>
+                                                    <label class="control-label ">Nome do Motorista</label>
+                                                    <asp:TextBox runat="server" Required="True" ClientIDMode="Static" ID="txt_motorista" CssClass="form-control"></asp:TextBox>
                                                     <span class="help-block"></span>
                                                 </div>
                                             </div>
@@ -51,12 +51,19 @@
 
                                             <div class="col-md-3">
                                                 <div class="form-group">
-                                                    <label class="control-label ">Nome do Motorista</label>
-                                                    <asp:TextBox runat="server" Required="True" ClientIDMode="Static" ID="txt_motorista" CssClass="form-control"></asp:TextBox>
+                                                    <label class="control-label ">Placa Cavalo</label>
+                                                    <asp:TextBox runat="server" Required="True" ID="txt_placa1" MaxLength="7" CssClass="form-control"></asp:TextBox>
                                                     <span class="help-block"></span>
                                                 </div>
                                             </div>
 
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label class="control-label ">Placa Carreta</label>
+                                                    <asp:TextBox runat="server" Required="False" ID="txt_placa2" MaxLength="7" CssClass="form-control"></asp:TextBox>
+                                                    <span class="help-block"></span>
+                                                </div>
+                                            </div>
 
                                             <div class="col-md-3">
                                                 <div class="form-group">
@@ -72,7 +79,7 @@
                                         <br />
 
                                         <div>
-                                            <asp:Button runat="server" CssClass="btn btn-success" ID="btn_registrar" Text="Salvar" />
+                                            <asp:Button runat="server" CssClass="btn btn-success" ID="btn_registrar" Text="Salvar" OnClick="btn_registrar_Click" />
                                             <a class="btn btn-default" href="../Default.aspx">Voltar</a>
                                         </div>
 
@@ -93,9 +100,9 @@
 
                                                 <Columns>
 
-                                                    <asp:TemplateField HeaderText="CodVeiculo">
+                                                    <asp:TemplateField HeaderText="Código" Visible="false">
                                                         <ItemTemplate><%#Eval("CodVeiculo") %> </ItemTemplate>
-                                                        <ItemStyle Width="17%"></ItemStyle>
+                                                        <ItemStyle Width="27%"></ItemStyle>
                                                     </asp:TemplateField>
 
                                                     <asp:TemplateField HeaderText="Descrição">
@@ -103,12 +110,17 @@
                                                         <ItemStyle Width="17%"></ItemStyle>
                                                     </asp:TemplateField>
 
-                                                    <asp:TemplateField HeaderText="Placa 1">
+                                                    <asp:TemplateField HeaderText="Motorista">
+                                                        <ItemTemplate><%#Eval("Motorista") %> </ItemTemplate>
+                                                        <ItemStyle Width="17%"></ItemStyle>
+                                                    </asp:TemplateField>
+
+                                                    <asp:TemplateField HeaderText="Placa Cavalo">
                                                         <ItemTemplate><%#Eval("Placa1") %> </ItemTemplate>
                                                         <ItemStyle></ItemStyle>
                                                     </asp:TemplateField>
 
-                                                    <asp:TemplateField HeaderText="Placa 2">
+                                                    <asp:TemplateField HeaderText="Placa Carreta">
                                                         <ItemTemplate><%#Eval("Placa2") %> </ItemTemplate>
                                                         <ItemStyle></ItemStyle>
                                                     </asp:TemplateField>
@@ -128,7 +140,8 @@
                                                         <ItemStyle Width="10%"></ItemStyle>
                                                     </asp:TemplateField>
 
-                                                    <%--<asp:HyperLinkField DataNavigateUrlFields="CodVeiculo" DataNavigateUrlFormatString="~/Pages/CargaDescarga/IncluirHistCarga.aspx?Cod={0}" HeaderText="Editar" Text="Atualizar" />--%>
+                                                    <asp:HyperLinkField DataNavigateUrlFields="CodVeiculo" DataNavigateUrlFormatString="~/Pages/CarteiraVeiculo/IncluiVeiculo.aspx?Cod={0}" HeaderText="Editar" Text="Atualizar"/>
+                                                    <asp:HyperLinkField DataNavigateUrlFields="CodVeiculo" DataNavigateUrlFormatString="~/Pages/CarteiraVeiculo/Carteira.aspx?Veiculo={0}" HeaderText="Carteira" Text="Carteira" />
 
                                                 </Columns>
 

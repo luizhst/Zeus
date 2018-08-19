@@ -6,16 +6,16 @@ Public Class Util
 
         Dim PermiteAcesso As Boolean = True
 
-        If Pagina = "Incluir | Atualizar Carregamento" Then
-            If Usuario.DesPerfil <> "AD" And Usuario.DesPerfil <> "UA" Then
-                PermiteAcesso = False
-            End If
+        'If Pagina = "Incluir | Atualizar Carregamento" Then
+        '    If Usuario.DesPerfil <> "AD" And Usuario.DesPerfil <> "UA" Then
+        '        PermiteAcesso = False
+        '    End If
 
-        ElseIf Pagina = "Cadastro Usuario" Then
-            If Usuario.DesPerfil <> "AD" And Usuario.DesPerfil <> "UA" Then
-                PermiteAcesso = False
-            End If
-        End If
+        'ElseIf Pagina = "Cadastro Usuario" Then
+        '    If Usuario.DesPerfil <> "AD" And Usuario.DesPerfil <> "UA" Then
+        '        PermiteAcesso = False
+        '    End If
+        'End If
 
         Return PermiteAcesso
 

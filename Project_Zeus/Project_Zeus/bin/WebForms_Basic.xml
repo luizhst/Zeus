@@ -349,6 +349,132 @@ Campo gerado automaticamente.
 Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
 </remarks>
 </member>
+<member name="F:Project_Zeus.Carteira._hfd_codVeiculo">
+<summary>
+hfd_codVeiculo control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Project_Zeus.Carteira._lbl_carteira">
+<summary>
+lbl_carteira control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Project_Zeus.Carteira._lbl_veiculo">
+<summary>
+lbl_veiculo control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Project_Zeus.Carteira._lbl_saldo">
+<summary>
+lbl_saldo control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Project_Zeus.Carteira._lbl_placa1">
+<summary>
+lbl_placa1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Project_Zeus.Carteira._lbl_placa2">
+<summary>
+lbl_placa2 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Project_Zeus.Carteira._lbl_motorista">
+<summary>
+lbl_motorista control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Project_Zeus.Carteira._drp_tipo_movimento">
+<summary>
+drp_tipo_movimento control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Project_Zeus.Carteira._drp_credito_debito">
+<summary>
+drp_credito_debito control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Project_Zeus.Carteira._txt_descricao">
+<summary>
+txt_descricao control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Project_Zeus.Carteira._txt_valor">
+<summary>
+txt_valor control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Project_Zeus.Carteira._btn_registrar">
+<summary>
+btn_registrar control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Project_Zeus.Carteira._lbl_Mensagem_Grid">
+<summary>
+lbl_Mensagem_Grid control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Project_Zeus.Carteira._grid_lancamentos">
+<summary>
+grid_lancamentos control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
 <member name="F:Project_Zeus.IncluiVeiculo._UpdatePanel1">
 <summary>
 UpdatePanel1 control.
@@ -358,9 +484,27 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
+<member name="F:Project_Zeus.IncluiVeiculo._txt_codVeiculo">
+<summary>
+txt_codVeiculo control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
 <member name="F:Project_Zeus.IncluiVeiculo._txt_des_veiculo">
 <summary>
 txt_des_veiculo control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Project_Zeus.IncluiVeiculo._txt_motorista">
+<summary>
+txt_motorista control.
 </summary>
 <remarks>
 Auto-generated field.
@@ -379,15 +523,6 @@ To modify move field declaration from designer file to code-behind file.
 <member name="F:Project_Zeus.IncluiVeiculo._txt_placa2">
 <summary>
 txt_placa2 control.
-</summary>
-<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member>
-<member name="F:Project_Zeus.IncluiVeiculo._txt_motorista">
-<summary>
-txt_motorista control.
 </summary>
 <remarks>
 Auto-generated field.
@@ -756,92 +891,92 @@ Modificar a declaração do campo de movimento do arquivo de designer para o arq
 </member>
 <member name="F:Project_Zeus.IncluirUsuario._txt_cod_usuario">
 <summary>
-Controle txt_cod_usuario.
+txt_cod_usuario control.
 </summary>
 <remarks>
-Campo gerado automaticamente.
-Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:Project_Zeus.IncluirUsuario._txt_nome_usuario">
 <summary>
-Controle txt_nome_usuario.
+txt_nome_usuario control.
 </summary>
 <remarks>
-Campo gerado automaticamente.
-Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:Project_Zeus.IncluirUsuario._txt_sobrenome_usuario">
 <summary>
-Controle txt_sobrenome_usuario.
+txt_sobrenome_usuario control.
 </summary>
 <remarks>
-Campo gerado automaticamente.
-Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:Project_Zeus.IncluirUsuario._txt_login">
 <summary>
-Controle txt_login.
+txt_login control.
 </summary>
 <remarks>
-Campo gerado automaticamente.
-Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:Project_Zeus.IncluirUsuario._txt_senha">
 <summary>
-Controle txt_senha.
+txt_senha control.
 </summary>
 <remarks>
-Campo gerado automaticamente.
-Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:Project_Zeus.IncluirUsuario._txt_nascimento">
 <summary>
-Controle txt_nascimento.
+txt_nascimento control.
 </summary>
 <remarks>
-Campo gerado automaticamente.
-Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:Project_Zeus.IncluirUsuario._drp_status">
 <summary>
-Controle drp_status.
+drp_status control.
 </summary>
 <remarks>
-Campo gerado automaticamente.
-Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:Project_Zeus.IncluirUsuario._drp_perfil">
 <summary>
-Controle drp_perfil.
+drp_perfil control.
 </summary>
 <remarks>
-Campo gerado automaticamente.
-Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:Project_Zeus.IncluirUsuario._btn_registrar">
 <summary>
-Controle btn_registrar.
+btn_registrar control.
 </summary>
 <remarks>
-Campo gerado automaticamente.
-Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:Project_Zeus.Usuarios._grid_usuarios">
 <summary>
-Controle grid_usuarios.
+grid_usuarios control.
 </summary>
 <remarks>
-Campo gerado automaticamente.
-Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:Project_Zeus.SiteMaster._theme">

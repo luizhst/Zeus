@@ -72,13 +72,13 @@
         End Set
     End Property
 
-    Private _DesPerfil As String
-    Public Property DesPerfil() As String
+    Private _CodPerfil As Integer
+    Public Property CodPerfil() As Integer
         Get
-            Return _DesPerfil
+            Return _CodPerfil
         End Get
-        Set(ByVal value As String)
-            _DesPerfil = value
+        Set(ByVal value As Integer)
+            _CodPerfil = value
         End Set
     End Property
 

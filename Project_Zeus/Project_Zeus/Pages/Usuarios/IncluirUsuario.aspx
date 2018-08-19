@@ -80,9 +80,6 @@
                                     <div class="form-group">
                                         <label class="control-label">Perfil</label>
                                         <asp:DropDownList AutoPostBack="false   " runat="server" AppendDataBoundItems="true" CssClass="dropdown form-control" SelectionMode="sigle" MaxLength="50" ID="drp_perfil">
-                                            <%--<asp:ListItem Value="AD" Text="Administrador" />--%>
-                                            <asp:ListItem Value="UA" Text="Interativo" />
-                                            <asp:ListItem Value="UC" Text="Consultas" />
                                         </asp:DropDownList>
                                     </div>
                                 </div>

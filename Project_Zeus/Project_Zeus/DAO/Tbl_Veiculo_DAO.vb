@@ -28,7 +28,7 @@ Public Class Tbl_Veiculo_DAO
             Comando.Parameters.AddWithValue("@Placa2", Item.Placa2)
             Comando.Parameters.AddWithValue("@Motorista", Item.Motorista)
             Comando.Parameters.AddWithValue("@DtaCadastro", DateTime.Now)
-            Comando.Parameters.AddWithValue("@DtaAtualizacao", Item.DtaAtualizacao)
+            Comando.Parameters.AddWithValue("@DtaAtualizacao", DateTime.Now)
             Comando.Parameters.AddWithValue("@FlagAtivo", Item.FlagAtivo)
 
             Comando.ExecuteNonQuery()
@@ -54,7 +54,7 @@ Public Class Tbl_Veiculo_DAO
         Dim Sql As New StringBuilder
 
         Sql.Append("UPDATE dbo.TBL_VEICULO SET Descricao = @Descricao, Placa1 = @Placa1, Placa2 = @Placa2, " &
-                   "Motorista = @Motorista, DtaCadastro = @DtaCadastro, DtaAtualizacao = @DtaAtualizacao, FlagAtivo = @FlagAtivo " &
+                   "Motorista = @Motorista, DtaAtualizacao = @DtaAtualizacao, FlagAtivo = @FlagAtivo " &
                    "WHERE CodVeiculo = @CodVeiculo")
 
         Try
@@ -68,7 +68,6 @@ Public Class Tbl_Veiculo_DAO
             Comando.Parameters.AddWithValue("@Placa1", Item.Placa1)
             Comando.Parameters.AddWithValue("@Placa2", Item.Placa2)
             Comando.Parameters.AddWithValue("@Motorista", Item.Motorista)
-            Comando.Parameters.AddWithValue("@DtaCadastro", Item.DtaCadastro)
             Comando.Parameters.AddWithValue("@DtaAtualizacao", DateTime.Now)
             Comando.Parameters.AddWithValue("@FlagAtivo", Item.FlagAtivo)
 

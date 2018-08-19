@@ -1,5 +1,6 @@
 ﻿Imports System.Data.SqlClient
 Imports System.Text
+Imports Project_Zeus
 
 Public Class Tbl_Movimento_Carteira_Veiculo_DAO
 
@@ -32,7 +33,7 @@ Public Class Tbl_Movimento_Carteira_Veiculo_DAO
             Comando.Parameters.AddWithValue("@Descricao", Item.Descricao)
             Comando.Parameters.AddWithValue("@Valor", Item.Valor)
             Comando.Parameters.AddWithValue("@Saldo", Item.Saldo)
-            Comando.Parameters.AddWithValue("@FlagAtivo", Item.FlagAtivo)
+            Comando.Parameters.AddWithValue("@FlagAtivo", 1)
 
             Comando.ExecuteNonQuery()
 
@@ -48,6 +49,7 @@ Public Class Tbl_Movimento_Carteira_Veiculo_DAO
 
 
     End Sub
+
 
     Public Sub Update(ByVal Item As Tbl_Movimento_Carteira_Veiculo)
 
@@ -147,6 +149,48 @@ Public Class Tbl_Movimento_Carteira_Veiculo_DAO
         End Try
 
         Return Lista
+
+    End Function
+
+    Public Function Saldo(ByVal Sql As String) As Double
+
+        Dim Conexao As New SqlConnection
+        Dim Comando As New SqlCommand
+        Comando.CommandTimeout = 60
+        'Dim Reader As SqlDataReader
+        Dim _Saldo As Double
+
+        Try
+
+            Conexao = DB.GetConexao()
+
+            Comando.CommandText = Sql
+            Comando.CommandType = System.Data.CommandType.Text
+            Comando.Connection = Conexao
+            Try
+                _Saldo = Comando.ExecuteScalar()
+            Catch ex As Exception
+                Log.Fatal(ex.Message)
+            End Try
+
+            'If (Reader.HasRows) Then
+            '    Return Reader("TOTAL")
+            'Else
+            '    Return ""
+            'End If
+
+        Catch ex As Exception
+
+            Log.Error("Erro ao executar: " & Sql)
+            Log.Fatal(ex.Message)
+
+        Finally
+
+            DB.CloseConexao(Conexao)
+
+        End Try
+
+        Return _Saldo.ToString()
 
     End Function
 

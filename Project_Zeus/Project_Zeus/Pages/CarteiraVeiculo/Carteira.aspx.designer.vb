@@ -11,70 +11,106 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class IncluiVeiculo
+Partial Public Class Carteira
     
     '''<summary>
-    '''UpdatePanel1 control.
+    '''hfd_codVeiculo control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents UpdatePanel1 As Global.System.Web.UI.UpdatePanel
+    Protected WithEvents hfd_codVeiculo As Global.System.Web.UI.WebControls.HiddenField
     
     '''<summary>
-    '''txt_codVeiculo control.
+    '''lbl_carteira control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txt_codVeiculo As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents lbl_carteira As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
-    '''txt_des_veiculo control.
+    '''lbl_veiculo control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txt_des_veiculo As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents lbl_veiculo As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
-    '''txt_motorista control.
+    '''lbl_saldo control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txt_motorista As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents lbl_saldo As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
-    '''txt_placa1 control.
+    '''lbl_placa1 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txt_placa1 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents lbl_placa1 As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
-    '''txt_placa2 control.
+    '''lbl_placa2 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txt_placa2 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents lbl_placa2 As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
-    '''drp_status control.
+    '''lbl_motorista control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents drp_status As Global.System.Web.UI.WebControls.DropDownList
+    Protected WithEvents lbl_motorista As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''drp_tipo_movimento control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents drp_tipo_movimento As Global.System.Web.UI.WebControls.DropDownList
+    
+    '''<summary>
+    '''drp_credito_debito control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents drp_credito_debito As Global.System.Web.UI.WebControls.DropDownList
+    
+    '''<summary>
+    '''txt_descricao control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txt_descricao As Global.System.Web.UI.WebControls.TextBox
+    
+    '''<summary>
+    '''txt_valor control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txt_valor As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
     '''btn_registrar control.
@@ -95,11 +131,11 @@ Partial Public Class IncluiVeiculo
     Protected WithEvents lbl_Mensagem_Grid As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
-    '''grid_veiculos control.
+    '''grid_lancamentos control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents grid_veiculos As Global.System.Web.UI.WebControls.GridView
+    Protected WithEvents grid_lancamentos As Global.System.Web.UI.WebControls.GridView
 End Class

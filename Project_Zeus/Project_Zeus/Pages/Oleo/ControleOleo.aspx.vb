@@ -77,6 +77,7 @@
         txt_qtde.Text = ""
         drp_tipo.SelectedIndex = -1
         txt_km.Text = ""
+        lbl_Mensagem_Grid.Visible = False
 
     End Sub
 

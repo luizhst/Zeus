@@ -700,6 +700,7 @@
     <Content Include="Pages\AcessoNegado.aspx" />
     <Content Include="Pages\CargaDescarga\IncluirHistCarga.aspx" />
     <Content Include="Pages\CargaDescarga\ListaCargas.aspx" />
+    <Content Include="Pages\CarteiraVeiculo\Carteira.aspx" />
     <Content Include="Pages\CarteiraVeiculo\IncluiVeiculo.aspx" />
     <Content Include="Pages\Default.aspx" />
     <Content Include="Global.asax" />
@@ -4215,6 +4216,7 @@
     <Compile Include="App_Start\BundleConfig.vb" />
     <Compile Include="App_Start\RouteConfig.vb" />
     <Compile Include="BIZ\Tbl_Hist_CargaBIZ.vb" />
+    <Compile Include="BIZ\Tbl_Movimento_Carteira_Veiculo_BIZ.vb" />
     <Compile Include="BIZ\Tbl_Oleo_Diesel_BIZ.vb" />
     <Compile Include="BIZ\Tbl_SolicitacaoBIZ.vb" />
     <Compile Include="BIZ\Tbl_UsuarioBIZ.vb" />
@@ -4224,6 +4226,7 @@
     <Compile Include="DAO\Tbl_Hist_CargaDAO.vb" />
     <Compile Include="DAO\Tbl_Movimento_Carteira_Veiculo_DAO.vb" />
     <Compile Include="DAO\Tbl_Oleo_Diesel_DAO.vb" />
+    <Compile Include="DAO\Tbl_Perfil_DAO.vb" />
     <Compile Include="DAO\Tbl_SolicitacaoDAO.vb" />
     <Compile Include="DAO\Tbl_Tipo_Movimento_Carteira_DAO.vb" />
     <Compile Include="DAO\Tbl_UsuarioDAO.vb" />
@@ -4231,6 +4234,7 @@
     <Compile Include="Modal\Tbl_Hist_Carga.vb" />
     <Compile Include="Modal\Tbl_Movimento_Carteira_Veiculo.vb" />
     <Compile Include="Modal\Tbl_Oleo_Diesel.vb" />
+    <Compile Include="Modal\Tbl_Perfil.vb" />
     <Compile Include="Modal\Tbl_Solicitacao.vb" />
     <Compile Include="Modal\Tbl_Tipo_Movimento_Carteira.vb" />
     <Compile Include="Modal\Tbl_Usuario.vb" />
@@ -4261,6 +4265,13 @@
     </Compile>
     <Compile Include="Pages\CargaDescarga\ListaCargas.aspx.vb">
       <DependentUpon>ListaCargas.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\CarteiraVeiculo\Carteira.aspx.designer.vb">
+      <DependentUpon>Carteira.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\CarteiraVeiculo\Carteira.aspx.vb">
+      <DependentUpon>Carteira.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Pages\CarteiraVeiculo\IncluiVeiculo.aspx.designer.vb">

@@ -15,8 +15,6 @@ Public Class Connection
 
         Dim Conexao As New SqlConnection
 
-        StringConexao = "Data Source=mssql03.redehost.com.br,5003;Initial Catalog=Db_Zeus;Persist Security Info=True;User ID=user_prd;Password='bgt5BGT%'"
-
         Try
 
             Conexao.ConnectionString = StringConexao
