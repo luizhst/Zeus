@@ -88,10 +88,10 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
       <publishTime>08/03/2014 20:33:56</publishTime>
     </File>
     <File Include="bin/Project_Zeus.dll">
-      <publishTime>04/24/2018 23:48:35</publishTime>
+      <publishTime>09/22/2018 10:53:07</publishTime>
     </File>
     <File Include="bin/Project_Zeus.pdb">
-      <publishTime>04/24/2018 23:48:35</publishTime>
+      <publishTime>09/22/2018 10:53:07</publishTime>
     </File>
     <File Include="bin/pt-br/Microsoft.AspNet.FriendlyUrls.resources.dll">
       <publishTime>07/30/2013 17:01:52</publishTime>
@@ -250,7 +250,7 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
       <publishTime>02/11/2014 16:26:04</publishTime>
     </File>
     <File Include="bin/WebForms_Basic.xml">
-      <publishTime>04/24/2018 23:48:34</publishTime>
+      <publishTime>09/22/2018 10:53:06</publishTime>
     </File>
     <File Include="bin/WebGrease.dll">
       <publishTime>09/10/2013 17:28:38</publishTime>
@@ -1292,6 +1292,21 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
     </File>
     <File Include="Content/fonts/poppins/Poppins-ThinItalic.ttf">
       <publishTime>03/20/2018 00:59:29</publishTime>
+    </File>
+    <File Include="Content/icons/chatting.png">
+      <publishTime>08/27/2018 22:38:10</publishTime>
+    </File>
+    <File Include="Content/icons/forklift.png">
+      <publishTime>08/27/2018 22:38:10</publishTime>
+    </File>
+    <File Include="Content/icons/maps-and-flags.png">
+      <publishTime>08/27/2018 22:38:10</publishTime>
+    </File>
+    <File Include="Content/icons/truck.png">
+      <publishTime>08/27/2018 22:38:10</publishTime>
+    </File>
+    <File Include="Content/icons/weekly-calendar.png">
+      <publishTime>08/27/2018 22:38:10</publishTime>
     </File>
     <File Include="Content/images/icons/favicon.ico">
       <publishTime>03/20/2018 00:59:29</publishTime>
@@ -12177,6 +12192,12 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
     <File Include="Pages/CargaDescarga/ListaCargas.aspx">
       <publishTime>04/24/2018 16:29:13</publishTime>
     </File>
+    <File Include="Pages/CarteiraVeiculo/Carteira.aspx">
+      <publishTime>08/18/2018 23:12:17</publishTime>
+    </File>
+    <File Include="Pages/CarteiraVeiculo/IncluiVeiculo.aspx">
+      <publishTime>08/27/2018 22:23:34</publishTime>
+    </File>
     <File Include="Pages/Default.aspx">
       <publishTime>04/24/2018 14:04:58</publishTime>
     </File>
@@ -12184,7 +12205,7 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
       <publishTime>04/24/2018 14:12:41</publishTime>
     </File>
     <File Include="Pages/Relatorio/Relatorio.aspx">
-      <publishTime>04/24/2018 17:13:53</publishTime>
+      <publishTime>04/25/2018 15:32:17</publishTime>
     </File>
     <File Include="Pages/Sair.aspx">
       <publishTime>03/20/2018 02:45:06</publishTime>
@@ -12196,10 +12217,10 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
       <publishTime>04/20/2018 16:48:56</publishTime>
     </File>
     <File Include="Pages/Usuarios/IncluirUsuario.aspx">
-      <publishTime>04/20/2018 12:20:41</publishTime>
+      <publishTime>08/10/2018 00:37:17</publishTime>
     </File>
     <File Include="Pages/Usuarios/Usuarios.aspx">
-      <publishTime>04/20/2018 10:41:32</publishTime>
+      <publishTime>07/31/2018 00:05:23</publishTime>
     </File>
     <File Include="Scripts/bootstrap.js">
       <publishTime>03/27/2018 00:33:37</publishTime>
@@ -12373,7 +12394,7 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
       <publishTime>03/19/2018 20:18:17</publishTime>
     </File>
     <File Include="Site.Master">
-      <publishTime>04/24/2018 17:11:08</publishTime>
+      <publishTime>08/27/2018 22:42:43</publishTime>
     </File>
     <File Include="Site.Mobile.Master">
       <publishTime>03/19/2018 20:17:57</publishTime>
@@ -12385,7 +12406,7 @@ ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.mi
       <publishTime>03/19/2018 20:17:57</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>04/24/2018 23:48:40</publishTime>
+      <publishTime>09/22/2018 10:53:12</publishTime>
     </File>
   </ItemGroup>
 </Project>

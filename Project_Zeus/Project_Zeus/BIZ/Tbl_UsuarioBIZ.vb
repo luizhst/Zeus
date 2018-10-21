@@ -27,18 +27,17 @@ Public Class Tbl_UsuarioBIZ
 
             ContaUsuario = DAO.List("SELECT * FROM dbo.TBL_USUARIO WHERE ContaLogin = '" & Usuario & "' AND SenhaLogin = '" & Senha & "'").FirstOrDefault()
 
-            If (IsNothing(ContaUsuario) = False) Then
-                Return ContaUsuario
-            Else
-                Return Nothing
-            End If
-
-
         Catch ex As Exception
 
             Log.Fatal(ex.Message)
 
         End Try
+
+        If (IsNothing(ContaUsuario) = False) Then
+            Return ContaUsuario
+        Else
+            Return Nothing
+        End If
 
     End Function
 

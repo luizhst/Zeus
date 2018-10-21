@@ -21,7 +21,7 @@
 
                                     <Columns>
 
-                                        <asp:TemplateField HeaderText="Cod." ItemStyle-Width="10%">
+                                        <asp:TemplateField HeaderText="Cod." ItemStyle-Width="10%" Visible="false">
                                             <ItemTemplate><%#Eval("CodUsuario") %> </ItemTemplate>
                                             <ItemStyle Width="10%"></ItemStyle>
                                         </asp:TemplateField>

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" CodeBehind="IncluirHistCarga.aspx.vb" Inherits="Project_Zeus.IncluirHistCarga" %>
+﻿<%@ Page Title="Incluir | Atualizar Carregamento" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" CodeBehind="IncluirHistCarga.aspx.vb" Inherits="Project_Zeus.IncluirHistCarga" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
@@ -61,11 +61,20 @@
 
                                 <div class="col-md-3">
                                     <div class="form-group">
-                                        <label class="control-label ">Pedido de Compra</label>
-                                        <asp:TextBox runat="server" MaxLength="50" ClientIDMode="Static" ID="txt_pedidocompra" CssClass="form-control"></asp:TextBox>
+                                        <label class="control-label ">Tipo do Pallet</label>
+                                        <asp:TextBox runat="server" MaxLength="100" ClientIDMode="Static" ID="txt_pedidocompra" CssClass="form-control"></asp:TextBox>
                                         <span class="help-block"></span>
                                     </div>
                                 </div>
+
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label class="control-label ">Quantidade</label>
+                                        <asp:TextBox runat="server" MaxLength="100" ClientIDMode="Static" ID="txt_qtdepallet" CssClass="form-control" TextMode="Number"></asp:TextBox>
+                                        <span class="help-block"></span>
+                                    </div>
+                                </div>
+
                             </div>
 
                             <div class="row">
@@ -81,6 +90,14 @@
                                     <div class="form-group">
                                         <label class="control-label ">Motorista</label>
                                         <asp:TextBox runat="server" Style="text-transform: uppercase" required="true" MaxLength="50" ClientIDMode="Static" ID="txt_motorista" CssClass="form-control" TextMode="SingleLine"></asp:TextBox>
+                                        <span class="help-block"></span>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label class="control-label ">Telefone</label>
+                                        <asp:TextBox runat="server" MaxLength="50" ClientIDMode="Static" ID="txt_telefone" CssClass="form-control" TextMode="SingleLine"></asp:TextBox>
                                         <span class="help-block"></span>
                                     </div>
                                 </div>
@@ -113,8 +130,8 @@
 
                                 <div class="col-md-3">
                                     <div class="form-group">
-                                        <label class="control-label">Placa 3</label>
-                                        <asp:TextBox runat="server" Style="text-transform: uppercase" MaxLength="8" ClientIDMode="Static" ID="txt_placa3" CssClass="form-control"></asp:TextBox>
+                                        <label class="control-label">Descrição Veículo</label>
+                                        <asp:TextBox runat="server" Style="text-transform: uppercase" ClientIDMode="Static" ID="txt_placa3" CssClass="form-control"></asp:TextBox>
                                         <span class="help-block"></span>
                                     </div>
                                 </div>
