@@ -27,6 +27,12 @@ Public Class Tbl_Oleo_Diesel_BIZ
 
     End Function
 
+    Friend Function GetLancamentosMedia(ByVal Veiculo As String)
+
+        Return DAO.List("SELECT TOP 2 * FROM dbo.TBL_OLEO_DIESEL WHERE DESPLACA_VEICULO = '" & Veiculo & "' AND DESKM > 0 ORDER BY CodRegistro DESC").ToList()
+
+    End Function
+
     Friend Function GetLast5Lancamentos() As List(Of Tbl_Oleo_Diesel)
 
         Return DAO.List("SELECT TOP 5 * FROM dbo.TBL_OLEO_DIESEL ORDER BY CodRegistro DESC").ToList()

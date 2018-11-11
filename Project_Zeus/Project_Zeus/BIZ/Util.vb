@@ -21,4 +21,12 @@ Public Class Util
 
     End Function
 
+    Public Function GetValorOleo() As Decimal
+
+        Dim BIZParametro As New Tbl_Parametro_BIZ
+
+        Return Convert.ToDecimal(BIZParametro.GetParametroById(1).Valor)
+
+    End Function
+
 End Class

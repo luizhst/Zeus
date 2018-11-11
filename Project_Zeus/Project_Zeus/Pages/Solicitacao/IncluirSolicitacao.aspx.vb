@@ -17,21 +17,21 @@
             Else
                 _User = Session("Usuario")
 
-                'If _User.DesPerfil <> "AD" Then
+                If _User.CodPerfil <> 1 Then
 
-                txt_resolucao.ReadOnly = True
-                btn_registrar_solucao.Visible = False
+                    txt_resolucao.ReadOnly = True
+                    btn_registrar_solucao.Visible = False
 
-                'End If
+                End If
 
                 If Not IsNothing(Request.QueryString("Cod")) Then
-                    GetSolicitacao(Request.QueryString("Cod"))
-                    btn_registrar_solicitacao.Text = "Atualizar Solicitação"
+                        GetSolicitacao(Request.QueryString("Cod"))
+                        btn_registrar_solicitacao.Text = "Atualizar Solicitação"
+                    End If
+
                 End If
 
             End If
-
-        End If
 
 
     End Sub

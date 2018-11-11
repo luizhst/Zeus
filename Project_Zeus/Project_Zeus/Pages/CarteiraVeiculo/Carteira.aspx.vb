@@ -29,9 +29,32 @@
 
             GetTipoMovimentos()
             GetLançamentos()
+            GetMediaAbastecimento()
         End If
 
 
+
+    End Sub
+
+    Private Sub GetMediaAbastecimento()
+
+        Dim BizOleoDiesel As New Tbl_Oleo_Diesel_BIZ
+        Dim Lista As New List(Of Tbl_Oleo_Diesel)
+
+        Try
+            Lista = BizOleoDiesel.GetLancamentosMedia(lbl_placa1.Text)
+
+            If Lista.Count = 2 Then
+                lbl_media.Text = ((Lista.Item(0).DesKm - Lista.Item(1).DesKm) / Lista.Item(0).NumQtdeOleo) & " KM/Litros"
+            Else
+                lbl_media.Text = "0.0 KM/Litros"
+            End If
+
+        Catch ex As Exception
+
+            Log.Error(ex.Message)
+
+        End Try
 
     End Sub
 

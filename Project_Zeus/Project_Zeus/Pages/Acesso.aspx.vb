@@ -15,7 +15,7 @@
 
         Try
 
-            Log.Debug("Tentativa de login. Usuário: " & txt_conta.Value)
+            Log.Debug("Tentativa de login. Usuário: " & txt_conta.Value & " - Host: " & Environment.MachineName)
             Usuario = Biz.LogarSistema(txt_conta.Value.ToString.Trim(), txt_senha.Value.ToString.Trim())
 
             If Not IsNothing(Usuario) Then

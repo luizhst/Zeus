@@ -21,10 +21,26 @@
 
                 lbl_estoque_oleo.Text = Biz.GetEstoqueAtual.ToString("#,###")
                 CarregarUltimosAbastecimentos()
+                CarregaVeiculosCadastrados()
 
             End If
 
         End If
+
+    End Sub
+
+    Private Sub CarregaVeiculosCadastrados()
+
+        Dim Veiculos As New List(Of Tbl_Veiculo)
+        Dim BizVeiculos As New Tbl_Veiculo_BIZ
+
+        Veiculos = BizVeiculos.GetVeiculos()
+
+        ddl_veiculos.DataSource = Veiculos
+        ddl_veiculos.DataTextField = "Placa1"
+        ddl_veiculos.DataValueField = "CodVeiculo"
+        ddl_veiculos.DataBind()
+
 
     End Sub
 
@@ -42,7 +58,7 @@
 
             _User = Session("Usuario")
             Item.DesUser = _User.Nome.ToUpper
-            Item.DesPlaca_Veiculo = txt_placa.Text.ToUpper
+            Item.DesPlaca_Veiculo = ddl_veiculos.SelectedItem.Text.ToUpper
             Item.DesNomeVeiculo = txt_des_veiculo.Text.ToUpper
             Item.NumQtdeOleo = CInt(txt_qtde.Text)
             Item.DtaRegistro = DateTime.Now
@@ -55,6 +71,8 @@
             End If
 
             Biz.InsertRegistro(Item)
+            RegistraMovimentoCarteira()
+
 
             CarregarUltimosAbastecimentos()
             lbl_estoque_oleo.Text = Biz.GetEstoqueAtual.ToString("#,###")
@@ -70,9 +88,35 @@
 
     End Sub
 
+    Private Sub RegistraMovimentoCarteira()
+
+        Dim Obj As New Tbl_Movimento_Carteira_Veiculo
+        Obj.Veiculo = New Tbl_Veiculo
+        Obj.TipoMovimento = New Tbl_Tipo_Movimento_Carteira
+        Dim Util As New Util
+
+        Try
+
+            Obj.Veiculo.CodVeiculo = Convert.ToInt32(ddl_veiculos.SelectedItem.Value.ToString.PadLeft(10, "0"))
+            Obj.TipoMovimento.CodTipoMovimentoCarteira = 1
+            Obj.Descricao = "Lançamento automático sobre abastecimento"
+            Obj.Valor = (txt_qtde.Text * Util.GetValorOleo()).ToString
+            Obj.DesTipoRegistro = "D"
+
+            Dim mcBIZ As New Tbl_Movimento_Carteira_Veiculo_BIZ
+            mcBIZ.InsertMovimento(Obj)
+
+        Catch ex As Exception
+
+            Log.Fatal(ex.Message)
+
+        End Try
+
+    End Sub
+
     Private Sub Limpar()
 
-        txt_placa.Text = ""
+        ddl_veiculos.SelectedIndex = 0
         txt_des_veiculo.Text = ""
         txt_qtde.Text = ""
         drp_tipo.SelectedIndex = -1

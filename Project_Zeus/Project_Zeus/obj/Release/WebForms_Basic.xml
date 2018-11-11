@@ -39,18 +39,18 @@ Project_Zeus
 </member>
 <member name="T:Project_Zeus.My.Resources.Resources">
 <summary>
-  Uma classe de recurso de tipo de alta segurança, para pesquisar cadeias de caracteres localizadas etc.
+  A strongly-typed resource class, for looking up localized strings, etc.
 </summary>
 </member>
 <member name="P:Project_Zeus.My.Resources.Resources.ResourceManager">
 <summary>
-  Retorna a instância de ResourceManager armazenada em cache usada por essa classe.
+  Returns the cached ResourceManager instance used by this class.
 </summary>
 </member>
 <member name="P:Project_Zeus.My.Resources.Resources.Culture">
 <summary>
-  Substitui a propriedade CurrentUICulture do thread atual para todas as
-  pesquisas de recursos que usam essa classe de recurso de tipo de alta segurança.
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
 </summary>
 </member>
 <member name="M:Project_Zeus.Tbl_UsuarioBIZ.LogarSistema(System.String,System.String)">
@@ -63,47 +63,47 @@ Project_Zeus
 </member>
 <member name="F:Project_Zeus.Acesso._frmAcesso">
 <summary>
-Controle frmAcesso.
+frmAcesso control.
 </summary>
 <remarks>
-Campo gerado automaticamente.
-Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:Project_Zeus.Acesso._txt_conta">
 <summary>
-Controle txt_conta.
+txt_conta control.
 </summary>
 <remarks>
-Campo gerado automaticamente.
-Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:Project_Zeus.Acesso._txt_senha">
 <summary>
-Controle txt_senha.
+txt_senha control.
 </summary>
 <remarks>
-Campo gerado automaticamente.
-Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:Project_Zeus.Acesso._btn_logar">
 <summary>
-Controle btn_logar.
+btn_logar control.
 </summary>
 <remarks>
-Campo gerado automaticamente.
-Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:Project_Zeus.Acesso._lblMensagem">
 <summary>
-Controle lblMensagem.
+lblMensagem control.
 </summary>
 <remarks>
-Campo gerado automaticamente.
-Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:Project_Zeus.IncluirHistCarga._txt_cod_hist">

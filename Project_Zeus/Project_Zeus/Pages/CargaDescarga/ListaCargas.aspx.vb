@@ -59,14 +59,18 @@
         Dim Lista As New List(Of Tbl_Hist_Carga)
         Lista = Biz.ListarCarregamentos()
 
-        Dim PrimeiroDia As String = "01/" & DateTime.Now.Month & "/" & DateTime.Now.Year & " 00:00:00"
+        Dim PrimeiroDia As String = DateTime.Now.Year & "/" & DateTime.Now.Month & "/" & "01" & " 00:00:00"
 
 
-        lbl_cargahoje.Text = Lista.Where(Function(x) Format(x.DtaRegistro, "dd/MM/yyyy") = Format(Now, "dd/MM/yyyy") And x.DesTipo = "CARREGAR").Count
-        lbl_descargahoje.Text = Lista.Where(Function(x) Format(x.DtaRegistro, "dd/MM/yyyy") = Format(Now, "dd/MM/yyyy") And x.DesTipo = "DESCARREGAR").Count
+        lbl_cargahoje.Text = Lista.Where(Function(x) Format(x.DtaRegistro, "yyyy/MM/dd") = Format(Now, "yyyy/MM/dd") And x.DesTipo = "CARREGAR").Count
+        lbl_descargahoje.Text = Lista.Where(Function(x) Format(x.DtaRegistro, "yyyy/MM/dd") = Format(Now, "yyyy/MM/dd") And x.DesTipo = "DESCARREGAR").Count
 
-        lbl_cargames.Text = Lista.Where(Function(x) Format(x.DtaRegistro, "dd/MM/yyyy") >= Format(Now, "01/MM/yyyy") And Format(x.DtaRegistro, "dd/MM/yyyy") <= Format(Now, "dd/MM/yyyy") And x.DesTipo = "CARREGAR").Count
-        lbl_descargames.Text = Lista.Where(Function(x) Format(x.DtaRegistro, "dd/MM/yyyy") >= Format(Now, "01/MM/yyyy") And Format(x.DtaRegistro, "dd/MM/yyyy") <= Format(Now, "dd/MM/yyyy") And x.DesTipo = "DESCARREGAR").Count
+        lbl_cargames.Text = Lista.Where(Function(x) Format(x.DtaRegistro, "yyyy/MM/dd") >= Format(Now, "yyyy/MM/01") And Format(x.DtaRegistro, "yyyy/MM/dd") <= Format(Now, "yyyy/MM/dd") And x.DesTipo = "CARREGAR").Count
+        lbl_descargames.Text = Lista.Where(Function(x) Format(x.DtaRegistro, "yyyy/MM/dd") >= Format(Now, "yyyy/MM/01") And Format(x.DtaRegistro, "yyyy/MM/dd") <= Format(Now, "yyyy/MM/dd") And x.DesTipo = "DESCARREGAR").Count
+
+
+
+
 
     End Sub
 

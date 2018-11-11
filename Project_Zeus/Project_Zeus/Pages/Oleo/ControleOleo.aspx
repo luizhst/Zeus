@@ -37,10 +37,19 @@
 
                                         <div class="row">
 
-                                            <div class="col-md-3">
+                                            <%--<div class="col-md-3">
                                                 <div class="form-group">
                                                     <label class="control-label ">Placa Veículo</label>
                                                     <asp:TextBox runat="server" Required="True" ID="txt_placa" MaxLength="7" CssClass="form-control"></asp:TextBox>
+                                                    <span class="help-block"></span>
+                                                </div>
+                                            </div>--%>
+
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label class="control-label ">Placa Veículo</label>
+                                                    <asp:DropDownList ID="ddl_veiculos" runat="server" MaxLength="7" CssClass="form-control"></asp:DropDownList>
+                                                    <a href="../CarteiraVeiculo/IncluiVeiculo.aspx">Cadastrar Veículo</a>
                                                     <span class="help-block"></span>
                                                 </div>
                                             </div>

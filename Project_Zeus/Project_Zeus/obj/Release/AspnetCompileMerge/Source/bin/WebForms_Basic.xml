@@ -39,18 +39,18 @@ Project_Zeus
 </member>
 <member name="T:Project_Zeus.My.Resources.Resources">
 <summary>
-  Uma classe de recurso de tipo de alta segurança, para pesquisar cadeias de caracteres localizadas etc.
+  A strongly-typed resource class, for looking up localized strings, etc.
 </summary>
 </member>
 <member name="P:Project_Zeus.My.Resources.Resources.ResourceManager">
 <summary>
-  Retorna a instância de ResourceManager armazenada em cache usada por essa classe.
+  Returns the cached ResourceManager instance used by this class.
 </summary>
 </member>
 <member name="P:Project_Zeus.My.Resources.Resources.Culture">
 <summary>
-  Substitui a propriedade CurrentUICulture do thread atual para todas as
-  pesquisas de recursos que usam essa classe de recurso de tipo de alta segurança.
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
 </summary>
 </member>
 <member name="M:Project_Zeus.Tbl_UsuarioBIZ.LogarSistema(System.String,System.String)">

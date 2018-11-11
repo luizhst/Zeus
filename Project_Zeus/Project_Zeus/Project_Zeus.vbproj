@@ -38,6 +38,7 @@
     <OutputPath>bin\</OutputPath>
     <DocumentationFile>WebForms_Basic.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -50,6 +51,7 @@
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
     <IncludeIisSettings>true</IncludeIisSettings>
     <PublishDatabases>false</PublishDatabases>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AspNet.ScriptManager.bootstrap, Version=3.0.1.0, Culture=neutral, processorArchitecture=MSIL">
@@ -100,8 +102,8 @@
     </Reference>
     <Reference Include="System.Drawing" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
-    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
@@ -977,6 +979,7 @@
     <Content Include="Content\themify-icons\fonts\themify.woff" />
     <Content Include="Content\themify-icons\Themify IconFonts 5-23-2014.json" />
     <Content Include="Pages\Oleo\ControleOleo.aspx" />
+    <Content Include="Pages\Parametros\Parametros.aspx" />
     <Content Include="Pages\Relatorio\Relatorio.aspx" />
     <Content Include="Pages\Sair.aspx" />
     <Content Include="Pages\Solicitacao\IncluirSolicitacao.aspx" />
@@ -4093,6 +4096,7 @@
     <Compile Include="BIZ\Tbl_Hist_CargaBIZ.vb" />
     <Compile Include="BIZ\Tbl_Movimento_Carteira_Veiculo_BIZ.vb" />
     <Compile Include="BIZ\Tbl_Oleo_Diesel_BIZ.vb" />
+    <Compile Include="BIZ\Tbl_Parametro_BIZ.vb" />
     <Compile Include="BIZ\Tbl_SolicitacaoBIZ.vb" />
     <Compile Include="BIZ\Tbl_UsuarioBIZ.vb" />
     <Compile Include="BIZ\Tbl_Veiculo_BIZ.vb" />
@@ -4101,6 +4105,7 @@
     <Compile Include="DAO\Tbl_Hist_CargaDAO.vb" />
     <Compile Include="DAO\Tbl_Movimento_Carteira_Veiculo_DAO.vb" />
     <Compile Include="DAO\Tbl_Oleo_Diesel_DAO.vb" />
+    <Compile Include="DAO\Tbl_Parametro_DAO.vb" />
     <Compile Include="DAO\Tbl_Perfil_DAO.vb" />
     <Compile Include="DAO\Tbl_SolicitacaoDAO.vb" />
     <Compile Include="DAO\Tbl_Tipo_Movimento_Carteira_DAO.vb" />
@@ -4109,6 +4114,7 @@
     <Compile Include="Modal\Tbl_Hist_Carga.vb" />
     <Compile Include="Modal\Tbl_Movimento_Carteira_Veiculo.vb" />
     <Compile Include="Modal\Tbl_Oleo_Diesel.vb" />
+    <Compile Include="Modal\Tbl_Parametro.vb" />
     <Compile Include="Modal\Tbl_Perfil.vb" />
     <Compile Include="Modal\Tbl_Solicitacao.vb" />
     <Compile Include="Modal\Tbl_Tipo_Movimento_Carteira.vb" />
@@ -4190,6 +4196,13 @@
     </Compile>
     <Compile Include="Pages\Oleo\ControleOleo.aspx.vb">
       <DependentUpon>ControleOleo.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Parametros\Parametros.aspx.designer.vb">
+      <DependentUpon>Parametros.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Parametros\Parametros.aspx.vb">
+      <DependentUpon>Parametros.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Pages\Relatorio\Relatorio.aspx.designer.vb">
