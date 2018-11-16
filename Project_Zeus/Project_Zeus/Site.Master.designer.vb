@@ -131,6 +131,15 @@ Partial Public Class SiteMaster
     Protected WithEvents _lbl_menu_relatorios As Global.System.Web.UI.WebControls.HyperLink
     
     '''<summary>
+    '''_lbl_menu_atualizacoes control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents _lbl_menu_atualizacoes As Global.System.Web.UI.WebControls.HyperLink
+    
+    '''<summary>
     '''MainContent control.
     '''</summary>
     '''<remarks>

@@ -1186,6 +1186,15 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
+<member name="F:Project_Zeus.SiteMaster.__lbl_menu_atualizacoes">
+<summary>
+_lbl_menu_atualizacoes control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
 <member name="F:Project_Zeus.SiteMaster._MainContent">
 <summary>
 MainContent control.

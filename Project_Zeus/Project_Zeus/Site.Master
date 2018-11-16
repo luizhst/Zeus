@@ -18,6 +18,8 @@
     <webopt:BundleReference runat="server" Path="~/Content/css" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="Content/fontawesome/fontawesome.min.css">
+
 
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <!-- Bootstrap Core CSS -->
@@ -112,7 +114,8 @@
                                 <asp:HyperLink runat="server" ID="_lbl_menu_solicitacao" NavigateUrl="~/Pages/Solicitacao/Solicitacoes.aspx" class="waves-effect"><i class="ti-comments p-r-10"></i><span class="hide-menu">Solicitações</span></asp:HyperLink>
                                 <asp:HyperLink runat="server" ID="_lbl_menu_config" NavigateUrl="~/Pages/Parametros/Parametros.aspx" class="waves-effect"><i class="ti-settings p-r-10"></i><span class="hide-menu">Parametros Sistema </span></asp:HyperLink>
                                 <asp:HyperLink runat="server" ID="_lbl_menu_relatorios" NavigateUrl="~/Pages/Relatorio/Relatorio.aspx" class="waves-effect"><i class="ti-server p-r-10"></i><span class="hide-menu">Relatórios</span></asp:HyperLink>
-
+                                <asp:HyperLink runat="server" ID="_lbl_menu_atualizacoes" NavigateUrl="~/Pages/Versao.aspx" class="waves-effect"><i class="fas fa-atlas"></i><span class="hide-menu">Atualizações</span></asp:HyperLink>
+                                
                             </li>
                         </ul>
                     </div>

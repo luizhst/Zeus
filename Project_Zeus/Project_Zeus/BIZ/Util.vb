@@ -29,4 +29,36 @@ Public Class Util
 
     End Function
 
+    Public Function GetTimbreEmailSolicitacoes() As String
+
+        Dim BIZParametro As New Tbl_Parametro_BIZ
+
+        Return BIZParametro.GetParametroById(2).Valor
+
+    End Function
+
+    Public Function GetEmailEnvio() As String
+
+        Dim BIZParametro As New Tbl_Parametro_BIZ
+
+        Return BIZParametro.GetParametroById(3).Valor
+
+    End Function
+
+    Public Function GetSenhaEnvio() As String
+
+        Dim BIZParametro As New Tbl_Parametro_BIZ
+
+        Return BIZParametro.GetParametroById(4).Valor
+
+    End Function
+
+    Public Function GetSMTPEnvio() As String
+
+        Dim BIZParametro As New Tbl_Parametro_BIZ
+
+        Return BIZParametro.GetParametroById(5).Valor
+
+    End Function
+
 End Class

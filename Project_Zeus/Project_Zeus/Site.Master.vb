@@ -7,13 +7,18 @@
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As EventArgs) Handles Me.Load
 
         Usuario = Session("Usuario")
-        If Usuario.CodPerfil = 1 Then
-            _lbl_menu_config.Visible = True
-            _lbl_menu_usuarios.Visible = True
+        If Not IsNothing(Usuario) Then
+            If Usuario.CodPerfil = 1 Then
+                _lbl_menu_config.Visible = True
+                _lbl_menu_usuarios.Visible = True
+            Else
+                _lbl_menu_config.Visible = False
+                _lbl_menu_usuarios.Visible = False
+            End If
         Else
-            _lbl_menu_config.Visible = False
-            _lbl_menu_usuarios.Visible = False
+            Response.Redirect("~/Pages/Sair.aspx")
         End If
+
 
     End Sub
 

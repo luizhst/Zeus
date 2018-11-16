@@ -25,13 +25,13 @@
                 End If
 
                 If Not IsNothing(Request.QueryString("Cod")) Then
-                        GetSolicitacao(Request.QueryString("Cod"))
-                        btn_registrar_solicitacao.Text = "Atualizar Solicitação"
-                    End If
-
+                    GetSolicitacao(Request.QueryString("Cod"))
+                    btn_registrar_solicitacao.Text = "Atualizar Solicitação"
                 End If
 
             End If
+
+        End If
 
 
     End Sub
@@ -121,6 +121,8 @@
 
             Biz.InsertSolicitacao(Item)
 
+            EnviarEmailSolicitacao(Item.DesSolicitacao, Item.DesSolicitante, Acao, Item.DesTitulo)
+
             Response.Redirect("~/Pages/Solicitacao/Solicitacoes.aspx")
 
             Limpar()
@@ -133,6 +135,30 @@
         End Try
 
     End Sub
+
+    Private Sub EnviarEmailSolicitacao(ByVal Descricao As String, ByVal Solicitante As Integer, ByVal Status As String, ByVal Titulo As String)
+
+        Dim Email As New Email
+        Dim Util As New Util
+
+        Dim CorpoEmail As String
+        If Status = 1 Then
+            CorpoEmail = "<h2>Nova Solicita&ccedil;&atilde;o de Mudan&ccedil;a</h2>"
+        Else
+            CorpoEmail = "<h2>Atualiza&ccedil;&atilde;o de Solicita&ccedil;&atilde;o de Mudan&ccedil;a</h2>"
+        End If
+
+        CorpoEmail = CorpoEmail & "<p>Foi aberta uma nova solicita&ccedil;&atilde;o de mudan&ccedil;a na ferramenta Servale APP com as seguintes informa&ccedil;&otilde;es:</p>"
+        CorpoEmail = CorpoEmail & "<p>Solicitante: " & Solicitante & "<br />"
+        CorpoEmail = CorpoEmail & "Titulo: " & Titulo & "<br />"
+        CorpoEmail = CorpoEmail & "Descri&ccedil;&atilde;o: " & Descricao & "<br />"
+        CorpoEmail = CorpoEmail & "Status: " & Status & "<br />"
+        CorpoEmail = CorpoEmail & "Data de Abertura: " & DateTime.Now & "</p>"
+
+        Email.EnviaMensagemEmail(Util.GetEmailEnvio(), Util.GetTimbreEmailSolicitacoes(), "Solicitação de Mudança Servale App", CorpoEmail, Util.GetSMTPEnvio)
+
+    End Sub
+
 
     Protected Sub btn_registrar_solucao_Click(sender As Object, e As EventArgs)
 
