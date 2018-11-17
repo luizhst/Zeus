@@ -24,14 +24,12 @@ O banco de dados ainda não está disponível para utilização, mas as entidade
 
 # Funcionalidades em desenvolvimento
 
-- Geração de solicitação de faturamento de revistas;
-- Gestão de saída de revistas;
-- Dashboard de indicadores gerenciais;
+- Boa pergunta;
 
 # Funcionalidades a serem desenvolvidas
 
-- Método de controle de estoque entrada e saída;
 - Relatórios de análise de bens;
+- Melhorias futuras;
 
 # Funcionalidades já desenvolvidas
 
@@ -39,6 +37,10 @@ O banco de dados ainda não está disponível para utilização, mas as entidade
 - Gestão de integrantes da banca;
 - Gestão de fila de entrada e saída de carregamentos de revistas;
 - Detalhamento de entrada de revistas;
+- Envio de e-mail de novas solicitações de mudança;
+- Controle de carteira;
+- Controle de abastecimentos;
+- Atualizações aplicadas e histórico de versionamento;
 
 # Referências
 
