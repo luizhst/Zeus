@@ -63,6 +63,7 @@
             Item.NumQtdeOleo = CInt(txt_qtde.Text)
             Item.DtaRegistro = DateTime.Now
             Item.DesKm = txt_km.Text.ToUpper
+            Item.DesEstoque = drp_estoque.Text
 
             If drp_tipo.Text.Equals("Saída") Then
                 Item.FlgEntrada = False
@@ -122,6 +123,7 @@
         drp_tipo.SelectedIndex = -1
         txt_km.Text = ""
         lbl_Mensagem_Grid.Visible = False
+        drp_estoque.SelectedIndex = 0
 
     End Sub
 

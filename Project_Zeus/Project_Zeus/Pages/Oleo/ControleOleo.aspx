@@ -91,6 +91,16 @@
                                                     </asp:DropDownList>
                                                 </div>
                                             </div>
+
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label class="control-label">Origem Abastecimento</label>
+                                                    <asp:DropDownList AutoPostBack="false" runat="server" AppendDataBoundItems="true" CssClass="dropdown form-control" SelectionMode="sigle" MaxLength="50" ID="drp_estoque">
+                                                        <asp:ListItem Value="Bomba" Text="Bomba" />
+                                                        <asp:ListItem Value="Posto de Gasolina" Text="Posto de Gasolina" />
+                                                    </asp:DropDownList>
+                                                </div>
+                                            </div>
                                         </div>
 
                                         <br />
@@ -149,6 +159,11 @@
 
                                                     <asp:TemplateField HeaderText="Saldo">
                                                         <ItemTemplate><%#Eval("NumSaldo", "{0:N0}") %> </ItemTemplate>
+                                                        <ItemStyle></ItemStyle>
+                                                    </asp:TemplateField>
+
+                                                    <asp:TemplateField HeaderText="Origem Abastecimento">
+                                                        <ItemTemplate><%#Eval("DesEstoque") %> </ItemTemplate>
                                                         <ItemStyle></ItemStyle>
                                                     </asp:TemplateField>
 

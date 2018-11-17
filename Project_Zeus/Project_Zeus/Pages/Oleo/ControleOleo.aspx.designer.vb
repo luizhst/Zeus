@@ -77,6 +77,15 @@ Partial Public Class ControleOleo
     Protected WithEvents drp_tipo As Global.System.Web.UI.WebControls.DropDownList
     
     '''<summary>
+    '''drp_estoque control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents drp_estoque As Global.System.Web.UI.WebControls.DropDownList
+    
+    '''<summary>
     '''btn_registrar control.
     '''</summary>
     '''<remarks>

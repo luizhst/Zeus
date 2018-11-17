@@ -26,22 +26,28 @@ Public Class Tbl_Oleo_Diesel_DAO
             End If
 
         Else
-
-            If Item.FlgEntrada = True Then
-                Log.Debug("Adicionando " & Item.NumQtdeOleo & " ao estoque de " & ItemOld.NumSaldo)
-                Item.NumSaldo = ItemOld.NumSaldo + Item.NumQtdeOleo
+            If Item.DesEstoque.Equals("Bomba") Then
+                If Item.FlgEntrada = True Then
+                    Log.Debug("Adicionando " & Item.NumQtdeOleo & " ao estoque de " & ItemOld.NumSaldo)
+                    Item.NumSaldo = ItemOld.NumSaldo + Item.NumQtdeOleo
+                Else
+                    Log.Debug("Subtraindo " & Item.NumQtdeOleo & " do estoque de " & ItemOld.NumSaldo)
+                    Item.NumSaldo = ItemOld.NumSaldo - Item.NumQtdeOleo
+                End If
             Else
-                Log.Debug("Subtraindo " & Item.NumQtdeOleo & " do estoque de " & ItemOld.NumSaldo)
-                Item.NumSaldo = ItemOld.NumSaldo - Item.NumQtdeOleo
+
+                Log.Debug("Lançamento de abastecimento em posto de gasolina, placa: " & Item.DesPlaca_Veiculo)
+                Item.NumSaldo = ItemOld.NumSaldo
+
             End If
 
         End If
 
 
         Sql.Append("INSERT INTO dbo.TBL_OLEO_DIESEL (DtaRegistro, DesUser, DesPlaca_Veiculo, DesNomeVeiculo, NumQtdeOleo, " &
-                                                   "NumSaldo, FlgEntrada, DesKm) VALUES " &
+                                                   "NumSaldo, FlgEntrada, DesKm, DesEstoque) VALUES " &
                                                    "(@DtaRegistro, @DesUser, @DesPlaca_Veiculo, @DesNomeVeiculo, @NumQtdeOleo, " &
-                                                   "@NumSaldo, @FlgEntrada, @DesKm)")
+                                                   "@NumSaldo, @FlgEntrada, @DesKm, @DesEstoque)")
         Try
 
             Conexao = DB.GetConexao()
@@ -56,6 +62,7 @@ Public Class Tbl_Oleo_Diesel_DAO
             Comando.Parameters.AddWithValue("@NumSaldo", Item.NumSaldo)
             Comando.Parameters.AddWithValue("@FlgEntrada", Item.FlgEntrada)
             Comando.Parameters.AddWithValue("@DesKm", Item.DesKm)
+            Comando.Parameters.AddWithValue("@DesEstoque", Item.DesEstoque)
 
             Comando.ExecuteNonQuery()
 
@@ -107,6 +114,7 @@ Public Class Tbl_Oleo_Diesel_DAO
                     Item.NumSaldo = Reader("NumSaldo").ToString
                     Item.FlgEntrada = Reader("FlgEntrada").ToString
                     Item.DesKm = Reader("DesKm").ToString
+                    Item.DesEstoque = Reader("DesEstoque").ToString
 
                     Lista.Add(Item)
 

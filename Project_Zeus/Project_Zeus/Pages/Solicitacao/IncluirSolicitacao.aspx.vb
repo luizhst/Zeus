@@ -136,23 +136,27 @@
 
     End Sub
 
-    Private Sub EnviarEmailSolicitacao(ByVal Descricao As String, ByVal Solicitante As Integer, ByVal Status As String, ByVal Titulo As String)
+    Private Sub EnviarEmailSolicitacao(ByVal Descricao As String, ByVal Solicitante As String, ByVal Status As Integer, ByVal Titulo As String)
 
         Dim Email As New Email
         Dim Util As New Util
+        Dim DesStatus As String
 
         Dim CorpoEmail As String
         If Status = 1 Then
             CorpoEmail = "<h2>Nova Solicita&ccedil;&atilde;o de Mudan&ccedil;a</h2>"
+            CorpoEmail = CorpoEmail & "<p>Foi aberta uma nova solicita&ccedil;&atilde;o de mudan&ccedil;a na ferramenta Servale APP com as seguintes informa&ccedil;&otilde;es:</p>"
+            DesStatus = "Em Aberto"
         Else
             CorpoEmail = "<h2>Atualiza&ccedil;&atilde;o de Solicita&ccedil;&atilde;o de Mudan&ccedil;a</h2>"
+            DesStatus = "Finalizado"
+
         End If
 
-        CorpoEmail = CorpoEmail & "<p>Foi aberta uma nova solicita&ccedil;&atilde;o de mudan&ccedil;a na ferramenta Servale APP com as seguintes informa&ccedil;&otilde;es:</p>"
         CorpoEmail = CorpoEmail & "<p>Solicitante: " & Solicitante & "<br />"
         CorpoEmail = CorpoEmail & "Titulo: " & Titulo & "<br />"
         CorpoEmail = CorpoEmail & "Descri&ccedil;&atilde;o: " & Descricao & "<br />"
-        CorpoEmail = CorpoEmail & "Status: " & Status & "<br />"
+        CorpoEmail = CorpoEmail & "<strong>Status: " & DesStatus & "</strong><br />"
         CorpoEmail = CorpoEmail & "Data de Abertura: " & DateTime.Now & "</p>"
 
         Email.EnviaMensagemEmail(Util.GetEmailEnvio(), Util.GetTimbreEmailSolicitacoes(), "Solicitação de Mudança Servale App", CorpoEmail, Util.GetSMTPEnvio)

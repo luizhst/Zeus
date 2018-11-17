@@ -80,6 +80,16 @@
         End Set
     End Property
 
+    Private _DesEstoque As String
+    Public Property DesEstoque() As String
+        Get
+            Return _DesEstoque
+        End Get
+        Set(ByVal value As String)
+            _DesEstoque = value
+        End Set
+    End Property
+
     Private _DesKm As String
     Public Property DesKm() As String
         Get
