@@ -5,7 +5,13 @@
     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
         <ContentTemplate>
             <fieldset>
-               
+
+
+
+                <div style="position: absolute; left: 50%; top: 50%; margin-left: -450px; margin-top: 250px;">
+                    <%--<img src="../Content/Logo 2.png" style="position: absolute; top: 50%">--%>
+                    <img src="../Content/Logo sem sombra.png" style="position: absolute; top: 50%">
+                </div>
 
                 <%--<div class="jumbotron">
         <h1>ASP.NET</h1>
@@ -43,7 +49,6 @@
             </p>
         </div>
     </div>--%>
-
             </fieldset>
         </ContentTemplate>
     </asp:UpdatePanel>

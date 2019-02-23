@@ -16,6 +16,17 @@
                             <div class="row">
 
                                 <div class="col-md-8">
+                                    <h2>24-11-2018</h2>
+                                    <p>
+                                        Inclusão da logo da página principal.
+                                    </p>
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+
+                                <div class="col-md-8">
                                     <h2>10-11-2018</h2>
                                     <p>
                                         Implantação do site na máquina 'HENRIQUE', compartilhamento do ambiente e configurações gerais.

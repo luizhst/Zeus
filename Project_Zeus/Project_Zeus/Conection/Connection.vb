@@ -5,10 +5,10 @@ Imports System.Text
 Public Class Connection
 
 
-    Private Shared StringConexao As String = My.Settings.StringConexao.ToString
+    'Private Shared StringConexao As String = My.Settings.StringConexao.ToString
 
     'Private Shared StringConexao As String = "Data Source=NB-LUIZHST;Initial Catalog=Db_Zeus;Persist Security Info=True;User ID=sa;Password='bgt5BGT%'"
-    'Private Shared StringConexao As String = "Data Source=SERVIDOR;Initial Catalog=Db_Zeus;Persist Security Info=True;User ID=sa;Password='bgt5BGT%'"
+    Private Shared StringConexao As String = "Data Source=SERVIDOR;Initial Catalog=Db_Zeus;Persist Security Info=True;User ID=sa;Password='bgt5BGT%'"
 
     Private ReadOnly Log As log4net.ILog = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
 

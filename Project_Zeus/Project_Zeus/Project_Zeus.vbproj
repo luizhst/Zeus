@@ -319,6 +319,8 @@
     <Content Include="Content\js\validator.js" />
     <Content Include="Content\js\waves.js" />
     <Content Include="Content\js\widget.js" />
+    <Content Include="Content\Logo 2.png" />
+    <Content Include="Content\Logo sem sombra.png" />
     <Content Include="Content\sweetalert\bootstrap-sweetalert.png" />
     <Content Include="Content\sweetalert\docs.css" />
     <Content Include="Content\sweetalert\sweet-alert.css" />

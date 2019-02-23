@@ -64,7 +64,7 @@
                             <%--<span class="txt1">Ainda não possui uma conta?
                             </span>
                             <a class="txt2" href="#">Sign Up</a>--%>
-                            <p>&copy; <%: DateTime.Now.Year %> - AdaptGestão | Controle</p>
+                            <p>&copy; <%: DateTime.Now.Year %> - Servale App | Controle</p>
                         </div>
                     </form>
                 </div>

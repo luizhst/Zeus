@@ -44,6 +44,15 @@
                                         </div>
                                     </div>
 
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label class="control-label ">Média Veículo</label>
+                                            <br />
+                                            <asp:Label runat="server" MaxLength="50" ClientIDMode="Static" ID="lbl_media" CssClass="control-label" Font-Size="18px" Font-Bold="true"></asp:Label>
+                                            <span class="help-block"></span>
+                                        </div>
+                                    </div>
+
                                 </div>
                                 <div class="row">
 
@@ -126,7 +135,9 @@
                                     <%--Valor--%>
                                     <div class="col-md-3">
                                         <div class="form-group">
-                                            <label class="control-label ">Valor <p> (Centavos separados com "," vírgula) </p></label>
+                                            <label class="control-label ">Valor
+                                                <p>(Centavos separados com "," vírgula) </p>
+                                            </label>
                                             <asp:TextBox runat="server" MaxLength="50" ClientIDMode="Static" ID="txt_valor" required="true" CssClass="form-control"></asp:TextBox>
                                             <span class="help-block"></span>
                                         </div>
@@ -177,7 +188,7 @@
 
                                         <asp:TemplateField HeaderText="Tipo Registro">
                                             <ItemTemplate><%# IIf(Eval("DesTipoRegistro") = "D", "Débito", "Crédito") %> </ItemTemplate>
-                                            
+
                                             <ItemStyle Width="17%"></ItemStyle>
                                         </asp:TemplateField>
 
