@@ -1,4 +1,4 @@
-﻿Imports System.Data.SqlClient
+﻿Imports MySql.Data.MySqlClient
 Imports System.Text
 Imports Project_Zeus
 
@@ -9,13 +9,13 @@ Public Class Tbl_Movimento_Carteira_Veiculo_DAO
 
     Public Sub Insert(ByVal Item As Tbl_Movimento_Carteira_Veiculo)
 
-        Dim Conexao As New SqlConnection
-        Dim Comando As New SqlCommand
+        Dim Conexao As New MySqlConnection
+        Dim Comando As New MySqlCommand
         Comando.CommandTimeout = 60
         Dim Sql As New StringBuilder
 
 
-        Sql.Append("INSERT INTO dbo.TBL_MOVIMENTO_CARTEIRA_VEICULO (CodVeiculo, CodTipoMovimentoCarteira, DtaRegistro, DesTipoRegistro, Descricao, " &
+        Sql.Append("INSERT INTO TBL_MOVIMENTO_CARTEIRA_VEICULO (CodVeiculo, CodTipoMovimentoCarteira, DtaRegistro, DesTipoRegistro, Descricao, " &
                                                                    "Valor, Saldo, FlagAtivo) VALUES " &
                                                                    "(@CodVeiculo, @CodTipoMovimentoCarteira, @DtaRegistro, @DesTipoRegistro, @Descricao, " &
                                                                    "@Valor, @Saldo, @FlagAtivo)")
@@ -53,12 +53,12 @@ Public Class Tbl_Movimento_Carteira_Veiculo_DAO
 
     Public Sub Update(ByVal Item As Tbl_Movimento_Carteira_Veiculo)
 
-        Dim Conexao As New SqlConnection
-        Dim Comando As New SqlCommand
+        Dim Conexao As New MySqlConnection
+        Dim Comando As New MySqlCommand
         Comando.CommandTimeout = 60
         Dim Sql As New StringBuilder
 
-        Sql.Append("UPDATE dbo.TBL_MOVIMENTO_CARTEIRA_VEICULO SET CodVeiculo = @CodVeiculo, CodTipoMovimentoCarteira = @CodTipoMovimentoCarteira " &
+        Sql.Append("UPDATE TBL_MOVIMENTO_CARTEIRA_VEICULO SET CodVeiculo = @CodVeiculo, CodTipoMovimentoCarteira = @CodTipoMovimentoCarteira " &
                    "DtaRegistro = @DtaRegistro, DesTipoRegistro = @DesTipoRegistro, Descricao = @Descricao, Valor = @Valor, Saldo = @Saldo, FlagAtivo = @FlagAtivo " &
                    "WHERE CodCarteira = @CodCarteira")
 
@@ -98,10 +98,10 @@ Public Class Tbl_Movimento_Carteira_Veiculo_DAO
 
         Dim Lista As New List(Of Tbl_Movimento_Carteira_Veiculo)
         Dim Item As New Tbl_Movimento_Carteira_Veiculo
-        Dim Conexao As New SqlConnection
-        Dim Comando As New SqlCommand
+        Dim Conexao As New MySqlConnection
+        Dim Comando As New MySqlCommand
         Comando.CommandTimeout = 60
-        Dim Reader As SqlDataReader
+        Dim Reader As MySqlDataReader
 
         Try
 
@@ -154,8 +154,8 @@ Public Class Tbl_Movimento_Carteira_Veiculo_DAO
 
     Public Function Saldo(ByVal Sql As String) As Double
 
-        Dim Conexao As New SqlConnection
-        Dim Comando As New SqlCommand
+        Dim Conexao As New MySqlConnection
+        Dim Comando As New MySqlCommand
         Comando.CommandTimeout = 60
         'Dim Reader As SqlDataReader
         Dim _Saldo As Double

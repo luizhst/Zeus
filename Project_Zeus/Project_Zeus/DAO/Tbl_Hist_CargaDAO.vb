@@ -1,4 +1,4 @@
-﻿Imports System.Data.SqlClient
+﻿Imports MySql.Data.MySqlClient
 Imports System.Text
 
 Public Class Tbl_Hist_CargaDAO
@@ -9,13 +9,13 @@ Public Class Tbl_Hist_CargaDAO
 
     Public Sub Insert(ByVal Item As Tbl_Hist_Carga)
 
-        Dim Conexao As New SqlConnection
-        Dim Comando As New SqlCommand
+        Dim Conexao As New MySqlConnection
+        Dim Comando As New MySqlCommand
         Comando.CommandTimeout = 60
         Dim Sql As New StringBuilder
 
 
-        Sql.Append("INSERT INTO dbo.TBL_HIST_CARGA (DtaRegistro, DtaAtualizacao, DesOrigemDestino, DesMotorista, DesTransportadora, " &
+        Sql.Append("INSERT INTO TBL_HIST_CARGA (DtaRegistro, DtaAtualizacao, DesOrigemDestino, DesMotorista, DesTransportadora, " &
                                                    "DesPlaca1, DesPlaca2, DesPlaca3, DesTipo, FlgLiberado, DesNotaFiscal, DesPedidoCompra, NumCpfMotorista, " &
                                                    "DtaNotaFiscal, DesTelefone, NumQtdePallet) VALUES " &
                                                    "(@DtaRegistro, @DtaAtualizacao, @DesOrigemDestino, @DesMotorista, @DesTransportadora, " &
@@ -63,12 +63,12 @@ Public Class Tbl_Hist_CargaDAO
 
     Public Sub Update(ByVal Item As Tbl_Hist_Carga)
 
-        Dim Conexao As New SqlConnection
-        Dim Comando As New SqlCommand
+        Dim Conexao As New MySqlConnection
+        Dim Comando As New MySqlCommand
         Comando.CommandTimeout = 60
         Dim Sql As New StringBuilder
 
-        Sql.Append("UPDATE dbo.TBL_HIST_CARGA SET DtaRegistro = @DtaRegistro, DtaAtualizacao = @DtaAtualizacao, DesOrigemDestino = @DesOrigemDestino, DesMotorista = @DesMotorista, " &
+        Sql.Append("UPDATE TBL_HIST_CARGA SET DtaRegistro = @DtaRegistro, DtaAtualizacao = @DtaAtualizacao, DesOrigemDestino = @DesOrigemDestino, DesMotorista = @DesMotorista, " &
                    "DesTransportadora = @DesTransportadora, DesPlaca1 = @DesPlaca1, DesPlaca2 = @DesPlaca2, DesPlaca3 = @DesPlaca3, " &
                    "DesTipo = @DesTipo, FlgLiberado = @FlgLiberado, DesPedidoCompra = @DesPedidoCompra, DesNotaFiscal = @DesNotaFiscal, NumCpfMotorista = @NumCpfMotorista, " &
                    "DtaNotaFiscal = @DtaNotaFiscal, DesTelefone = @DesTelefone, NumQtdePallet = @NumQtdePallet WHERE CodHist = @CodHist")
@@ -116,10 +116,10 @@ Public Class Tbl_Hist_CargaDAO
 
         Dim Lista As New List(Of Tbl_Hist_Carga)
         Dim Item As New Tbl_Hist_Carga
-        Dim Conexao As New SqlConnection
-        Dim Comando As New SqlCommand
+        Dim Conexao As New MySqlConnection
+        Dim Comando As New MySqlCommand
         Comando.CommandTimeout = 60
-        Dim Reader As SqlDataReader
+        Dim Reader As MySqlDataReader
 
         Try
 

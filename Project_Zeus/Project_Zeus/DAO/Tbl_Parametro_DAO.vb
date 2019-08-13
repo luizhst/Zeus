@@ -1,4 +1,4 @@
-﻿Imports System.Data.SqlClient
+﻿Imports MySql.Data.MySqlClient
 Imports System.Text
 
 Public Class Tbl_Parametro_DAO
@@ -8,13 +8,13 @@ Public Class Tbl_Parametro_DAO
 
     Public Sub Insert(ByVal Item As Tbl_Parametro)
 
-        Dim Conexao As New SqlConnection
-        Dim Comando As New SqlCommand
+        Dim Conexao As New MySqlConnection
+        Dim Comando As New MySqlCommand
         Comando.CommandTimeout = 60
         Dim Sql As New StringBuilder
 
 
-        Sql.Append("INSERT INTO dbo.TBL_PARAMETROS (Nome, Valor, Observacao, DtaRegistro, UsuarioRegistro, FlagAtivo) VALUES " &
+        Sql.Append("INSERT INTO TBL_PARAMETROS (Nome, Valor, Observacao, DtaRegistro, UsuarioRegistro, FlagAtivo) VALUES " &
                                                "(@Nome, @Valor, @Observacao, @DtaRegistro, @UsuarioRegistro, @FlagAtivo)")
 
         Try
@@ -47,12 +47,12 @@ Public Class Tbl_Parametro_DAO
 
     Public Sub Update(ByVal Item As Tbl_Parametro)
 
-        Dim Conexao As New SqlConnection
-        Dim Comando As New SqlCommand
+        Dim Conexao As New MySqlConnection
+        Dim Comando As New MySqlCommand
         Comando.CommandTimeout = 60
         Dim Sql As New StringBuilder
 
-        Sql.Append("UPDATE dbo.TBL_PARAMETROS SET Valor = @Valor, Observacao = @Observacao, " &
+        Sql.Append("UPDATE TBL_PARAMETROS SET Valor = @Valor, Observacao = @Observacao, " &
                    "FlagAtivo = @FlagAtivo WHERE CodParametro = @CodParametro")
 
         Try
@@ -86,10 +86,10 @@ Public Class Tbl_Parametro_DAO
 
         Dim Lista As New List(Of Tbl_Parametro)
         Dim Item As New Tbl_Parametro
-        Dim Conexao As New SqlConnection
-        Dim Comando As New SqlCommand
+        Dim Conexao As New MySqlConnection
+        Dim Comando As New MySqlCommand
         Comando.CommandTimeout = 60
-        Dim Reader As SqlDataReader
+        Dim Reader As MySqlDataReader
 
         Try
 

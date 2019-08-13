@@ -25,7 +25,7 @@ Public Class Tbl_UsuarioBIZ
 
         Try
 
-            ContaUsuario = DAO.List("SELECT * FROM dbo.TBL_USUARIO WHERE ContaLogin = '" & Usuario & "' AND SenhaLogin = '" & Senha & "'").FirstOrDefault()
+            ContaUsuario = DAO.List("SELECT * FROM TBL_USUARIO WHERE ContaLogin = '" & Usuario & "' AND SenhaLogin = '" & Senha & "'").FirstOrDefault()
 
         Catch ex As Exception
 
@@ -43,20 +43,20 @@ Public Class Tbl_UsuarioBIZ
 
     Friend Function ListarUsuarios() As List(Of Tbl_Usuario)
 
-        Return DAO.List("SELECT * FROM dbo.TBL_USUARIO ORDER BY Nome").ToList()
+        Return DAO.List("SELECT * FROM TBL_USUARIO ORDER BY Nome").ToList()
 
     End Function
 
     Friend Function GetUsuarioById(ByVal Cod As Integer) As Tbl_Usuario
 
-        Return DAO.List("SELECT * FROM dbo.TBL_USUARIO WHERE CodUsuario = " & Cod).FirstOrDefault()
+        Return DAO.List("SELECT * FROM TBL_USUARIO WHERE CodUsuario = " & Cod).FirstOrDefault()
 
     End Function
 
     Friend Function GetPerfis() As List(Of Tbl_Perfil)
 
         Dim DAO As New Tbl_Perfil_DAO
-        Return DAO.List("SELECT * FROM dbo.TBL_PERFIL ORDER BY DesPerfil").ToList()
+        Return DAO.List("SELECT * FROM TBL_PERFIL ORDER BY DesPerfil").ToList()
 
     End Function
 

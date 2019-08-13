@@ -1,4 +1,4 @@
-﻿Imports System.Data.SqlClient
+﻿Imports MySql.Data.MySqlClient
 Imports System.Text
 
 Public Class Tbl_Veiculo_DAO
@@ -8,13 +8,13 @@ Public Class Tbl_Veiculo_DAO
 
     Public Sub Insert(ByVal Item As Tbl_Veiculo)
 
-        Dim Conexao As New SqlConnection
-        Dim Comando As New SqlCommand
+        Dim Conexao As New MySqlConnection
+        Dim Comando As New MySqlCommand
         Comando.CommandTimeout = 60
         Dim Sql As New StringBuilder
 
 
-        Sql.Append("INSERT INTO dbo.TBL_VEICULO (Descricao, Placa1, Placa2, Motorista, DtaCadastro, DtaAtualizacao, FlagAtivo) VALUES " &
+        Sql.Append("INSERT INTO TBL_VEICULO (Descricao, Placa1, Placa2, Motorista, DtaCadastro, DtaAtualizacao, FlagAtivo) VALUES " &
                                                "(@Descricao, @Placa1, @Placa2, @Motorista, @DtaCadastro, @DtaAtualizacao, @FlagAtivo)")
 
         Try
@@ -48,12 +48,12 @@ Public Class Tbl_Veiculo_DAO
 
     Public Sub Update(ByVal Item As Tbl_Veiculo)
 
-        Dim Conexao As New SqlConnection
-        Dim Comando As New SqlCommand
+        Dim Conexao As New MySqlConnection
+        Dim Comando As New MySqlCommand
         Comando.CommandTimeout = 60
         Dim Sql As New StringBuilder
 
-        Sql.Append("UPDATE dbo.TBL_VEICULO SET Descricao = @Descricao, Placa1 = @Placa1, Placa2 = @Placa2, " &
+        Sql.Append("UPDATE TBL_VEICULO SET Descricao = @Descricao, Placa1 = @Placa1, Placa2 = @Placa2, " &
                    "Motorista = @Motorista, DtaAtualizacao = @DtaAtualizacao, FlagAtivo = @FlagAtivo " &
                    "WHERE CodVeiculo = @CodVeiculo")
 
@@ -91,10 +91,10 @@ Public Class Tbl_Veiculo_DAO
 
         Dim Lista As New List(Of Tbl_Veiculo)
         Dim Item As New Tbl_Veiculo
-        Dim Conexao As New SqlConnection
-        Dim Comando As New SqlCommand
+        Dim Conexao As New MySqlConnection
+        Dim Comando As New MySqlCommand
         Comando.CommandTimeout = 60
-        Dim Reader As SqlDataReader
+        Dim Reader As MySqlDataReader
 
         Try
 

@@ -14,32 +14,32 @@ Public Class Tbl_Hist_CargaBIZ
 
     Friend Function ListarCarregamentos() As List(Of Tbl_Hist_Carga)
 
-        Return DAO.List("SELECT * FROM dbo.TBL_HIST_CARGA ORDER BY DtaRegistro").ToList()
+        Return DAO.List("SELECT * FROM TBL_HIST_CARGA ORDER BY DtaRegistro").ToList()
 
     End Function
 
     Friend Function ListarCarregamentosPendentes() As List(Of Tbl_Hist_Carga)
 
-        Return DAO.List("SELECT * FROM dbo.TBL_HIST_CARGA WHERE FlgLiberado = 'False' ORDER BY DtaRegistro").ToList()
+        Return DAO.List("SELECT * FROM TBL_HIST_CARGA WHERE FlgLiberado = 'False' ORDER BY DtaRegistro").ToList()
 
     End Function
 
 
     Friend Function ListarCarregamentosByDate(Inicio As String, Fim As String) As List(Of Tbl_Hist_Carga)
 
-        Return DAO.List("SELECT * FROM dbo.TBL_HIST_CARGA WHERE DtaRegistro BETWEEN '" & Inicio & "' AND '" & Fim & "'").ToList()
+        Return DAO.List("SELECT * FROM TBL_HIST_CARGA WHERE DtaRegistro BETWEEN '" & Inicio & "' AND '" & Fim & "'").ToList()
 
     End Function
 
     Friend Function GetCarregamentoById(ByVal Cod As Integer) As Tbl_Hist_Carga
 
-        Return DAO.List("SELECT * FROM dbo.TBL_HIST_CARGA WHERE CodHist = " & Cod).FirstOrDefault()
+        Return DAO.List("SELECT * FROM TBL_HIST_CARGA WHERE CodHist = " & Cod).FirstOrDefault()
 
     End Function
 
     Friend Function GetUltCarregamentoByCpf(ByVal Cpf As String) As Tbl_Hist_Carga
 
-        Return DAO.List("SELECT * FROM dbo.TBL_HIST_CARGA WHERE NumCpfMotorista = '" & Cpf & "' ORDER BY CodHist DESC").FirstOrDefault()
+        Return DAO.List("SELECT * FROM TBL_HIST_CARGA WHERE NumCpfMotorista = '" & Cpf & "' ORDER BY CodHist DESC").FirstOrDefault()
 
     End Function
 

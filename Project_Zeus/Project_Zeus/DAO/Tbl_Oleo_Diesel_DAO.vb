@@ -1,4 +1,4 @@
-﻿Imports System.Data.SqlClient
+﻿Imports MySql.Data.MySqlClient
 Imports System.Text
 
 Public Class Tbl_Oleo_Diesel_DAO
@@ -8,13 +8,13 @@ Public Class Tbl_Oleo_Diesel_DAO
 
     Public Sub Insert(ByVal Item As Tbl_Oleo_Diesel)
 
-        Dim Conexao As New SqlConnection
-        Dim Comando As New SqlCommand
+        Dim Conexao As New MySqlConnection
+        Dim Comando As New MySqlCommand
         Comando.CommandTimeout = 60
         Dim Sql As New StringBuilder
         Dim ItemOld As New Tbl_Oleo_Diesel
 
-        ItemOld = List("SELECT TOP 1 * FROM dbo.TBL_OLEO_DIESEL ORDER BY CodRegistro DESC").FirstOrDefault
+        ItemOld = List("SELECT TOP 1 * FROM TBL_OLEO_DIESEL ORDER BY CodRegistro DESC").FirstOrDefault
 
         'Faz o cálculo do saldo de estoque
         If IsNothing(ItemOld) Then
@@ -44,7 +44,7 @@ Public Class Tbl_Oleo_Diesel_DAO
         End If
 
 
-        Sql.Append("INSERT INTO dbo.TBL_OLEO_DIESEL (DtaRegistro, DesUser, DesPlaca_Veiculo, DesNomeVeiculo, NumQtdeOleo, " &
+        Sql.Append("INSERT INTO TBL_OLEO_DIESEL (DtaRegistro, DesUser, DesPlaca_Veiculo, DesNomeVeiculo, NumQtdeOleo, " &
                                                    "NumSaldo, FlgEntrada, DesKm, DesEstoque) VALUES " &
                                                    "(@DtaRegistro, @DesUser, @DesPlaca_Veiculo, @DesNomeVeiculo, @NumQtdeOleo, " &
                                                    "@NumSaldo, @FlgEntrada, @DesKm, @DesEstoque)")
@@ -84,10 +84,10 @@ Public Class Tbl_Oleo_Diesel_DAO
 
         Dim Lista As New List(Of Tbl_Oleo_Diesel)
         Dim Item As New Tbl_Oleo_Diesel
-        Dim Conexao As New SqlConnection
-        Dim Comando As New SqlCommand
+        Dim Conexao As New MySqlConnection
+        Dim Comando As New MySqlCommand
         Comando.CommandTimeout = 60
-        Dim Reader As SqlDataReader
+        Dim Reader As MySqlDataReader
 
         Try
 

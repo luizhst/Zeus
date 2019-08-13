@@ -1,4 +1,4 @@
-﻿Imports System.Data.SqlClient
+﻿Imports MySql.Data.MySqlClient
 Imports System.Text
 
 Public Class Tbl_Tipo_Movimento_Carteira_DAO
@@ -8,13 +8,13 @@ Public Class Tbl_Tipo_Movimento_Carteira_DAO
 
     Public Sub Insert(ByVal Item As Tbl_Tipo_Movimento_Carteira)
 
-        Dim Conexao As New SqlConnection
-        Dim Comando As New SqlCommand
+        Dim Conexao As New MySqlConnection
+        Dim Comando As New MySqlCommand
         Comando.CommandTimeout = 60
         Dim Sql As New StringBuilder
 
 
-        Sql.Append("INSERT INTO dbo.TBL_TIPO_MOVIMENTO_CARTEIRA (Descricao, FlagAtivo) VALUES " &
+        Sql.Append("INSERT INTO TBL_TIPO_MOVIMENTO_CARTEIRA (Descricao, FlagAtivo) VALUES " &
                                                                 "(@Descricao, @FlagAtivo)")
 
         Try
@@ -43,12 +43,12 @@ Public Class Tbl_Tipo_Movimento_Carteira_DAO
 
     Public Sub Update(ByVal Item As Tbl_Tipo_Movimento_Carteira)
 
-        Dim Conexao As New SqlConnection
-        Dim Comando As New SqlCommand
+        Dim Conexao As New MySqlConnection
+        Dim Comando As New MySqlCommand
         Comando.CommandTimeout = 60
         Dim Sql As New StringBuilder
 
-        Sql.Append("UPDATE dbo.TBL_TIPO_MOVIMENTO_CARTEIRA SET Descricao = @Descricao, FlagAtivo = @FlagAtivo " &
+        Sql.Append("UPDATE TBL_TIPO_MOVIMENTO_CARTEIRA SET Descricao = @Descricao, FlagAtivo = @FlagAtivo " &
                    "WHERE CodTipoMovimentoCarteira = @CodTipoMovimentoCarteira")
 
         Try
@@ -81,10 +81,10 @@ Public Class Tbl_Tipo_Movimento_Carteira_DAO
 
         Dim Lista As New List(Of Tbl_Tipo_Movimento_Carteira)
         Dim Item As New Tbl_Tipo_Movimento_Carteira
-        Dim Conexao As New SqlConnection
-        Dim Comando As New SqlCommand
+        Dim Conexao As New MySqlConnection
+        Dim Comando As New MySqlCommand
         Comando.CommandTimeout = 60
-        Dim Reader As SqlDataReader
+        Dim Reader As MySqlDataReader
 
         Try
 

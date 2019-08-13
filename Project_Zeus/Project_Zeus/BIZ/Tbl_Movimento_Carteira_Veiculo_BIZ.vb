@@ -15,23 +15,23 @@ Public Class Tbl_Movimento_Carteira_Veiculo_BIZ
 
     Friend Function GetLancamentos(Veiculo As Integer) As List(Of Tbl_Movimento_Carteira_Veiculo)
 
-        Return DAO.List("SELECT * FROM dbo.TBL_MOVIMENTO_CARTEIRA_VEICULO WHERE CodVeiculo = " & Veiculo & " ORDER BY CodCarteira DESC").ToList()
+        Return DAO.List("SELECT * FROM TBL_MOVIMENTO_CARTEIRA_VEICULO WHERE CodVeiculo = " & Veiculo & " ORDER BY CodCarteira DESC").ToList()
 
     End Function
 
     Friend Function GetSaldo(Veiculo As Integer) As Double
 
-        'Return DAO.List("SELECT TOP 1 * FROM dbo.TBL_MOVIMENTO_CARTEIRA_VEICULO WHERE CodVeiculo = " & Veiculo & " ORDER BY CodCarteira DESC").FirstOrDefault()
+        'Return DAO.List("SELECT TOP 1 * FROM TBL_MOVIMENTO_CARTEIRA_VEICULO WHERE CodVeiculo = " & Veiculo & " ORDER BY CodCarteira DESC").FirstOrDefault()
 
         Return DAO.Saldo("SELECT ISNULL(TOTAIS.totalreceber, 0) - ISNULL(TOTAIS.totalpagar, 0) AS TOTAL " &
                          "FROM   (SELECT " &
                          "               (SELECT Sum (dr.valor) " &
-                         "                FROM   dbo.TBL_MOVIMENTO_CARTEIRA_VEICULO dr WITH(NOLOCK) " &
+                         "                FROM   TBL_MOVIMENTO_CARTEIRA_VEICULO dr WITH(NOLOCK) " &
                          "				WHERE  DesTipoRegistro = 'C'  " &
                          "					   AND FlagAtivo = 1  " &
                          "					   AND CodVeiculo =  " & Veiculo & ")             AS totalreceber,  " &
                          "               (SELECT Sum (dr.valor) " &
-                         "                FROM   dbo.TBL_MOVIMENTO_CARTEIRA_VEICULO dr WITH(NOLOCK) " &
+                         "                FROM   TBL_MOVIMENTO_CARTEIRA_VEICULO dr WITH(NOLOCK) " &
                          "				WHERE  DesTipoRegistro = 'D'  " &
                          "					   AND FlagAtivo = 1  " &
                          "					   AND CodVeiculo =  " & Veiculo & ")              AS totalpagar " &
@@ -68,7 +68,7 @@ Public Class Tbl_Tipo_Movimento_Carteira_BIZ
 
     Friend Function GetTipos() As List(Of Tbl_Tipo_Movimento_Carteira)
 
-        Return DAO.List("SELECT * FROM dbo.TBL_TIPO_MOVIMENTO_CARTEIRA WHERE FlagAtivo = 1 ORDER BY Descricao").ToList()
+        Return DAO.List("SELECT * FROM TBL_TIPO_MOVIMENTO_CARTEIRA WHERE FlagAtivo = 1 ORDER BY Descricao").ToList()
 
     End Function
 

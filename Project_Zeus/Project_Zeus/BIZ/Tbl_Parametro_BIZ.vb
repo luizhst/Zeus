@@ -17,13 +17,13 @@ Public Class Tbl_Parametro_BIZ
 
     Friend Function GetParametros() As List(Of Tbl_Parametro)
 
-        Return DAO.List("SELECT * FROM dbo.TBL_PARAMETROS ORDER BY CodParametro").ToList()
+        Return DAO.List("SELECT * FROM TBL_PARAMETROS ORDER BY CodParametro").ToList()
 
     End Function
 
     Friend Function GetParametroById(cod As Integer) As Tbl_Parametro
 
-        Return DAO.List("SELECT * FROM dbo.TBL_PARAMETROS WHERE CodParametro = " & cod).FirstOrDefault()
+        Return DAO.List("SELECT * FROM TBL_PARAMETROS WHERE CodParametro = " & cod).FirstOrDefault()
 
     End Function
 

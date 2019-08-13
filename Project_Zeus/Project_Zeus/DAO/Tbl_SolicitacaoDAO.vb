@@ -1,4 +1,4 @@
-﻿Imports System.Data.SqlClient
+﻿Imports MySql.Data.MySqlClient
 Imports System.Text
 
 Public Class Tbl_SolicitacaoDAO
@@ -8,13 +8,13 @@ Public Class Tbl_SolicitacaoDAO
 
     Public Sub Insert(ByVal Item As Tbl_Solicitacao)
 
-        Dim Conexao As New SqlConnection
-        Dim Comando As New SqlCommand
+        Dim Conexao As New MySqlConnection
+        Dim Comando As New MySqlCommand
         Comando.CommandTimeout = 60
         Dim Sql As New StringBuilder
 
 
-        Sql.Append("INSERT INTO dbo.TBL_SOLICITACAO (DesSolicitante, DtaSolicitacao, DesSolicitacao, DesStatus, DesAtribuidoPara, DtaUltimaAtualizacao, DesResolucao, DesTitulo) VALUES " &
+        Sql.Append("INSERT INTO TBL_SOLICITACAO (DesSolicitante, DtaSolicitacao, DesSolicitacao, DesStatus, DesAtribuidoPara, DtaUltimaAtualizacao, DesResolucao, DesTitulo) VALUES " &
                                                "(@DesSolicitante, @DtaSolicitacao, @DesSolicitacao, @DesStatus, @DesAtribuidoPara, @DtaUltimaAtualizacao, @DesResolucao, @DesTitulo)")
 
         Try
@@ -50,12 +50,12 @@ Public Class Tbl_SolicitacaoDAO
 
     Public Sub Update(ByVal Item As Tbl_Solicitacao)
 
-        Dim Conexao As New SqlConnection
-        Dim Comando As New SqlCommand
+        Dim Conexao As New MySqlConnection
+        Dim Comando As New MySqlCommand
         Comando.CommandTimeout = 60
         Dim Sql As New StringBuilder
 
-        Sql.Append("UPDATE dbo.TBL_SOLICITACAO SET DesSolicitante = @DesSolicitante, DtaSolicitacao = @DtaSolicitacao, DesSolicitacao = @DesSolicitacao, " &
+        Sql.Append("UPDATE TBL_SOLICITACAO SET DesSolicitante = @DesSolicitante, DtaSolicitacao = @DtaSolicitacao, DesSolicitacao = @DesSolicitacao, " &
                    "DesStatus = @DesStatus, DesAtribuidoPara = @DesAtribuidoPara, DtaUltimaAtualizacao = @DtaUltimaAtualizacao, DesResolucao = @DesResolucao, " &
                    "DesTitulo = @DesTitulo WHERE CodSolicitacao = @CodSolicitacao")
 
@@ -94,10 +94,10 @@ Public Class Tbl_SolicitacaoDAO
 
         Dim Lista As New List(Of Tbl_Solicitacao)
         Dim Item As New Tbl_Solicitacao
-        Dim Conexao As New SqlConnection
-        Dim Comando As New SqlCommand
+        Dim Conexao As New MySqlConnection
+        Dim Comando As New MySqlCommand
         Comando.CommandTimeout = 60
-        Dim Reader As SqlDataReader
+        Dim Reader As MySqlDataReader
 
         Try
 

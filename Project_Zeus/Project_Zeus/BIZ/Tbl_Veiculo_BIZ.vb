@@ -15,13 +15,13 @@ Public Class Tbl_Veiculo_BIZ
 
     Friend Function GetVeiculos() As List(Of Tbl_Veiculo)
 
-        Return DAO.List("SELECT * FROM dbo.TBL_VEICULO ORDER BY Descricao").ToList()
+        Return DAO.List("SELECT * FROM TBL_VEICULO ORDER BY Descricao").ToList()
 
     End Function
 
     Friend Function GetVeiculoById(cod As Integer) As Tbl_Veiculo
 
-        Return DAO.List("SELECT * FROM dbo.TBL_VEICULO WHERE CodVeiculo = " & cod & " ORDER BY Descricao").FirstOrDefault()
+        Return DAO.List("SELECT * FROM TBL_VEICULO WHERE CodVeiculo = " & cod & " ORDER BY Descricao").FirstOrDefault()
 
     End Function
 

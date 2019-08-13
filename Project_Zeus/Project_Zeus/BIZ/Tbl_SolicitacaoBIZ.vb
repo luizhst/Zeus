@@ -16,25 +16,25 @@ Public Class Tbl_SolicitacaoBIZ
 
     Friend Function ListarTodasSolicitacoes() As List(Of Tbl_Solicitacao)
 
-        Return DAO.List("SELECT * FROM dbo.TBL_SOLICITACAO ORDER BY CodSolicitacao DESC").ToList()
+        Return DAO.List("SELECT * FROM TBL_SOLICITACAO ORDER BY CodSolicitacao DESC").ToList()
 
     End Function
 
     Friend Function ListarTodasSolicitacoesAbertas() As List(Of Tbl_Solicitacao)
 
-        Return DAO.List("SELECT * FROM dbo.TBL_SOLICITACAO WHERE DesStatus = 'Em Aberto' ORDER BY CodSolicitacao DESC").ToList()
+        Return DAO.List("SELECT * FROM TBL_SOLICITACAO WHERE DesStatus = 'Em Aberto' ORDER BY CodSolicitacao DESC").ToList()
 
     End Function
 
     Friend Function ListarTodasSolicitacoesFinalizadas() As List(Of Tbl_Solicitacao)
 
-        Return DAO.List("SELECT * FROM dbo.TBL_SOLICITACAO WHERE DesStatus = 'Finalizada' ORDER BY CodSolicitacao DESC").ToList()
+        Return DAO.List("SELECT * FROM TBL_SOLICITACAO WHERE DesStatus = 'Finalizada' ORDER BY CodSolicitacao DESC").ToList()
 
     End Function
 
     Friend Function GetSolicitacaoById(ByVal Cod As Integer) As Tbl_Solicitacao
 
-        Return DAO.List("SELECT * FROM dbo.TBL_SOLICITACAO WHERE CodSolicitacao = " & Cod).FirstOrDefault()
+        Return DAO.List("SELECT * FROM TBL_SOLICITACAO WHERE CodSolicitacao = " & Cod).FirstOrDefault()
 
     End Function
 

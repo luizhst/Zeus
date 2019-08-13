@@ -1,4 +1,4 @@
-﻿Imports System.Data.SqlClient
+﻿Imports MySql.Data.MySqlClient
 Imports System.Text
 
 Public Class Tbl_UsuarioDAO
@@ -8,13 +8,13 @@ Public Class Tbl_UsuarioDAO
 
     Public Sub Insert(ByVal Item As Tbl_Usuario)
 
-        Dim Conexao As New SqlConnection
-        Dim Comando As New SqlCommand
+        Dim Conexao As New MySqlConnection
+        Dim Comando As New MySqlCommand
         Comando.CommandTimeout = 60
         Dim Sql As New StringBuilder
 
 
-        Sql.Append("INSERT INTO dbo.TBL_USUARIO (Nome, SobreNome, ContaLogin, SenhaLogin, DtaNascimento, FlgAtivo, CodPerfil) VALUES " &
+        Sql.Append("INSERT INTO TBL_USUARIO (Nome, SobreNome, ContaLogin, SenhaLogin, DtaNascimento, FlgAtivo, CodPerfil) VALUES " &
                                                "(@Nome, @SobreNome, @ContaLogin, @SenhaLogin, @DtaNascimento, @FlgAtivo, @CodPerfil)")
 
         Try
@@ -49,12 +49,12 @@ Public Class Tbl_UsuarioDAO
 
     Public Sub Update(ByVal Item As Tbl_Usuario)
 
-        Dim Conexao As New SqlConnection
-        Dim Comando As New SqlCommand
+        Dim Conexao As New MySqlConnection
+        Dim Comando As New MySqlCommand
         Comando.CommandTimeout = 60
         Dim Sql As New StringBuilder
 
-        Sql.Append("UPDATE dbo.TBL_USUARIO SET Nome = @Nome, SobreNome = @SobreNome, ContaLogin = @ContaLogin, " &
+        Sql.Append("UPDATE TBL_USUARIO SET Nome = @Nome, SobreNome = @SobreNome, ContaLogin = @ContaLogin, " &
                    "SenhaLogin = @SenhaLogin, DtaNascimento = @DtaNascimento, FlgAtivo = @FlgAtivo, CodPerfil = @CodPerfil " &
                    "WHERE CodUsuario = @CodUsuario")
 
@@ -92,10 +92,10 @@ Public Class Tbl_UsuarioDAO
 
         Dim Lista As New List(Of Tbl_Usuario)
         Dim Item As New Tbl_Usuario
-        Dim Conexao As New SqlConnection
-        Dim Comando As New SqlCommand
+        Dim Conexao As New MySqlConnection
+        Dim Comando As New MySqlCommand
         Comando.CommandTimeout = 60
-        Dim Reader As SqlDataReader
+        Dim Reader As MySqlDataReader
 
         Try
 

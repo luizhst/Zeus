@@ -1,5 +1,5 @@
 ﻿Imports System.Configuration
-Imports System.Data.SqlClient
+Imports MySql.Data.MySqlClient
 Imports System.Text
 
 Public Class Connection
@@ -7,14 +7,14 @@ Public Class Connection
 
     'Private Shared StringConexao As String = My.Settings.StringConexao.ToString
 
-    'Private Shared StringConexao As String = "Data Source=NB-LUIZHST;Initial Catalog=Db_Zeus;Persist Security Info=True;User ID=sa;Password='bgt5BGT%'"
-    Private Shared StringConexao As String = "Data Source=SERVIDOR;Initial Catalog=Db_Zeus;Persist Security Info=True;User ID=sa;Password='bgt5BGT%'"
+    Private Shared StringConexao As String = "Server=db_servale_app.mysql.dbaas.com.br;Port=3306;Database=db_servale_app;Uid=db_servale_app;Pwd=BReWtz@p27Fa5L;"
+    'Private Shared StringConexao As String = "Data Source=SERVIDOR;Initial Catalog=Db_Zeus;Persist Security Info=True;User ID=sa;Password='bgt5BGT%'"
 
     Private ReadOnly Log As log4net.ILog = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
 
-    Public Function GetConexao() As SqlConnection
+    Public Function GetConexao() As MySqlConnection
 
-        Dim Conexao As New SqlConnection
+        Dim Conexao As New MySqlConnection
 
         Try
 
@@ -33,7 +33,7 @@ Public Class Connection
     End Function
 
 
-    Public Sub CloseConexao(ByVal Con As SqlConnection)
+    Public Sub CloseConexao(ByVal Con As MySqlConnection)
 
         Try
 
